@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="AI_Director_Prototype"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/UofA/Research/AI_Director_Prototype/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AI_Director_Prototype">
+				<Option output="D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/AI_Director_Prototype.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/UofA/Research/AI_Director_Prototype/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../include/c++/6.2.0"/>
+					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../include/c++/6.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../include/c++/6.2.0/backward"/>
+					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/include"/>
+					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../include"/>
+					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/include-fixed"/>
+					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 AI_Director_Prototype"/>
+					<CompileFile command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AI_Director_Prototype/fast">
+				<Option output="D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/AI_Director_Prototype.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/UofA/Research/AI_Director_Prototype/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../include/c++/6.2.0"/>
+					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../include/c++/6.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../include/c++/6.2.0/backward"/>
+					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/include"/>
+					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../include"/>
+					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/include-fixed"/>
+					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 AI_Director_Prototype/fast"/>
+					<CompileFile command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/UofA/Research/AI_Director_Prototype/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/UofA/Research/AI_Director_Prototype/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/cmake/mingwn/bin/mingw32-make.exe -f &quot;D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/ActionUtils.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/ActionUtils.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Actions.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Actions.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Locations.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Operators.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Operators.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Player.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Player.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/PlayerModel.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/PlayerModel.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/main.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

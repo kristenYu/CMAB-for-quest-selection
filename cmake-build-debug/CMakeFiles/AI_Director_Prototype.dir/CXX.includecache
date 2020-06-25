@@ -10,7 +10,15 @@ D:/UofA/Research/AI_Director_Prototype/ActionUtils.h
 unordered_map
 -
 
-D:/UofA/Research/AI_Director_Prototype/Actions.h
+D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
+
+D:/UofA/Research/AI_Director_Prototype/Game.h
+string
+-
+unordered_map
+-
+Player.h
+D:/UofA/Research/AI_Director_Prototype/Player.h
 
 D:/UofA/Research/AI_Director_Prototype/Operators.h
 Player.h
@@ -18,6 +26,8 @@ D:/UofA/Research/AI_Director_Prototype/Player.h
 
 D:/UofA/Research/AI_Director_Prototype/Player.h
 unordered_map
+-
+vector
 -
 
 D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
@@ -29,8 +39,8 @@ unordered_map
 -
 PlayerModel.h
 D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
-Actions.h
-D:/UofA/Research/AI_Director_Prototype/Actions.h
+Enums/Actions.h
+D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
 PlayerModel.h
 D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
 ActionUtils.h
@@ -39,4 +49,6 @@ Player.h
 D:/UofA/Research/AI_Director_Prototype/Player.h
 Operators.h
 D:/UofA/Research/AI_Director_Prototype/Operators.h
+Game.h
+D:/UofA/Research/AI_Director_Prototype/Game.h
 

@@ -13,7 +13,6 @@ enum actions{
     Mine,
     Build,
     Craft,
-    Teleport,
     Attack,
     Equip_Item
 };

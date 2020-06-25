@@ -2,7 +2,7 @@
 // Created by Sticky on 6/24/2020.
 //
 #include <iostream>
-#include "Actions.h"
+#include "Enums/Actions.h"
 #include "ActionUtils.h"
 ActionUtils::ActionUtils() {
     setActionValues();
@@ -50,10 +50,12 @@ void ActionUtils::setActionValues() {
     actionValues[actions::Craft][3] = 0.1;
 
     //Teleporting
+    /*
     actionValues[actions::Teleport][0] = 0.25;
     actionValues[actions::Teleport][1] = 0.25;
     actionValues[actions::Teleport][2] = 0.25;
     actionValues[actions::Teleport][3] = 0.25;
+     */
 
     //Attacking
     actionValues[actions::Attack][0] = 0.8;

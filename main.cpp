@@ -1,20 +1,23 @@
 #include <iostream>
 #include <unordered_map>
 #include "PlayerModel.h"
-#include "Actions.h"
+#include "Enums/Actions.h"
 #include "PlayerModel.h"
 #include "ActionUtils.h"
 #include "Player.h"
 #include "Operators.h"
+#include "Game.h"
 
 int main() {
     ActionUtils actionUtils;
     //initialize values
     PlayerModel playerModel;
     Player player;
-    //Operators operators;
+    Operators operators;
+    Game game;
 
     bool keepPlaying = true;
+    bool checkAction = true;
     while(keepPlaying)
     {
         if(!keepPlaying)
@@ -28,7 +31,24 @@ int main() {
         if(actionInput == 9)
         {
             keepPlaying = false;
-        } else{
+        } else if(actionInput == 0) {
+            checkAction = game.move(player);
+            if(!checkAction)
+            {
+                std::cout<<"Invalid move"<<std::endl;
+            }
+        }
+        else if (actionInput == 7)
+        {
+            game.attack(player);
+            if(!checkAction)
+            {
+                std::cout<<"Invalid move"<<std::endl;
+            }
+            playerModel.updatePlayerActions(actionUtils.getActionValue(actionInput));
+            playerModel.printPlayerActions();
+        }
+        else{
             playerModel.updatePlayerActions(actionUtils.getActionValue(actionInput));
             playerModel.printPlayerActions();
         }
@@ -36,10 +56,6 @@ int main() {
     }
 
     std::cout<<"Finished playing";
-
-
-
-
 
 
 
@@ -51,9 +67,7 @@ int main() {
     playerModel.printPlayerActions();
     playerModel.updatePlayerActions(actionUtils.getActionValue(actions::Mine));
     playerModel.printPlayerActions();
-     */
-
-
+    */
 
     return 0;
 }

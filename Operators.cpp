@@ -4,11 +4,29 @@
 
 #include "Operators.h"
 #include "Player.h"
+#include <iostream>
+#include "Game.h"
 
-Operators::Operators(Player &p) {
-    this->player = p;
+enum actions{
+    Move = 0,
+    Blueprint,
+    Chop,
+    Mine,
+    Build,
+    Craft,
+    Attack,
+    Equip_Item
+};
+
+Operators::Operators() {
+
 }
 
-void Operators::move(int location) {
-    player.location = location;
+void Operators::move(Player &p, int location) {
+    p.location = location;
 }
+
+void Operators::attack(Player &p, int creature) {
+
+}
+

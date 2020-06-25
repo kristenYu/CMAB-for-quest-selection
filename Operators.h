@@ -9,10 +9,9 @@
 
 class Operators {
 public:
-    void move(int location);
-    Player player;
-
-    Operators(Player &p);
+    void move(Player &p, int location);
+    Operators();
+    void attack(Player &p, int creature);
 };
 
 

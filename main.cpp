@@ -25,7 +25,7 @@ int main() {
             break;
         }
         std::cout<< "Please select an action by typing the number next to it"<<std::endl;
-        std::cout<<"[0] Move, [1] Blueprint, [2] Chop, [3] Mine, [4] Build, [5] Craft, \n [6] Teleport, [7] Attack, [8] Equip Item, [9] stop playing"<<std::endl;
+        std::cout<<"[0] Move, [1] Blueprint, [2] Chop, [3] Mine, [4] Build, [5] Craft, \n [6] Refine, [7] Attack, [8] Equip Item, [9] stop playing"<<std::endl;
         int actionInput;
         std::cin>> actionInput;
         if(actionInput == 9)
@@ -35,7 +35,24 @@ int main() {
             checkAction = game.move(player);
             if(!checkAction)
             {
-                std::cout<<"Invalid move"<<std::endl;
+                std::cout<<"Invalid action"<<std::endl;
+            }
+        }
+        else if(actionInput == 2)
+        {
+            checkAction = game.chop(player);
+            if(!checkAction)
+            {
+                std::cout<<"Invalid action"<<std::endl;
+            }
+        }
+
+        else if (actionInput == 3)
+        {
+            checkAction = game.mine(player);
+            if(!checkAction)
+            {
+                std::cout<<"Invalid action"<<std::endl;
             }
         }
         else if (actionInput == 7)
@@ -43,7 +60,7 @@ int main() {
             game.attack(player);
             if(!checkAction)
             {
-                std::cout<<"Invalid move"<<std::endl;
+                std::cout<<"Invalid action"<<std::endl;
             }
             playerModel.updatePlayerActions(actionUtils.getActionValue(actionInput));
             playerModel.printPlayerActions();
@@ -51,6 +68,7 @@ int main() {
         else{
             playerModel.updatePlayerActions(actionUtils.getActionValue(actionInput));
             playerModel.printPlayerActions();
+            game.printPlayerActionStack(player);
         }
 
     }

@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+D:/UofA/Research/AI_Director_Prototype/ActionStruct.h
+
 D:/UofA/Research/AI_Director_Prototype/ActionUtils.h
 unordered_map
 -
@@ -19,6 +21,8 @@ unordered_map
 -
 Player.h
 D:/UofA/Research/AI_Director_Prototype/Player.h
+ActionStruct.h
+D:/UofA/Research/AI_Director_Prototype/ActionStruct.h
 
 D:/UofA/Research/AI_Director_Prototype/Operators.h
 Player.h
@@ -29,6 +33,8 @@ unordered_map
 -
 vector
 -
+ActionStruct.h
+D:/UofA/Research/AI_Director_Prototype/ActionStruct.h
 
 D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
 

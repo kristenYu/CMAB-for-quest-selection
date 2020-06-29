@@ -8,18 +8,24 @@ CMakeFiles/AI_Director_Prototype.dir/ActionUtils.cpp.obj: ../Enums/Actions.h
 CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.obj: ../Actions.cpp
 CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.obj: ../Enums/Actions.h
 
+CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../ActionStruct.h
+CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Enums/Actions.h
 CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Enums/Creatures.h
+CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Enums/GatheredResources.h
 CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Enums/Locations.h
+CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Enums/NaturalResources.h
 CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Enums/RawMaterials.h
 CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Game.cpp
 CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Game.h
 CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Player.h
 
+CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../ActionStruct.h
 CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Game.h
 CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Operators.cpp
 CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Operators.h
 CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Player.h
 
+CMakeFiles/AI_Director_Prototype.dir/Player.cpp.obj: ../ActionStruct.h
 CMakeFiles/AI_Director_Prototype.dir/Player.cpp.obj: ../Enums/Locations.h
 CMakeFiles/AI_Director_Prototype.dir/Player.cpp.obj: ../Player.cpp
 CMakeFiles/AI_Director_Prototype.dir/Player.cpp.obj: ../Player.h
@@ -27,6 +33,7 @@ CMakeFiles/AI_Director_Prototype.dir/Player.cpp.obj: ../Player.h
 CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj: ../PlayerModel.cpp
 CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj: ../PlayerModel.h
 
+CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../ActionStruct.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../ActionUtils.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Enums/Actions.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Game.h

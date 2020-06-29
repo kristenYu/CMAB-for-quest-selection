@@ -14,3 +14,7 @@ void Player::addToInventory(int item) {
     this->inventory.push_back(item);
 }
 
+void Player::addAction(actionStruct a) {
+    this->actionStack.push_back(a);
+}
+

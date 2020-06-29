@@ -13,6 +13,7 @@ enum actions{
     Chop,
     Mine,
     Build,
+    Refine,
     Craft,
     Attack,
     Equip_Item

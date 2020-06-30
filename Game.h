@@ -4,7 +4,7 @@
 #include <string>
 #include <unordered_map>
 #include "Player.h"
-#include "ActionStruct.h"
+#include "Structs/ActionStruct.h"
 #include "Enums/GatheredResources.h"
 #ifndef AI_DIRECTOR_PROTOTYPE_GAME_H
 #define AI_DIRECTOR_PROTOTYPE_GAME_H
@@ -40,7 +40,7 @@ public:
     bool chop(Player &p);
     bool refine(Player &p);
     bool attack(Player &p);
-
+    bool craft(Player &p);
 
 
     //utility/make life easier things

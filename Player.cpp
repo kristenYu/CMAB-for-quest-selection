@@ -18,3 +18,6 @@ void Player::addAction(actionStruct a) {
     this->actionStack.push_back(a);
 }
 
+void Player::unlockSchematic(schematic unlock) {
+    this->unlockedSchematics.push_back(unlock);
+}

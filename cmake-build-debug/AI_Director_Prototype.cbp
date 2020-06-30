@@ -82,9 +82,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/UofA/Research/AI_Director_Prototype/ActionStruct.h">
-			<Option target="AI_Director_Prototype"/>
-		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/ActionUtils.cpp">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
@@ -118,9 +115,6 @@
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Game.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
-		<Unit filename="D:/UofA/Research/AI_Director_Prototype/ItemStruct.h">
-			<Option target="AI_Director_Prototype"/>
-		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Operators.cpp">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
@@ -137,6 +131,21 @@
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/PlayerModel.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/SchematicList.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/SchematicList.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Structs/ItemStruct.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/main.cpp">

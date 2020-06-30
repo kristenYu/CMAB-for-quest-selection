@@ -284,6 +284,33 @@ PlayerModel.cpp.s:
 	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.s
 .PHONY : PlayerModel.cpp.s
 
+SchematicList.obj: SchematicList.cpp.obj
+
+.PHONY : SchematicList.obj
+
+# target to build an object file
+SchematicList.cpp.obj:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/SchematicList.cpp.obj
+.PHONY : SchematicList.cpp.obj
+
+SchematicList.i: SchematicList.cpp.i
+
+.PHONY : SchematicList.i
+
+# target to preprocess a source file
+SchematicList.cpp.i:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/SchematicList.cpp.i
+.PHONY : SchematicList.cpp.i
+
+SchematicList.s: SchematicList.cpp.s
+
+.PHONY : SchematicList.s
+
+# target to generate assembly for a file
+SchematicList.cpp.s:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/SchematicList.cpp.s
+.PHONY : SchematicList.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -338,6 +365,9 @@ help:
 	@echo ... PlayerModel.obj
 	@echo ... PlayerModel.i
 	@echo ... PlayerModel.s
+	@echo ... SchematicList.obj
+	@echo ... SchematicList.i
+	@echo ... SchematicList.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

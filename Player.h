@@ -7,7 +7,8 @@
 
 #ifndef AI_DIRECTOR_PROTOTYPE_PLAYER_H
 #define AI_DIRECTOR_PROTOTYPE_PLAYER_H
-#include "ActionStruct.h"
+#include "Structs/ActionStruct.h"
+#include "Structs/SchematicStruct.h"
 
 
 class Player {
@@ -17,6 +18,7 @@ public:
     std::vector<int> inventory;
     std::vector<actionStruct> actionStack;
     std::vector<actionStruct> reverseActionStack;
+    std::vector<schematic> unlockedSchematics;
 
     int gumption; //offense
     int moxie; //Defense/resistance
@@ -57,11 +59,9 @@ public:
      */
 
 
-
     void addAction(actionStruct a);
     void addToInventory(int item);
-
-
+    void unlockSchematic(schematic unlock);
 
     Player();
 

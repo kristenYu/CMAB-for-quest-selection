@@ -157,6 +157,9 @@ bool Game::chop(Player &p) {
 
 }
 
+
+
+
 bool Game::mine(Player &p) {
     inputMap.clear();
     if(locationNaturalResource[p.location].empty())
@@ -199,6 +202,7 @@ bool Game::mine(Player &p) {
 bool Game::refine(Player &p) {
     inputMap.clear();
     std::cout<<"Please select an item from your inventory to refine:"<<std::endl;
+    //TODO: Doesn't skip if there isn't anything that can be refined
     for(int i = 0; i < p.inventory.size(); ++i)
     {
         if(!isRefined(p.inventory[i]))

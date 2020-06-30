@@ -7,10 +7,13 @@
 
 #endif //AI_DIRECTOR_PROTOTYPE_RAWMATERIALS_H
 
+/*
 enum rawMaterials{
     Antlers=0,
     SpiderWeb,
     BearPelt,
     WolfPelt,
     Vines
+    //refined;
 };
+ */

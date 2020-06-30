@@ -5,7 +5,7 @@
 #ifndef AI_DIRECTOR_PROTOTYPE_REFINEDRESOURCE_H
 #define AI_DIRECTOR_PROTOTYPE_REFINEDRESOURCE_H
 
-
+/*
 enum refinedResource{
     Lumber=0,
     IronBar,
@@ -13,5 +13,5 @@ enum refinedResource{
     BearLeather,
     WolfLeather,
 };
-
+*/
 #endif //AI_DIRECTOR_PROTOTYPE_REFINEDRESOURCE_H

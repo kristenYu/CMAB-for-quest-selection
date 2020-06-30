@@ -3,13 +3,11 @@
 //
 #include <unordered_map>
 #include <vector>
-#include "ActionStruct.h"
-#include "Enums/GatheredResources.h"
-#include "Enums/RawMaterials.h"
-#include "Enums/RefinedResource.h"
+
 
 #ifndef AI_DIRECTOR_PROTOTYPE_PLAYER_H
 #define AI_DIRECTOR_PROTOTYPE_PLAYER_H
+#include "ActionStruct.h"
 
 
 class Player {
@@ -20,9 +18,49 @@ public:
     std::vector<actionStruct> actionStack;
     std::vector<actionStruct> reverseActionStack;
 
+    int gumption; //offense
+    int moxie; //Defense/resistance
+    int precision; //resource yield
+    int finesse; //craft power
+    int brawn; //physical/speed
+    int reason; //intellectual, effect resistance, concentration
+    int ingenuity; //mechanical, crit power
+    int mystique; //magical, crit chance
+
+    /* Offensive:
+     *  Physical Damage - gumption + brawn
+     *  Mechanical Damage - gumption + ingenuity
+     *  Reload Time - Ingenuity
+     *  Accuracy - Reason
+     *  Crit Damage - Ingenuity
+     *
+     * Defensive:
+     *  Block Cost: gumption + brawn
+     *  Magical healing: Moxie + Mystique
+     *  Mechanical Healing: Moxie + Ingenuity
+     *  Physical Defense: Moxie + Brawn
+     *  Magical Resistance: Moxie + Mystique
+     *
+     * Gathering:
+     *  Magical Resource Yield: Finesse + Mystique
+     *  Physical Resource Yield: Brawn + Finesse
+     *  Crit Yield: Ingenuity
+     *  Concentration: Reason
+     *
+     * Crafting:
+     *  Build Speed - Ingenuity
+     *
+     *
+     *  I worked out equations for these, look in the google dock.
+     *  basically, take the weighted average
+     *
+     */
+
+
+
     void addAction(actionStruct a);
-    void addToInventory(int item, gatheredResources container);
-    void addToInventory(int item, enum rawMaterials);
+    void addToInventory(int item);
+
 
 
     Player();

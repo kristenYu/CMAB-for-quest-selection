@@ -15,12 +15,12 @@ CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj
  D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
  D:/UofA/Research/AI_Director_Prototype/Enums/Locations.h
  D:/UofA/Research/AI_Director_Prototype/Enums/NaturalResources.h
- D:/UofA/Research/AI_Director_Prototype/Enums/RawMaterials.h
  D:/UofA/Research/AI_Director_Prototype/Game.cpp
  D:/UofA/Research/AI_Director_Prototype/Game.h
  D:/UofA/Research/AI_Director_Prototype/Player.h
 CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj
  D:/UofA/Research/AI_Director_Prototype/ActionStruct.h
+ D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
  D:/UofA/Research/AI_Director_Prototype/Game.h
  D:/UofA/Research/AI_Director_Prototype/Operators.cpp
  D:/UofA/Research/AI_Director_Prototype/Operators.h
@@ -37,6 +37,7 @@ CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj
  D:/UofA/Research/AI_Director_Prototype/ActionStruct.h
  D:/UofA/Research/AI_Director_Prototype/ActionUtils.h
  D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
+ D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
  D:/UofA/Research/AI_Director_Prototype/Game.h
  D:/UofA/Research/AI_Director_Prototype/Operators.h
  D:/UofA/Research/AI_Director_Prototype/Player.h

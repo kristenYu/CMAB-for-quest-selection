@@ -11,7 +11,7 @@ class PlayerModel {
     void printPlayerActions();
     //made with the 4 roles in mind
     float playerActions[4] = {0};
-    float alpha = 0.1;
+    float alpha = 0.5;
     int roles = 4;
 };
 

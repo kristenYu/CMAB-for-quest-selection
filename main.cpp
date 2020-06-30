@@ -31,39 +31,46 @@ int main() {
         if(actionInput == 9)
         {
             keepPlaying = false;
-        } else if(actionInput == 0) {
+        } else if(actionInput == actions::Move) {
             checkAction = game.move(player);
             if(!checkAction)
             {
                 std::cout<<"Invalid action"<<std::endl;
+                break;
             }
         }
-        else if(actionInput == 2)
+        else if(actionInput == actions::Chop)
         {
             checkAction = game.chop(player);
             if(!checkAction)
             {
                 std::cout<<"Invalid action"<<std::endl;
+                break;
             }
         }
-
-        else if (actionInput == 3)
-        {
+        else if (actionInput == actions::Mine) {
             checkAction = game.mine(player);
-            if(!checkAction)
-            {
-                std::cout<<"Invalid action"<<std::endl;
+            if (!checkAction) {
+                std::cout << "Invalid action" << std::endl;
+                break;
+            }
+
+        }else if(actionInput == actions::Refine)
+        {
+            checkAction = game.refine(player);
+            if (!checkAction) {
+                std::cout << "Invalid action" << std::endl;
+                break;
             }
         }
-        else if (actionInput == 7)
+        else if (actionInput == actions::Attack)
         {
-            game.attack(player);
+            checkAction = game.attack(player);
             if(!checkAction)
             {
                 std::cout<<"Invalid action"<<std::endl;
+                break;
             }
-            playerModel.updatePlayerActions(actionUtils.getActionValue(actionInput));
-            playerModel.printPlayerActions();
         }
         else{
             playerModel.updatePlayerActions(actionUtils.getActionValue(actionInput));
@@ -71,11 +78,12 @@ int main() {
             game.printPlayerActionStack(player);
         }
 
+        playerModel.updatePlayerActions(actionUtils.getActionValue(actionInput));
+        playerModel.printPlayerActions();
+
     }
 
     std::cout<<"Finished playing";
-
-
 
     //alpha of 0.1 seems pretty strong. Will likely have to tune this higher
     /*

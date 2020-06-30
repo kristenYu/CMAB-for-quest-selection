@@ -9,6 +9,20 @@ enum gatheredResources{
     IronOre,
     CutStone,
     PlantingEarth,
+    Antlers, //location 4,this is where the resources from animals come from
+    SpiderWeb,
+    BearPelt,
+    WolfPelt,
+    Vines,
+    Lumber, //location 9, refined resources
+    IronBar,
+    Brick,
+    FertileEarth,
+    Gelatin,
+    SpiderRope,
+    BearLeather,
+    WolfLeather,
+    VineRope,
 };
 
 #endif //AI_DIRECTOR_PROTOTYPE_GATHEREDRESOURCES_H

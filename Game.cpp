@@ -5,11 +5,11 @@
 #include "Game.h"
 #include "Enums/Locations.h"
 #include "Enums/Creatures.h"
-#include "Enums/RawMaterials.h"
+//#include "Enums/RawMaterials.h"
 #include "Enums/Actions.h"
 #include "Enums/GatheredResources.h"
 #include "Enums/NaturalResources.h"
-#include "Enums/RefinedResource.h"
+//#include "Enums/RefinedResource.h"
 #include <iostream>
 
 Game::Game() {
@@ -36,41 +36,36 @@ Game::Game() {
     this->creatureMap[creatures::Bear] = "Bear";
     this->creatureMap[creatures::Wolf] = "Wolf";
     this->creatureMap[creatures::Swamp_Monster] = "SwampMonster";
-    //maps the item to string for printing purposes
-    this->rawMaterialsMap[rawMaterials::Antlers] = "Antlers";
-    this->rawMaterialsMap[rawMaterials::SpiderWeb] = "SpiderWeb";
-    this->rawMaterialsMap[rawMaterials::BearPelt] = "BearPelt";
-    this->rawMaterialsMap[rawMaterials::WolfPelt] = "WolfPelt";
-    this->rawMaterialsMap[rawMaterials::Vines] = "Vines";
     //maps the natural resource to string for printing purposes
     this->naturalResourceMap[naturalResources::Tree] = "Tree";
     this->naturalResourceMap[naturalResources::Iron] = "Iron";
     this->naturalResourceMap[naturalResources::Rocks] = "Rocks";
     this->naturalResourceMap[naturalResources::Soil] = "Soil";
-    //maps the gahtered resource to string for printing purposes
+    //maps the gathered resource to string for printing purposes
     this->gatheredResourceMap[gatheredResources::Wood] = "Wood";
     this->gatheredResourceMap[gatheredResources::IronOre] = "IronOre";
     this->gatheredResourceMap[gatheredResources::CutStone] = "CutStone";
     this->gatheredResourceMap[gatheredResources::PlantingEarth] = "PlantingEarth";
-    //maps the refined resoure to string for printing purposes
-    this->refinedResourceMap[refinedResource::Lumber] = "Lumber";
-    this->refinedResourceMap[refinedResource::IronBar] = "IronBar";
-    this->refinedResourceMap[refinedResource::Brick] = "BearLeather";
-    this->refinedResourceMap[refinedResource::BearLeather] = "BearLeather";
-    this->refinedResourceMap[refinedResource::WolfLeather] = "WolfLeather";
-    //disambiguates all items in the game, string to enum mapping
-    this->itemMap["Wood"] = gatheredResources::Wood;
-    this->itemMap["IronOre"] = gatheredResources::IronOre;
-    this->itemMap["CutStone"] = gatheredResources::CutStone;
-    this->itemMap["PlantingEarth"] = gatheredResources::PlantingEarth;
-    this->itemMap["Lumber"] = refinedResource::Lumber;
-    this->itemMap[""]
+    this->gatheredResourceMap[gatheredResources::Antlers] = "Antlers";
+    this->gatheredResourceMap[gatheredResources::SpiderWeb] = "SpiderWeb";
+    this->gatheredResourceMap[gatheredResources::BearPelt] = "BearPelt";
+    this->gatheredResourceMap[gatheredResources::WolfPelt] = "WolfPelt";
+    this->gatheredResourceMap[gatheredResources::Vines] = "Vines";
+    this->gatheredResourceMap[gatheredResources::Lumber] = "Lumber";
+    this->gatheredResourceMap[gatheredResources::IronBar] = "IronBar";
+    this->gatheredResourceMap[gatheredResources::Brick] = "Brick";
+    this->gatheredResourceMap[gatheredResources::FertileEarth] = "FertileEarth";
+    this->gatheredResourceMap[gatheredResources::Gelatin] = "Gelatin";
+    this->gatheredResourceMap[gatheredResources::SpiderRope] = "SpiderRope";
+    this->gatheredResourceMap[gatheredResources::BearLeather] = "BearLeather";
+    this->gatheredResourceMap[gatheredResources::WolfLeather] = "WolfLeather";
+    this->gatheredResourceMap[gatheredResources::VineRope] = "VineRope";
     //assign resources to each creature
-    this->creatureResource[creatures::Deer] = rawMaterials::Antlers;
-    this->creatureResource[creatures::Spider] = rawMaterials::SpiderWeb;
-    this->creatureResource[creatures::Bear] = rawMaterials::BearPelt;
-    this->creatureResource[creatures::Wolf] = rawMaterials::WolfPelt;
-    this->creatureResource[creatures::Swamp_Monster] = rawMaterials::Vines;
+    this->creatureResource[creatures::Deer] = gatheredResources::Antlers;
+    this->creatureResource[creatures::Spider] = gatheredResources::SpiderWeb;
+    this->creatureResource[creatures::Bear] = gatheredResources::BearPelt;
+    this->creatureResource[creatures::Wolf] = gatheredResources::WolfPelt;
+    this->creatureResource[creatures::Swamp_Monster] = gatheredResources::Vines;
     //assign creatures to a location
     this->locationCreature[locations::Forest].push_back(creatures::Deer);
     this->locationCreature[locations::Forest].push_back(creatures::Spider);
@@ -91,11 +86,23 @@ Game::Game() {
     this->locationNaturalResource[locations::Mountain].push_back(naturalResources::Iron);
     this->locationNaturalResource[locations::Swamp].push_back(naturalResources::Soil);
     //assign base resource to refined resource
-    this->baseRefinedResourceMap[gatheredResources::Wood] = refinedResource::Lumber;
-    this->baseRefinedResourceMap[gatheredResources::IronOre] = refinedResource::IronBar;
-    this->baseRefinedResourceMap[gatheredResources::CutStone] = refinedResource::Brick;
-    this->baseRefinedResourceMap[rawMaterials::BearPelt] = refinedResource::BearLeather;
-    this->baseRefinedResourceMap[rawMaterials::WolfPelt] = refinedResource::WolfLeather;
+    this->baseRefinedResourceMap[gatheredResources::Wood] = gatheredResources::Lumber;
+    this->baseRefinedResourceMap[gatheredResources::IronOre] = gatheredResources::IronBar;
+    this->baseRefinedResourceMap[gatheredResources::CutStone] = gatheredResources::Brick;
+    this->baseRefinedResourceMap[gatheredResources::PlantingEarth] = gatheredResources::FertileEarth;
+    this->baseRefinedResourceMap[gatheredResources::Antlers] = gatheredResources::Gelatin;
+    this->baseRefinedResourceMap[gatheredResources::SpiderWeb] = gatheredResources::SpiderRope;
+    this->baseRefinedResourceMap[gatheredResources::BearPelt] = gatheredResources::BearLeather;
+    this->baseRefinedResourceMap[gatheredResources::WolfPelt] = gatheredResources::WolfLeather;
+    this->baseRefinedResourceMap[gatheredResources::Vines] = gatheredResources::VineRope;
+}
+
+bool Game::isRefined(int resource) {
+    if(resource <= MAX_UNREFINED)
+    {
+        return false;
+    }
+    return true;
 }
 
 bool Game::move(Player &p) {
@@ -179,7 +186,7 @@ bool Game::mine(Player &p) {
             return false;
         }
         std::cout<<"You mined "<<gatheredResourceMap[naturalGatheredResource[inputMap[resource]]]<< " from "<<naturalResourceMap[inputMap[resource]]<<std::endl;
-        p.addToInventory(naturalGatheredResource[resource]);
+        p.addToInventory(naturalGatheredResource[inputMap[resource]]);
         actionStruct a;
         a.action = actions::Mine;
         a.target = inputMap[resource];
@@ -189,6 +196,44 @@ bool Game::mine(Player &p) {
     std::cout<<"Please Select what you want to mine"<<std::endl;
 }
 
+bool Game::refine(Player &p) {
+    inputMap.clear();
+    std::cout<<"Please select an item from your inventory to refine:"<<std::endl;
+    for(int i = 0; i < p.inventory.size(); ++i)
+    {
+        if(!isRefined(p.inventory[i]))
+        {
+            std::cout<<"["<<i<<"] "<<gatheredResourceMap[p.inventory[i]]<<",";
+            inputMap[i] = p.inventory[i];
+        }
+    }
+    std::cout<<std::endl;
+    int refine;
+    std::cin>>refine;
+    if(refine >= p.inventory.size())
+    {
+        std::cout<<"Invalid Move"<<std::endl;
+        return false;
+    }
+    printPlayerInventory(p);
+    //std::cout<<inputMap[refine]<<std::endl;
+    std::cout<<"You refined "<<gatheredResourceMap[inputMap[refine]]<<" into "<<gatheredResourceMap[baseRefinedResourceMap[inputMap[refine]]]<<std::endl;
+    for (std::vector<int>::iterator it = p.inventory.begin() ; it != p.inventory.end(); it++)
+    {
+        if(*it == inputMap[refine])
+        {
+            p.inventory.erase(it);
+            break;
+        }
+    }
+    p.inventory.push_back(baseRefinedResourceMap[inputMap[refine]]);
+    printPlayerInventory(p);
+    actionStruct a;
+    a.action = actions::Refine;
+    a.target = inputMap[refine];
+    p.addAction(a);
+    return true;
+}
 
 bool Game::attack(Player &p) {
     inputMap.clear();
@@ -205,7 +250,7 @@ bool Game::attack(Player &p) {
     {
         return false;
     }
-    std::cout << "You killed the " << creatureMap[inputMap[creature]] << " and recieved " << rawMaterialsMap[creatureResource[inputMap[creature]]] << std::endl;
+    std::cout << "You killed the " << creatureMap[inputMap[creature]] << " and recieved " << gatheredResourceMap[creatureResource[inputMap[creature]]] << std::endl;
     p.addToInventory(creatureResource[creature]);
     actionStruct a;
     a.action = actions::Attack;
@@ -229,13 +274,19 @@ void Game::printPlayerActionStack(Player &p) {
 
         switch(currentAction.action)
         {
-            case 0:
+            case actions::Move:
                 std::cout<<locationMap[currentAction.target];
                 break;
-            case 3:
+            case actions::Chop:
                 std::cout<<gatheredResourceMap[currentAction.target];
                 break;
-            case 7:
+            case actions::Mine:
+                std::cout<<gatheredResourceMap[currentAction.target];
+                break;
+            case actions::Refine:
+                std::cout<<gatheredResourceMap[currentAction.target];
+                break;
+            case actions::Attack:
                 std::cout<<creatureMap[currentAction.target];
                 break;
         }
@@ -250,6 +301,9 @@ void Game::printPlayerActionStack(Player &p) {
 }
 
 void Game::printPlayerInventory(Player &p) {
-
-
+    for (std::vector<int>::iterator it = p.inventory.begin() ; it != p.inventory.end(); ++it)
+    {
+        std::cout<<gatheredResourceMap[*it]<<" ";
+    }
+    std::cout<<std::endl;
 }

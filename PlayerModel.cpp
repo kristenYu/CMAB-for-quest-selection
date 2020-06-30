@@ -10,6 +10,11 @@ void PlayerModel::updatePlayerActions(float *action) {
     {
         //std::cout<<action[i]<<std::endl;
         this->playerActions[i] = this->playerActions[i]*this->alpha + action[i];
+        //clamp the value at 1 -> This is to prevent explosion
+        if(this->playerActions[i] > 1)
+        {
+            this->playerActions[i] = 1;
+        }
     }
 }
 

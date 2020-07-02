@@ -9,17 +9,23 @@
 #define AI_DIRECTOR_PROTOTYPE_PLAYER_H
 #include "Structs/ActionStruct.h"
 #include "Structs/SchematicStruct.h"
-
+#include "EquippableItemsList.h"
+#include "Structs/EquippableItemStruct.h"
 
 class Player {
     //holds all the information for the player
 public:
     int location;
     std::vector<int> inventory;
+    std::vector<equippableItem> equippableItemsInventory;
     std::vector<actionStruct> actionStack;
     std::vector<actionStruct> reverseActionStack;
     std::vector<schematic> unlockedSchematics;
 
+    equippableItem armor;
+    equippableItem tool;
+
+    //player traits
     int gumption; //offense
     int moxie; //Defense/resistance
     int precision; //resource yield
@@ -58,10 +64,10 @@ public:
      *
      */
 
-
     void addAction(actionStruct a);
     void addToInventory(int item);
     void unlockSchematic(schematic unlock);
+    void addToEquippableInventory(equippableItem item);
 
     Player();
 

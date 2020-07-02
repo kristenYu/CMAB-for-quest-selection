@@ -109,6 +109,12 @@
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Enums/RefinedResource.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Game.cpp">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
@@ -142,7 +148,7 @@
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
-		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Structs/ItemStruct.h">
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h">

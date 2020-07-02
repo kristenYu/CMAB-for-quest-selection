@@ -13,12 +13,15 @@ class SchematicList {
 public:
     std::vector<schematic> list;
 
+    //equippable items
     schematic axePick;
     schematic fancyGun;
     schematic bearArmor;
     schematic defensiveArmor;
     schematic sharpenedAxePick;
     schematic toolbelt;
+
+    //buildings
     //schematic tinyHouse;
     //schematic craftingBench;
     //schematic wall;

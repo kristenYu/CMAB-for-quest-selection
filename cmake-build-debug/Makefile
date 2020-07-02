@@ -176,6 +176,33 @@ Actions.cpp.s:
 	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.s
 .PHONY : Actions.cpp.s
 
+EquippableItemsList.obj: EquippableItemsList.cpp.obj
+
+.PHONY : EquippableItemsList.obj
+
+# target to build an object file
+EquippableItemsList.cpp.obj:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/EquippableItemsList.cpp.obj
+.PHONY : EquippableItemsList.cpp.obj
+
+EquippableItemsList.i: EquippableItemsList.cpp.i
+
+.PHONY : EquippableItemsList.i
+
+# target to preprocess a source file
+EquippableItemsList.cpp.i:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/EquippableItemsList.cpp.i
+.PHONY : EquippableItemsList.cpp.i
+
+EquippableItemsList.s: EquippableItemsList.cpp.s
+
+.PHONY : EquippableItemsList.s
+
+# target to generate assembly for a file
+EquippableItemsList.cpp.s:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/EquippableItemsList.cpp.s
+.PHONY : EquippableItemsList.cpp.s
+
 Game.obj: Game.cpp.obj
 
 .PHONY : Game.obj
@@ -353,6 +380,9 @@ help:
 	@echo ... Actions.obj
 	@echo ... Actions.i
 	@echo ... Actions.s
+	@echo ... EquippableItemsList.obj
+	@echo ... EquippableItemsList.i
+	@echo ... EquippableItemsList.s
 	@echo ... Game.obj
 	@echo ... Game.i
 	@echo ... Game.s

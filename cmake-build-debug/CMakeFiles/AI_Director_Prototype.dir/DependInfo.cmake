@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/UofA/Research/AI_Director_Prototype/ActionUtils.cpp" "D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/ActionUtils.cpp.obj"
   "D:/UofA/Research/AI_Director_Prototype/Actions.cpp" "D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.obj"
+  "D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.cpp" "D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/EquippableItemsList.cpp.obj"
   "D:/UofA/Research/AI_Director_Prototype/Game.cpp" "D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj"
   "D:/UofA/Research/AI_Director_Prototype/Operators.cpp" "D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj"
   "D:/UofA/Research/AI_Director_Prototype/Player.cpp" "D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Player.cpp.obj"

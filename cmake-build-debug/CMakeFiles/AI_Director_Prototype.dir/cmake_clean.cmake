@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "AI_Director_Prototype.pdb"
   "CMakeFiles/AI_Director_Prototype.dir/ActionUtils.cpp.obj"
   "CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.obj"
+  "CMakeFiles/AI_Director_Prototype.dir/EquippableItemsList.cpp.obj"
   "CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj"
   "CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj"
   "CMakeFiles/AI_Director_Prototype.dir/Player.cpp.obj"

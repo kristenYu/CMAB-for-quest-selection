@@ -8,6 +8,18 @@
 
 Player::Player() {
     this->location = 1; //set the starting location at homestead
+    //start all stats at 20
+    int gumption = 20;
+    int moxie = 20;
+    int precision = 20;
+    int finesse = 20;
+    int brawn = 20;
+    int reason = 20;
+    int ingenuity = 20;
+    int mystique = 20;
+
+    tool.name = "null";
+    armor.name = "null";
 }
 
 void Player::addToInventory(int item) {
@@ -20,4 +32,8 @@ void Player::addAction(actionStruct a) {
 
 void Player::unlockSchematic(schematic unlock) {
     this->unlockedSchematics.push_back(unlock);
+}
+
+void Player::addToEquippableInventory(equippableItem item) {
+    this->equippableItemsInventory.push_back(item);
 }

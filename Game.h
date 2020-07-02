@@ -26,29 +26,39 @@ public:
     //std::unordered_map<int, std::string> refinedResourceMap;
     std::unordered_map<std::string, int> itemMap;
 
+
     //variables to bucket items
     static constexpr int MAX_NATURALRESOURCE = gatheredResources::PlantingEarth;
     static constexpr int MAX_UNREFINED = gatheredResources::Vines;
     bool isRefined(int resource);
 
-    //used to realign the input with the target enum
+    //used to realign the input with the target enums
     std::unordered_map<int, int> inputMap;
+
+    SchematicList schematicList;
+    std::vector<int> usedCrafting;
+    EquippableItemsList equippableItemsList;
+    bool removeFromVector(std::vector<int> &v, int value);
+    bool removeFromVector(std::vector<equippableItem> &v, std::string name);
 
     //actions
     bool move(Player &p);
     bool mine(Player &p);
     bool chop(Player &p);
+    bool craft(Player &p);
     bool refine(Player &p);
     bool attack(Player &p);
-    bool craft(Player &p);
+    bool equipItem(Player &p);
 
 
     //utility/make life easier things
     void printPlayerLocation(Player &p);
     void printPlayerActionStack(Player &p);
     void printPlayerInventory(Player &p);
+    void printPlayerEquippableItems(Player &p);
     actionStruct currentAction;
-    Game();
+    Game(Player &p);
+
 
     /*
     bool IsRefined(Material m) { return m > MAX_UNREFINED; }

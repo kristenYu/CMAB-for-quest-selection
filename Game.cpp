@@ -12,7 +12,7 @@
 //#include "Enums/RefinedResource.h"
 #include <iostream>
 
-Game::Game() {
+Game::Game(Player &p) {
     //set up the logic for all of the maps
     //maps action to string for printing purposes
     this->actionMap[actions::Move] = "Move";
@@ -95,6 +95,16 @@ Game::Game() {
     this->baseRefinedResourceMap[gatheredResources::BearPelt] = gatheredResources::BearLeather;
     this->baseRefinedResourceMap[gatheredResources::WolfPelt] = gatheredResources::WolfLeather;
     this->baseRefinedResourceMap[gatheredResources::Vines] = gatheredResources::VineRope;
+
+    //axpick
+    p.unlockedSchematics.push_back(schematicList.list[0]);
+    //toolbelt
+    p.unlockedSchematics.push_back(schematicList.list[5]);
+
+    //axepick
+    p.addToEquippableInventory(equippableItemsList.list[0]);
+    //fancygun
+    p.addToEquippableInventory(equippableItemsList.list[1]);
 }
 
 bool Game::isRefined(int resource) {
@@ -142,7 +152,7 @@ bool Game::chop(Player &p) {
         {
             return false;
         }
-        std::cout<<"You mined "<<gatheredResourceMap[naturalGatheredResource[inputMap[resource]]]<< " from "<<naturalResourceMap[inputMap[resource]]<<std::endl;
+        std::cout<<"You chopped "<<gatheredResourceMap[naturalGatheredResource[inputMap[resource]]]<< " from "<<naturalResourceMap[inputMap[resource]]<<std::endl;
         p.addToInventory(naturalGatheredResource[resource]);
         actionStruct a;
         a.action = actions::Chop;
@@ -154,11 +164,7 @@ bool Game::chop(Player &p) {
         std::cout<<"There is nothing to chop here"<<std::endl;
         return false;
     }
-
 }
-
-
-
 
 bool Game::mine(Player &p) {
     inputMap.clear();
@@ -196,7 +202,62 @@ bool Game::mine(Player &p) {
         p.actionStack.push_back(a);
         return true;
     }
-    std::cout<<"Please Select what you want to mine"<<std::endl;
+}
+
+bool Game::craft(Player &p) {
+    usedCrafting.clear();
+    inputMap.clear();
+    std::cout<<"Please select a schematic to craft"<<std::endl;
+    for(int i = 0; i < p.unlockedSchematics.size(); i++)
+    {
+        std::cout<<"["<<i<<"] "<<p.unlockedSchematics[i].name<<", ";
+    }
+    std::cout<<std::endl;
+    int schematic;
+    std::cin>>schematic;
+    if(schematic >= p.unlockedSchematics.size())
+    {
+        std::cout<<"Invalid Move"<<std::endl;
+        return false;
+    }
+    std::cout<<"This schematic requires the following items to craft"<<std::endl;
+    for(int i = 0; i<p.unlockedSchematics[schematic].requirements.size(); i++)
+    {
+        std::cout<<gatheredResourceMap[p.unlockedSchematics[schematic].requirements[i]]<<", ";
+        bool temp = removeFromVector(p.inventory, p.unlockedSchematics[schematic].requirements[i]);
+        if(temp){
+            usedCrafting.push_back(p.unlockedSchematics[schematic].requirements[i]);
+        }
+
+    }
+    std::cout<<std::endl;
+    if(usedCrafting.size() == p.unlockedSchematics[schematic].requirements.size())
+    {
+        std::cout<<"You crafted a "<<p.unlockedSchematics[schematic].name<<std::endl;
+        for(int i = 0; i < equippableItemsList.list.size(); i++)
+        {
+            std::cout<<equippableItemsList.list[i].name<<std::endl;
+            if(p.unlockedSchematics[schematic].name == equippableItemsList.list[i].name)
+            {
+                p.addToEquippableInventory(equippableItemsList.list[i]);
+                break;
+            }
+        }
+    } else{
+        std::cout<<"You do not have all of the items needed to craft this schematic"<<std::endl;
+        for(int i = 0; i < usedCrafting.size(); i++)
+        {
+            p.inventory.push_back(usedCrafting[i]);
+        }
+        return false;
+    }
+    printPlayerEquippableItems(p);
+    actionStruct a;
+    a.action = actions::Craft;
+    a.otherTarget = p.unlockedSchematics[schematic].name;
+    p.addAction(a);
+    return true;
+    return true;
 }
 
 bool Game::refine(Player &p) {
@@ -219,19 +280,13 @@ bool Game::refine(Player &p) {
         std::cout<<"Invalid Move"<<std::endl;
         return false;
     }
-    printPlayerInventory(p);
+    //printPlayerInventory(p);
     //std::cout<<inputMap[refine]<<std::endl;
     std::cout<<"You refined "<<gatheredResourceMap[inputMap[refine]]<<" into "<<gatheredResourceMap[baseRefinedResourceMap[inputMap[refine]]]<<std::endl;
-    for (std::vector<int>::iterator it = p.inventory.begin() ; it != p.inventory.end(); it++)
-    {
-        if(*it == inputMap[refine])
-        {
-            p.inventory.erase(it);
-            break;
-        }
-    }
+    bool temp = removeFromVector(p.inventory, inputMap[refine]);
+    std::cout<<temp<<std::endl;
     p.inventory.push_back(baseRefinedResourceMap[inputMap[refine]]);
-    printPlayerInventory(p);
+    //printPlayerInventory(p);
     actionStruct a;
     a.action = actions::Refine;
     a.target = inputMap[refine];
@@ -255,7 +310,7 @@ bool Game::attack(Player &p) {
         return false;
     }
     std::cout << "You killed the " << creatureMap[inputMap[creature]] << " and recieved " << gatheredResourceMap[creatureResource[inputMap[creature]]] << std::endl;
-    p.addToInventory(creatureResource[creature]);
+    p.addToInventory(creatureResource[inputMap[creature]]);
     actionStruct a;
     a.action = actions::Attack;
     a.target = inputMap[creature];
@@ -263,6 +318,49 @@ bool Game::attack(Player &p) {
     return true;
 }
 
+bool Game::equipItem(Player &p) {
+    std::cout<<"Please select an item to equip"<<std::endl;
+    for(int i = 0; i < p.equippableItemsInventory.size(); i++)
+    {
+        std::cout<<"["<<i<<"] "<<p.equippableItemsInventory[i].name<<", ";
+    }
+    std::cout<<std::endl;
+    int item;
+    if(item >= p.equippableItemsInventory.size())
+    {
+        std::cout<<"Invalid action"<<std::endl;
+        return false;
+    }
+    std::string itemName = p.equippableItemsInventory[item].name;
+    if(itemName == "AxePick" || itemName == "SharpenedAxePick" || itemName == "FancyGun")
+    {
+        if(p.tool.name != "null")
+        {
+            p.addToEquippableInventory(p.tool);
+        }
+        p.tool = p.equippableItemsInventory[item];
+        removeFromVector(p.equippableItemsInventory, itemName);
+        actionStruct a;
+        a.action = actions::Equip_Item;
+        a.otherTarget = itemName;
+        p.addAction(a);
+        return true;
+    }else if(itemName == "BearArmor" || itemName == "DefensiveArmor" || itemName == "ToolBelt")
+    {
+        if(p.armor.name != "null")
+        {
+            p.addToEquippableInventory(p.armor);
+        }
+        p.armor = p.equippableItemsInventory[item];
+        removeFromVector(p.equippableItemsInventory, itemName);
+        actionStruct a;
+        a.action = actions::Equip_Item;
+        a.otherTarget = itemName;
+        p.addAction(a);
+        return true;
+    } else{
+        return false;}
+}
 
 void Game::printPlayerLocation(Player &p) {
     std::cout<<"Player is in "<< locationMap[p.location]<<std::endl;
@@ -287,6 +385,9 @@ void Game::printPlayerActionStack(Player &p) {
             case actions::Mine:
                 std::cout<<gatheredResourceMap[currentAction.target];
                 break;
+            case actions::Craft:
+                std::cout<<currentAction.otherTarget;
+                break;
             case actions::Refine:
                 std::cout<<gatheredResourceMap[currentAction.target];
                 break;
@@ -310,4 +411,48 @@ void Game::printPlayerInventory(Player &p) {
         std::cout<<gatheredResourceMap[*it]<<" ";
     }
     std::cout<<std::endl;
+}
+
+void Game::printPlayerEquippableItems(Player &p) {
+    for (int i = 0; i < p.equippableItemsInventory.size(); i++)
+    {
+        std::cout<<p.equippableItemsInventory[i].name<<" ";
+    }
+    std::cout<<std::endl;
+}
+
+bool Game::removeFromVector(std::vector<int> &v, int value) {
+    int index = 1000;
+    for(int i = 0; i < v.size(); i++)
+    {
+        if(v[i] == value)
+        {
+            index = i;
+        }
+    }
+    if (index == 1000)
+    {
+        return false;
+    }
+    v[index] = v.back();
+    v.pop_back();
+    return true;
+}
+
+bool Game::removeFromVector(std::vector<equippableItem> &v, std::string name) {
+    int index = 1000;
+    for(int i = 0; i < v.size(); i++)
+    {
+        if(v[i].name == name)
+        {
+            index = i;
+        }
+    }
+    if (index == 1000)
+    {
+        return false;
+    }
+    v[index] = v.back();
+    v.pop_back();
+    return true;
 }

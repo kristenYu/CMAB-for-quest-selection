@@ -14,7 +14,7 @@ int main() {
     PlayerModel playerModel;
     Player player;
     Operators operators;
-    Game game;
+    Game game(player);
 
     bool keepPlaying = true;
     bool checkAction = true;
@@ -36,7 +36,6 @@ int main() {
             if(!checkAction)
             {
                 std::cout<<"Invalid action"<<std::endl;
-                break;
             }
         }
         else if(actionInput == actions::Chop)
@@ -45,22 +44,25 @@ int main() {
             if(!checkAction)
             {
                 std::cout<<"Invalid action"<<std::endl;
-                break;
             }
         }
         else if (actionInput == actions::Mine) {
             checkAction = game.mine(player);
             if (!checkAction) {
                 std::cout << "Invalid action" << std::endl;
-                break;
             }
 
+        } else if(actionInput == actions::Craft){
+            checkAction = game.craft(player);
+            if(!checkAction)
+            {
+                std::cout<<"Invalid action"<<std::endl;
+            }
         }else if(actionInput == actions::Refine)
         {
             checkAction = game.refine(player);
             if (!checkAction) {
                 std::cout << "Invalid action" << std::endl;
-                break;
             }
         }
         else if (actionInput == actions::Attack)
@@ -69,7 +71,14 @@ int main() {
             if(!checkAction)
             {
                 std::cout<<"Invalid action"<<std::endl;
-                break;
+            }
+        }
+        else if(actionInput == actions::Equip_Item)
+        {
+            checkAction = game.equipItem(player);
+            if(!checkAction)
+            {
+                std::cout<<"Invalid action"<<std::endl;
             }
         }
         else{

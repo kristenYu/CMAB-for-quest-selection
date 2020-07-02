@@ -8,6 +8,7 @@
 struct actionStruct{
     int action;
     int target;
+    std::string otherTarget;
 };
 
 #endif //AI_DIRECTOR_PROTOTYPE_ACTIONSTRUCT_H

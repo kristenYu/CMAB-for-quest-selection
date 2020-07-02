@@ -6,8 +6,6 @@
 
 #IncludeRegexTransform: 
 
-D:/UofA/Research/AI_Director_Prototype/ActionStruct.h
-
 D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
 
 D:/UofA/Research/AI_Director_Prototype/Enums/Creatures.h
@@ -17,6 +15,12 @@ D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
 D:/UofA/Research/AI_Director_Prototype/Enums/Locations.h
 
 D:/UofA/Research/AI_Director_Prototype/Enums/NaturalResources.h
+
+D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.h
+SchematicList.h
+D:/UofA/Research/AI_Director_Prototype/SchematicList.h
+Structs/EquippableItemStruct.h
+D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h
 
 D:/UofA/Research/AI_Director_Prototype/Game.cpp
 Game.h
@@ -41,8 +45,8 @@ unordered_map
 -
 Player.h
 D:/UofA/Research/AI_Director_Prototype/Player.h
-ActionStruct.h
-D:/UofA/Research/AI_Director_Prototype/ActionStruct.h
+Structs/ActionStruct.h
+D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
 Enums/GatheredResources.h
 D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
 
@@ -51,6 +55,30 @@ unordered_map
 -
 vector
 -
-ActionStruct.h
-D:/UofA/Research/AI_Director_Prototype/ActionStruct.h
+Structs/ActionStruct.h
+D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
+Structs/SchematicStruct.h
+D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
+EquippableItemsList.h
+D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.h
+Structs/EquippableItemStruct.h
+D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h
+
+D:/UofA/Research/AI_Director_Prototype/SchematicList.h
+vector
+-
+structs/SchematicStruct.h
+D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
+
+D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
+
+D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h
+SchematicStruct.h
+D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
+
+D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
+string
+-
+vector
+-
 

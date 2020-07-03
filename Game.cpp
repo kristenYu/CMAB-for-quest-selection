@@ -102,9 +102,9 @@ Game::Game(Player &p) {
     p.unlockedSchematics.push_back(schematicList.list[5]);
 
     //axepick
-    //p.addToEquippableInventory(equippableItemsList.list[0]);
+    p.addToEquippableInventory(equippableItemsList.list[0]);
     //fancygun
-    //p.addToEquippableInventory(equippableItemsList.list[1]);
+    p.addToEquippableInventory(equippableItemsList.list[1]);
 }
 
 bool Game::isRefined(int resource) {
@@ -326,6 +326,7 @@ bool Game::equipItem(Player &p) {
     }
     std::cout<<std::endl;
     int item;
+    std::cin>>item;
     if(item >= p.equippableItemsInventory.size())
     {
         std::cout<<"Invalid action"<<std::endl;
@@ -339,8 +340,10 @@ bool Game::equipItem(Player &p) {
             p.addToEquippableInventory(p.tool);
         }
         p.tool = p.equippableItemsInventory[item];
-        p.resetTraits();
-        p.updateTraits(p.tool);
+        std::cout<<p.tool.gumption<<std::endl;
+        printPlayerAptitudes(p);
+        updateAptitudes(p, p.tool);
+        printPlayerAptitudes(p);
         removeFromVector(p.equippableItemsInventory, itemName);
         actionStruct a;
         a.action = actions::Equip_Item;
@@ -354,7 +357,6 @@ bool Game::equipItem(Player &p) {
             p.addToEquippableInventory(p.armor);
         }
         p.armor = p.equippableItemsInventory[item];
-        p.resetTraits();
         p.updateTraits(p.armor);
         removeFromVector(p.equippableItemsInventory, itemName);
         actionStruct a;
@@ -364,6 +366,46 @@ bool Game::equipItem(Player &p) {
         return true;
     } else{
         return false;}
+}
+
+void Game::updateAptitudes(Player &p, equippableItem item) {
+    if(item.name == "AxePick" || item.name == "SharpenedAxePick" || item.name == "FancyGun") {
+        if(p.tool.name != "null")
+        {
+            //remove aptitudes of the current tool.
+            p.gumption -= p.tool.gumption;
+            p.moxie -= p.tool.moxie;
+            p.precision -= p.tool.precision;
+            p.finesse -= p.tool.finesse;
+            p.brawn -= p.tool.brawn;
+            p.reason -= p.tool.reason;
+            p.ingenuity -= p.tool.ingenuity;
+            p.mystique -= p.tool.mystique;
+        }
+    }else if(item.name == "BearArmor" || item.name == "DefensiveArmor" || item.name == "ToolBelt") {
+        if(p.armor.name != "null")
+        {
+            //remove aptitudes of the current armor
+            p.gumption -= p.armor.gumption;
+            p.moxie -= p.armor.moxie;
+            p.precision -= p.armor.precision;
+            p.finesse -= p.armor.finesse;
+            p.brawn -= p.armor.brawn;
+            p.reason -= p.armor.reason;
+            p.ingenuity -= p.armor.ingenuity;
+            p.mystique -= p.armor.mystique;
+        }
+    }
+    std::cout<<item.reason<<std::endl;
+    p.gumption = p.gumption + item.gumption;
+    //std::cout<<p.gumption<<std::endl;
+    p.moxie = p.moxie + item.moxie;
+    p.precision = p.precision + item.precision;
+    p.finesse = p.finesse + item.finesse;
+    p.brawn = p.brawn + item.brawn;
+    p.reason = p.reason + item.reason;
+    p.ingenuity = p.ingenuity + item.ingenuity;
+    p.mystique = p.mystique + item.mystique;
 }
 
 void Game::printPlayerLocation(Player &p) {
@@ -425,6 +467,17 @@ void Game::printPlayerEquippableItems(Player &p) {
         std::cout<<p.equippableItemsInventory[i].name<<" ";
     }
     std::cout<<std::endl;
+}
+
+void Game::printPlayerAptitudes(Player &p) {
+    std::cout<<"Gumption: "<<p.gumption<<std::endl;
+    std::cout<<"Moxie: "<<p.moxie<<std::endl;
+    std::cout<<"Precision: "<<p.precision<<std::endl;
+    std::cout<<"Finesse: "<<p.finesse<<std::endl;
+    std::cout<<"Brawn: "<<p.brawn<<std::endl;
+    std::cout<<"Reason: "<<p.reason<<std::endl;
+    std::cout<<"Ingenuity: "<<p.ingenuity<<std::endl;
+    std::cout<<"Mystique: "<<p.mystique<<std::endl;
 }
 
 bool Game::removeFromVector(std::vector<int> &v, int value) {

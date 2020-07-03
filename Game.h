@@ -38,6 +38,7 @@ public:
     SchematicList schematicList;
     std::vector<int> usedCrafting;
     EquippableItemsList equippableItemsList;
+    void updateAptitudes(Player &p, equippableItem item);
     bool removeFromVector(std::vector<int> &v, int value);
     bool removeFromVector(std::vector<equippableItem> &v, std::string name);
 
@@ -56,6 +57,7 @@ public:
     void printPlayerActionStack(Player &p);
     void printPlayerInventory(Player &p);
     void printPlayerEquippableItems(Player &p);
+    void printPlayerAptitudes(Player &p);
     actionStruct currentAction;
     Game(Player &p);
 

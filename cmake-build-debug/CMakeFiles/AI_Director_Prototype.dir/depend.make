@@ -48,13 +48,31 @@ CMakeFiles/AI_Director_Prototype.dir/Player.cpp.obj: ../Structs/ActionStruct.h
 CMakeFiles/AI_Director_Prototype.dir/Player.cpp.obj: ../Structs/EquippableItemStruct.h
 CMakeFiles/AI_Director_Prototype.dir/Player.cpp.obj: ../Structs/SchematicStruct.h
 
+CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj: ../EquippableItemsList.h
+CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj: ../Player.h
 CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj: ../PlayerModel.cpp
 CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj: ../PlayerModel.h
+CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj: ../SchematicList.h
+CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj: ../Structs/ActionStruct.h
+CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj: ../Structs/EquippableItemStruct.h
+CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj: ../Structs/SchematicStruct.h
 
 CMakeFiles/AI_Director_Prototype.dir/SchematicList.cpp.obj: ../Enums/GatheredResources.h
 CMakeFiles/AI_Director_Prototype.dir/SchematicList.cpp.obj: ../SchematicList.cpp
 CMakeFiles/AI_Director_Prototype.dir/SchematicList.cpp.obj: ../SchematicList.h
 CMakeFiles/AI_Director_Prototype.dir/SchematicList.cpp.obj: ../Structs/SchematicStruct.h
 
+CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../ActionUtils.h
+CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Enums/Actions.h
+CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Enums/GatheredResources.h
+CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../EquippableItemsList.h
+CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Game.h
+CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Operators.h
+CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Player.h
+CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../PlayerModel.h
+CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../SchematicList.h
+CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Structs/ActionStruct.h
+CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Structs/EquippableItemStruct.h
+CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Structs/SchematicStruct.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../main.cpp
 

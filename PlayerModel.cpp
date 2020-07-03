@@ -23,3 +23,20 @@ void PlayerModel::printPlayerActions() {
     std::cout<<"Attack: "<<playerActions[0]<<" Defense: "<<playerActions[1];
     std::cout<<" Crafting: "<<playerActions[2]<< " Gathering: "<<playerActions[3]<<std::endl;
 }
+
+void PlayerModel::updatePlayerStyle(Player &p) {
+    //attack
+    this->playerStyle[0] = (2*p.gumption + p.brawn + 3*p.ingenuity + p.reason)/(7*this->maxAptitude);
+    //defense
+    this->playerStyle[1] = (p.gumption + 2*p.brawn + 4*p.moxie + 2*p.mystique + p.ingenuity)/(10*this->maxAptitude);
+    //crafting
+    this->playerStyle[2] = (2*p.finesse + p.ingenuity)/(3*this->maxAptitude);
+    //gathering
+    this->playerStyle[3] = (2*p.precision + p.mystique + p.brawn + p.ingenuity + p.reason)/(6*this->maxAptitude);
+}
+
+void PlayerModel::printPlayerStyle() {
+    std::cout<<"player style vector: ";
+    std::cout<<"Attack: "<<playerStyle[0]<<" Defense: "<<playerStyle[1];
+    std::cout<<" Crafting: "<<playerStyle[2]<< " Gathering: "<<playerStyle[3]<<std::endl;
+}

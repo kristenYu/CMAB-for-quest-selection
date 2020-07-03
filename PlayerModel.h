@@ -4,7 +4,7 @@
 
 #ifndef AI_DIRECTOR_PROTOTYPE_PLAYERMODEL_H
 #define AI_DIRECTOR_PROTOTYPE_PLAYERMODEL_H
-
+#include "Player.h"
 class PlayerModel {
  public:
     void updatePlayerActions(float *action);
@@ -13,6 +13,11 @@ class PlayerModel {
     float playerActions[4] = {0};
     float alpha = 0.5;
     int roles = 4;
+
+    int maxAptitude = 40;
+    float playerStyle[4] = {0};
+    void updatePlayerStyle(Player &p);
+    void printPlayerStyle();
 };
 
 #endif //AI_DIRECTOR_PROTOTYPE_PLAYERMODEL_H

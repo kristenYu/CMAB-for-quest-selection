@@ -3,4 +3,34 @@ project(AI_Director_Prototype)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(AI_Director_Prototype main.cpp Actions.cpp ActionUtils.cpp ActionUtils.h PlayerModel.cpp PlayerModel.h Player.cpp Player.h Enums/Locations.h Operators.cpp Operators.h Enums/Creatures.h Enums/RawMaterials.h Game.cpp Game.h Enums/NaturalResources.h Enums/GatheredResources.h Structs/ActionStruct.h Enums/RefinedResource.h Structs/EquippableItemStruct.h Structs/SchematicStruct.h SchematicList.cpp SchematicList.h EquippableItemsList.cpp EquippableItemsList.h)
+include_directories(.)
+include_directories(Enums)
+include_directories(Structs)
+
+add_executable(AI_Director_Prototype
+    Enums/Actions.h
+    Enums/Creatures.h
+    Enums/GatheredResources.h
+    Enums/Locations.h
+    Enums/NaturalResources.h
+    Enums/RawMaterials.h
+    Enums/RefinedResource.h
+    Structs/ActionStruct.h
+    Structs/EquippableItemStruct.h
+    Structs/SchematicStruct.h
+    Actions.cpp
+    ActionUtils.cpp
+    ActionUtils.h
+    EquippableItemsList.cpp
+    EquippableItemsList.h
+    Game.cpp
+    Game.h
+    main.cpp
+    Operators.cpp
+    Operators.h
+    Player.cpp
+    Player.h
+    PlayerModel.cpp
+    PlayerModel.h
+    SchematicList.cpp
+    SchematicList.h)

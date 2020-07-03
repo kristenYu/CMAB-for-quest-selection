@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+D:/UofA/Research/AI_Director_Prototype/ActionUtils.cpp
+iostream
+-
+Enums/Actions.h
+D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
+ActionUtils.h
+D:/UofA/Research/AI_Director_Prototype/ActionUtils.h
+
+D:/UofA/Research/AI_Director_Prototype/ActionUtils.h
+unordered_map
+-
+
+D:/UofA/Research/AI_Director_Prototype/Actions.cpp
+Enums/Actions.h
+D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
+
 D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
 
 D:/UofA/Research/AI_Director_Prototype/Enums/Creatures.h
@@ -15,6 +31,12 @@ D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
 D:/UofA/Research/AI_Director_Prototype/Enums/Locations.h
 
 D:/UofA/Research/AI_Director_Prototype/Enums/NaturalResources.h
+
+D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.cpp
+EquippableItemsList.h
+D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.h
+SchematicList.h
+D:/UofA/Research/AI_Director_Prototype/SchematicList.h
 
 D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.h
 SchematicList.h
@@ -50,6 +72,28 @@ D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
 Enums/GatheredResources.h
 D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
 
+D:/UofA/Research/AI_Director_Prototype/Operators.cpp
+Operators.h
+D:/UofA/Research/AI_Director_Prototype/Operators.h
+Player.h
+D:/UofA/Research/AI_Director_Prototype/Player.h
+iostream
+-
+Game.h
+D:/UofA/Research/AI_Director_Prototype/Game.h
+
+D:/UofA/Research/AI_Director_Prototype/Operators.h
+Player.h
+D:/UofA/Research/AI_Director_Prototype/Player.h
+
+D:/UofA/Research/AI_Director_Prototype/Player.cpp
+Player.h
+D:/UofA/Research/AI_Director_Prototype/Player.h
+iostream
+-
+Enums/Locations.h
+D:/UofA/Research/AI_Director_Prototype/Enums/Locations.h
+
 D:/UofA/Research/AI_Director_Prototype/Player.h
 unordered_map
 -
@@ -63,6 +107,20 @@ EquippableItemsList.h
 D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.h
 Structs/EquippableItemStruct.h
 D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h
+
+D:/UofA/Research/AI_Director_Prototype/PlayerModel.cpp
+iostream
+-
+PlayerModel.h
+D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
+
+D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
+
+D:/UofA/Research/AI_Director_Prototype/SchematicList.cpp
+SchematicList.h
+D:/UofA/Research/AI_Director_Prototype/SchematicList.h
+Enums/GatheredResources.h
+D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
 
 D:/UofA/Research/AI_Director_Prototype/SchematicList.h
 vector

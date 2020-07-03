@@ -24,6 +24,9 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="D:/UofA/Research/AI_Director_Prototype/."/>
+					<Add directory="D:/UofA/Research/AI_Director_Prototype/Enums"/>
+					<Add directory="D:/UofA/Research/AI_Director_Prototype/Structs"/>
 					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../include/c++/6.2.0"/>
 					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../include/c++/6.2.0/x86_64-w64-mingw32"/>
 					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../include/c++/6.2.0/backward"/>
@@ -46,6 +49,9 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="D:/UofA/Research/AI_Director_Prototype/."/>
+					<Add directory="D:/UofA/Research/AI_Director_Prototype/Enums"/>
+					<Add directory="D:/UofA/Research/AI_Director_Prototype/Structs"/>
 					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../include/c++/6.2.0"/>
 					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../include/c++/6.2.0/x86_64-w64-mingw32"/>
 					<Add directory="D:/Programs/8.2.1/mingw/bin/../lib/gcc/x86_64-w64-mingw32/6.2.0/../../../../include/c++/6.2.0/backward"/>
@@ -89,6 +95,9 @@
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Actions.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Enums/Creatures.h">

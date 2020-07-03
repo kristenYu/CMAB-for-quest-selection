@@ -8,19 +8,41 @@
 
 Player::Player() {
     this->location = 1; //set the starting location at homestead
-    //start all stats at 20
-    int gumption = 20;
-    int moxie = 20;
-    int precision = 20;
-    int finesse = 20;
-    int brawn = 20;
-    int reason = 20;
-    int ingenuity = 20;
-    int mystique = 20;
+    //starting stats
+    gumption = 0;
+    moxie = 0;
+    precision = 0;
+    finesse = 0;
+    brawn = 0;
+    reason = 0;
+    ingenuity = 0;
+    mystique = 0;
 
     tool.name = "null";
     armor.name = "null";
 }
+void Player::resetTraits() {
+    gumption = 0;
+    moxie = 0;
+    precision = 0;
+    finesse = 0;
+    brawn = 0;
+    reason = 0;
+    ingenuity = 0;
+    mystique = 0;
+}
+
+void Player::updateTraits(equippableItem item) {
+    gumption += item.gumption;
+    moxie += item.moxie;
+    precision += item.precision;
+    finesse += item.finesse;
+    brawn += item.brawn;
+    reason += item.reason;
+    ingenuity += item.ingenuity;
+    mystique += item.mystique;
+}
+
 
 void Player::addToInventory(int item) {
     this->inventory.push_back(item);

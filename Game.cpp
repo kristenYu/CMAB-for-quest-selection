@@ -102,9 +102,9 @@ Game::Game(Player &p) {
     p.unlockedSchematics.push_back(schematicList.list[5]);
 
     //axepick
-    p.addToEquippableInventory(equippableItemsList.list[0]);
+    //p.addToEquippableInventory(equippableItemsList.list[0]);
     //fancygun
-    p.addToEquippableInventory(equippableItemsList.list[1]);
+    //p.addToEquippableInventory(equippableItemsList.list[1]);
 }
 
 bool Game::isRefined(int resource) {
@@ -339,6 +339,8 @@ bool Game::equipItem(Player &p) {
             p.addToEquippableInventory(p.tool);
         }
         p.tool = p.equippableItemsInventory[item];
+        p.resetTraits();
+        p.updateTraits(p.tool);
         removeFromVector(p.equippableItemsInventory, itemName);
         actionStruct a;
         a.action = actions::Equip_Item;
@@ -352,6 +354,8 @@ bool Game::equipItem(Player &p) {
             p.addToEquippableInventory(p.armor);
         }
         p.armor = p.equippableItemsInventory[item];
+        p.resetTraits();
+        p.updateTraits(p.armor);
         removeFromVector(p.equippableItemsInventory, itemName);
         actionStruct a;
         a.action = actions::Equip_Item;
@@ -394,6 +398,8 @@ void Game::printPlayerActionStack(Player &p) {
             case actions::Attack:
                 std::cout<<creatureMap[currentAction.target];
                 break;
+            case actions::Equip_Item:
+                std::cout<<currentAction.otherTarget;
         }
         std::cout<<",";
     }

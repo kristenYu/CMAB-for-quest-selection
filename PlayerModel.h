@@ -16,6 +16,8 @@ class PlayerModel {
 
     int maxAptitude = 40;
     float playerStyle[4] = {0};
+    float numer;
+    float denom;
     void updatePlayerStyle(Player &p);
     void printPlayerStyle();
 };

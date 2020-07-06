@@ -12,44 +12,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6575b13b-b741-42bb-853b-af43f0fa8dd7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Objects/BlueprintsList.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Objects/BlueprintsList.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Objects/BuildingsList.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Objects/BuildingsList.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Structs/BlueprintStruct.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Structs/BuildingStruct.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EquippableItemsList.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/EquippableItemsList.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EquippableItemsList.h" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/EquippableItemsList.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchematicList.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/SchematicList.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchematicList.h" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/SchematicList.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/AI_Director_Prototype.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AI_Director_Prototype.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerModel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerModel.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/AI_Director_Prototype.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AI_Director_Prototype.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/EquippableItemsList.cpp.obj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Player.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Player.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/SchematicList.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1593812162899</updated>
       <workItem from="1593812167151" duration="5192000" />
-      <workItem from="1594048139384" duration="11926000" />
+      <workItem from="1594048139384" duration="12233000" />
     </task>
     <servers />
   </component>
@@ -104,21 +73,21 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1594075501706">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1594075861733">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594075501706" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1594075501706">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594075861733" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1594075861732">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594075501706" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1594075501705">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594075861732" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1594075861732">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594075501705" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1594075501706">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594075861732" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1594075861732">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594075501706" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594075861732" />
   </component>
 </project>

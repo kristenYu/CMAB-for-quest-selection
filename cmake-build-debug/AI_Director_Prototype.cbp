@@ -118,16 +118,34 @@
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Enums/RefinedResource.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
-		<Unit filename="D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.cpp">
-			<Option target="AI_Director_Prototype"/>
-		</Unit>
-		<Unit filename="D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.h">
-			<Option target="AI_Director_Prototype"/>
-		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Game.cpp">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Game.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/BuildingsList.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/BuildingsList.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Operators.cpp">
@@ -148,13 +166,13 @@
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/PlayerModel.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
-		<Unit filename="D:/UofA/Research/AI_Director_Prototype/SchematicList.cpp">
-			<Option target="AI_Director_Prototype"/>
-		</Unit>
-		<Unit filename="D:/UofA/Research/AI_Director_Prototype/SchematicList.h">
-			<Option target="AI_Director_Prototype"/>
-		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Structs/BlueprintStruct.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Structs/BuildingStruct.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h">

@@ -88,3 +88,7 @@ void Player::unlockSchematic(schematic unlock) {
 void Player::addToEquippableInventory(equippableItem item) {
     this->equippableItemsInventory.push_back(item);
 }
+
+void Player::unlockBlueprint(blueprint bp) {
+    this->unlockedBlueprints.push_back(bp);
+}

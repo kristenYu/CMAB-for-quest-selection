@@ -38,6 +38,14 @@ int main() {
                 std::cout<<"Invalid action"<<std::endl;
             }
         }
+        else if(actionInput == actions::Blueprint)
+        {
+            checkAction = game.Blueprint(player);
+            if(!checkAction)
+            {
+                std::cout<<"Invalid action"<<std::endl;
+            }
+        }
         else if(actionInput == actions::Chop)
         {
             checkAction = game.chop(player);
@@ -51,8 +59,15 @@ int main() {
             if (!checkAction) {
                 std::cout << "Invalid action" << std::endl;
             }
+        } else if(actionInput == actions::Build)
+        {
+            checkAction = game.Build(player);
+            if (!checkAction) {
+                std::cout << "Invalid action" << std::endl;
+            }
+        }
 
-        } else if(actionInput == actions::Craft){
+        else if(actionInput == actions::Craft){
             checkAction = game.craft(player);
             if(!checkAction)
             {

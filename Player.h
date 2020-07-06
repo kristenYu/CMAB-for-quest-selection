@@ -9,8 +9,9 @@
 #define AI_DIRECTOR_PROTOTYPE_PLAYER_H
 #include "Structs/ActionStruct.h"
 #include "Structs/SchematicStruct.h"
-#include "EquippableItemsList.h"
+#include "Objects/EquippableItemsList.h"
 #include "Structs/EquippableItemStruct.h"
+#include "Structs/BlueprintStruct.h"
 
 class Player {
     //holds all the information for the player
@@ -21,6 +22,8 @@ public:
     std::vector<actionStruct> actionStack;
     std::vector<actionStruct> reverseActionStack;
     std::vector<schematic> unlockedSchematics;
+    std::vector<blueprint> unlockedBlueprints;
+
 
     equippableItem armor;
     equippableItem tool;
@@ -65,10 +68,12 @@ public:
      *
      */
 
+
     void addAction(actionStruct a);
     void addToInventory(int item);
     void unlockSchematic(schematic unlock);
     void addToEquippableInventory(equippableItem item);
+    void unlockBlueprint(blueprint bp);
 
     Player();
 

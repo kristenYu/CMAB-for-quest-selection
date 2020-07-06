@@ -8,71 +8,100 @@ CMakeFiles/AI_Director_Prototype.dir/ActionUtils.cpp.obj
 CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.obj
  D:/UofA/Research/AI_Director_Prototype/Actions.cpp
  D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
-CMakeFiles/AI_Director_Prototype.dir/EquippableItemsList.cpp.obj
- D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.cpp
- D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.h
- D:/UofA/Research/AI_Director_Prototype/SchematicList.h
- D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h
- D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
 CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj
+ ../Structs/BlueprintStruct.h
+ ../Structs/BuildingStruct.h
  D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
  D:/UofA/Research/AI_Director_Prototype/Enums/Creatures.h
  D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
  D:/UofA/Research/AI_Director_Prototype/Enums/Locations.h
  D:/UofA/Research/AI_Director_Prototype/Enums/NaturalResources.h
- D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.h
  D:/UofA/Research/AI_Director_Prototype/Game.cpp
  D:/UofA/Research/AI_Director_Prototype/Game.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/BuildingsList.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h
  D:/UofA/Research/AI_Director_Prototype/Player.h
- D:/UofA/Research/AI_Director_Prototype/SchematicList.h
  D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
+ D:/UofA/Research/AI_Director_Prototype/Structs/BlueprintStruct.h
  D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h
  D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
+CMakeFiles/AI_Director_Prototype.dir/Objects/BlueprintsList.cpp.obj
+ ../Enums/GatheredResources.h
+ ../Structs/BlueprintStruct.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.cpp
+ D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.h
+CMakeFiles/AI_Director_Prototype.dir/Objects/BuildingsList.cpp.obj
+ ../Enums/GatheredResources.h
+ ../Structs/BlueprintStruct.h
+ ../Structs/BuildingStruct.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/BuildingsList.cpp
+ D:/UofA/Research/AI_Director_Prototype/Objects/BuildingsList.h
+CMakeFiles/AI_Director_Prototype.dir/Objects/EquippableItemsList.cpp.obj
+ ../Structs/EquippableItemStruct.h
+ ../Structs/SchematicStruct.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.cpp
+ D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h
+CMakeFiles/AI_Director_Prototype.dir/Objects/SchematicList.cpp.obj
+ ../Enums/GatheredResources.h
+ ../Structs/SchematicStruct.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.cpp
+ D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h
 CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj
+ ../Structs/BlueprintStruct.h
+ ../Structs/BuildingStruct.h
  D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
- D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.h
  D:/UofA/Research/AI_Director_Prototype/Game.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/BuildingsList.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h
  D:/UofA/Research/AI_Director_Prototype/Operators.cpp
  D:/UofA/Research/AI_Director_Prototype/Operators.h
  D:/UofA/Research/AI_Director_Prototype/Player.h
- D:/UofA/Research/AI_Director_Prototype/SchematicList.h
  D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
+ D:/UofA/Research/AI_Director_Prototype/Structs/BlueprintStruct.h
  D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h
  D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
 CMakeFiles/AI_Director_Prototype.dir/Player.cpp.obj
  D:/UofA/Research/AI_Director_Prototype/Enums/Locations.h
- D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h
  D:/UofA/Research/AI_Director_Prototype/Player.cpp
  D:/UofA/Research/AI_Director_Prototype/Player.h
- D:/UofA/Research/AI_Director_Prototype/SchematicList.h
  D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
+ D:/UofA/Research/AI_Director_Prototype/Structs/BlueprintStruct.h
  D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h
  D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
 CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj
- D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h
  D:/UofA/Research/AI_Director_Prototype/Player.h
  D:/UofA/Research/AI_Director_Prototype/PlayerModel.cpp
  D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
- D:/UofA/Research/AI_Director_Prototype/SchematicList.h
  D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
+ D:/UofA/Research/AI_Director_Prototype/Structs/BlueprintStruct.h
  D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h
  D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
-CMakeFiles/AI_Director_Prototype.dir/SchematicList.cpp.obj
- D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
- D:/UofA/Research/AI_Director_Prototype/SchematicList.cpp
- D:/UofA/Research/AI_Director_Prototype/SchematicList.h
- D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj
+ ../Structs/BlueprintStruct.h
+ ../Structs/BuildingStruct.h
  D:/UofA/Research/AI_Director_Prototype/ActionUtils.h
  D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
  D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
- D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.h
  D:/UofA/Research/AI_Director_Prototype/Game.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/BuildingsList.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h
  D:/UofA/Research/AI_Director_Prototype/Operators.h
  D:/UofA/Research/AI_Director_Prototype/Player.h
  D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
- D:/UofA/Research/AI_Director_Prototype/SchematicList.h
  D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
+ D:/UofA/Research/AI_Director_Prototype/Structs/BlueprintStruct.h
  D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h
  D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
  D:/UofA/Research/AI_Director_Prototype/main.cpp

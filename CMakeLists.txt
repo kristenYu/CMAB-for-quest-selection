@@ -21,8 +21,8 @@ add_executable(AI_Director_Prototype
     Actions.cpp
     ActionUtils.cpp
     ActionUtils.h
-    EquippableItemsList.cpp
-    EquippableItemsList.h
+        Objects/EquippableItemsList.cpp
+        Objects/EquippableItemsList.h
     Game.cpp
     Game.h
     main.cpp
@@ -32,5 +32,5 @@ add_executable(AI_Director_Prototype
     Player.h
     PlayerModel.cpp
     PlayerModel.h
-    SchematicList.cpp
-    SchematicList.h)
+        Objects/SchematicList.cpp
+        Objects/SchematicList.h Objects/BuildingsList.cpp Objects/BuildingsList.h Objects/BlueprintsList.cpp Objects/BlueprintsList.h Structs/BlueprintStruct.h Structs/BuildingStruct.h)

@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+../Structs/BlueprintStruct.h
+string
+-
+vector
+-
+
+../Structs/BuildingStruct.h
+BlueprintStruct.h
+../Structs/BlueprintStruct.h
+
 D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
 
 D:/UofA/Research/AI_Director_Prototype/Enums/Creatures.h
@@ -15,12 +25,6 @@ D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
 D:/UofA/Research/AI_Director_Prototype/Enums/Locations.h
 
 D:/UofA/Research/AI_Director_Prototype/Enums/NaturalResources.h
-
-D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.h
-SchematicList.h
-D:/UofA/Research/AI_Director_Prototype/SchematicList.h
-Structs/EquippableItemStruct.h
-D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h
 
 D:/UofA/Research/AI_Director_Prototype/Game.cpp
 Game.h
@@ -49,6 +53,32 @@ Structs/ActionStruct.h
 D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
 Enums/GatheredResources.h
 D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
+Objects/BlueprintsList.h
+D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.h
+Objects/BuildingsList.h
+D:/UofA/Research/AI_Director_Prototype/Objects/BuildingsList.h
+
+D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.h
+Structs/BlueprintStruct.h
+D:/UofA/Research/AI_Director_Prototype/Objects/Structs/BlueprintStruct.h
+Enums/GatheredResources.h
+D:/UofA/Research/AI_Director_Prototype/Objects/Enums/GatheredResources.h
+
+D:/UofA/Research/AI_Director_Prototype/Objects/BuildingsList.h
+BuildingStruct.h
+D:/UofA/Research/AI_Director_Prototype/Objects/BuildingStruct.h
+
+D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h
+SchematicList.h
+D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h
+Structs/EquippableItemStruct.h
+D:/UofA/Research/AI_Director_Prototype/Objects/Structs/EquippableItemStruct.h
+
+D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h
+vector
+-
+Structs/SchematicStruct.h
+D:/UofA/Research/AI_Director_Prototype/Objects/Structs/SchematicStruct.h
 
 D:/UofA/Research/AI_Director_Prototype/Player.h
 unordered_map
@@ -59,18 +89,20 @@ Structs/ActionStruct.h
 D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
 Structs/SchematicStruct.h
 D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
-EquippableItemsList.h
-D:/UofA/Research/AI_Director_Prototype/EquippableItemsList.h
+Objects/EquippableItemsList.h
+D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h
 Structs/EquippableItemStruct.h
 D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h
-
-D:/UofA/Research/AI_Director_Prototype/SchematicList.h
-vector
--
-structs/SchematicStruct.h
-D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
+Structs/BlueprintStruct.h
+D:/UofA/Research/AI_Director_Prototype/Structs/BlueprintStruct.h
 
 D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
+
+D:/UofA/Research/AI_Director_Prototype/Structs/BlueprintStruct.h
+string
+-
+vector
+-
 
 D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h
 SchematicStruct.h

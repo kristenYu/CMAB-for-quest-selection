@@ -1,14 +1,16 @@
 //
 // Created by Sticky on 6/25/2020.
 //
+
+#ifndef AI_DIRECTOR_PROTOTYPE_GAME_H
+#define AI_DIRECTOR_PROTOTYPE_GAME_H
 #include <string>
 #include <unordered_map>
 #include "Player.h"
 #include "Structs/ActionStruct.h"
 #include "Enums/GatheredResources.h"
-#ifndef AI_DIRECTOR_PROTOTYPE_GAME_H
-#define AI_DIRECTOR_PROTOTYPE_GAME_H
-
+#include "Objects/BlueprintsList.h"
+#include "Objects/BuildingsList.h"
 
 class Game {
 public:
@@ -23,8 +25,10 @@ public:
     std::unordered_map<int, std::string> gatheredResourceMap;
     std::unordered_map<int, std::vector<int>> locationNaturalResource;
     std::unordered_map<int, int> baseRefinedResourceMap;
+    std::unordered_map<int, std::vector<blueprint>> locationBlueprints;
+    std::unordered_map<int, std::vector<building>> locationBuildings;
     //std::unordered_map<int, std::string> refinedResourceMap;
-    std::unordered_map<std::string, int> itemMap;
+    //std::unordered_map<std::string, int> itemMap;
 
 
     //variables to bucket items
@@ -38,14 +42,30 @@ public:
     SchematicList schematicList;
     std::vector<int> usedCrafting;
     EquippableItemsList equippableItemsList;
-    void updateAptitudes(Player &p, equippableItem item);
+
+    BlueprintsList blueprintsList;
+    BuildingsList buildingsList;
+    std::vector<blueprint> forestBlueprints;
+    std::vector<building> forestBuildings;
+    std::vector<blueprint> homesteadBlueprints;
+    std::vector<building> homesteadBuildings;
+    std::vector<blueprint> nightingaleBlueprints;
+    std::vector<building> nightingaleBuildings;
+    std::vector<blueprint> swampBlueprints;
+    std::vector<building> swampBuildings;
+    std::vector<blueprint> mountainBlueprints;
+    std::vector<building> mountainBuildings;
+
     bool removeFromVector(std::vector<int> &v, int value);
     bool removeFromVector(std::vector<equippableItem> &v, std::string name);
+    bool removeFromVector(std::vector<blueprint> &v, std::string name);
 
     //actions
     bool move(Player &p);
+    bool Blueprint(Player &p);
     bool mine(Player &p);
     bool chop(Player &p);
+    bool Build(Player &p);
     bool craft(Player &p);
     bool refine(Player &p);
     bool attack(Player &p);
@@ -58,6 +78,9 @@ public:
     void printPlayerInventory(Player &p);
     void printPlayerEquippableItems(Player &p);
     void printPlayerAptitudes(Player &p);
+    void printBuildingLocation(std::vector<building> &v);
+    void printBlueprintLocation(std::vector<blueprint> &v);
+
     actionStruct currentAction;
     Game(Player &p);
 

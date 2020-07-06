@@ -176,33 +176,6 @@ Actions.cpp.s:
 	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.s
 .PHONY : Actions.cpp.s
 
-EquippableItemsList.obj: EquippableItemsList.cpp.obj
-
-.PHONY : EquippableItemsList.obj
-
-# target to build an object file
-EquippableItemsList.cpp.obj:
-	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/EquippableItemsList.cpp.obj
-.PHONY : EquippableItemsList.cpp.obj
-
-EquippableItemsList.i: EquippableItemsList.cpp.i
-
-.PHONY : EquippableItemsList.i
-
-# target to preprocess a source file
-EquippableItemsList.cpp.i:
-	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/EquippableItemsList.cpp.i
-.PHONY : EquippableItemsList.cpp.i
-
-EquippableItemsList.s: EquippableItemsList.cpp.s
-
-.PHONY : EquippableItemsList.s
-
-# target to generate assembly for a file
-EquippableItemsList.cpp.s:
-	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/EquippableItemsList.cpp.s
-.PHONY : EquippableItemsList.cpp.s
-
 Game.obj: Game.cpp.obj
 
 .PHONY : Game.obj
@@ -229,6 +202,114 @@ Game.s: Game.cpp.s
 Game.cpp.s:
 	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Game.cpp.s
 .PHONY : Game.cpp.s
+
+Objects/BlueprintsList.obj: Objects/BlueprintsList.cpp.obj
+
+.PHONY : Objects/BlueprintsList.obj
+
+# target to build an object file
+Objects/BlueprintsList.cpp.obj:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/BlueprintsList.cpp.obj
+.PHONY : Objects/BlueprintsList.cpp.obj
+
+Objects/BlueprintsList.i: Objects/BlueprintsList.cpp.i
+
+.PHONY : Objects/BlueprintsList.i
+
+# target to preprocess a source file
+Objects/BlueprintsList.cpp.i:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/BlueprintsList.cpp.i
+.PHONY : Objects/BlueprintsList.cpp.i
+
+Objects/BlueprintsList.s: Objects/BlueprintsList.cpp.s
+
+.PHONY : Objects/BlueprintsList.s
+
+# target to generate assembly for a file
+Objects/BlueprintsList.cpp.s:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/BlueprintsList.cpp.s
+.PHONY : Objects/BlueprintsList.cpp.s
+
+Objects/BuildingsList.obj: Objects/BuildingsList.cpp.obj
+
+.PHONY : Objects/BuildingsList.obj
+
+# target to build an object file
+Objects/BuildingsList.cpp.obj:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/BuildingsList.cpp.obj
+.PHONY : Objects/BuildingsList.cpp.obj
+
+Objects/BuildingsList.i: Objects/BuildingsList.cpp.i
+
+.PHONY : Objects/BuildingsList.i
+
+# target to preprocess a source file
+Objects/BuildingsList.cpp.i:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/BuildingsList.cpp.i
+.PHONY : Objects/BuildingsList.cpp.i
+
+Objects/BuildingsList.s: Objects/BuildingsList.cpp.s
+
+.PHONY : Objects/BuildingsList.s
+
+# target to generate assembly for a file
+Objects/BuildingsList.cpp.s:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/BuildingsList.cpp.s
+.PHONY : Objects/BuildingsList.cpp.s
+
+Objects/EquippableItemsList.obj: Objects/EquippableItemsList.cpp.obj
+
+.PHONY : Objects/EquippableItemsList.obj
+
+# target to build an object file
+Objects/EquippableItemsList.cpp.obj:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/EquippableItemsList.cpp.obj
+.PHONY : Objects/EquippableItemsList.cpp.obj
+
+Objects/EquippableItemsList.i: Objects/EquippableItemsList.cpp.i
+
+.PHONY : Objects/EquippableItemsList.i
+
+# target to preprocess a source file
+Objects/EquippableItemsList.cpp.i:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/EquippableItemsList.cpp.i
+.PHONY : Objects/EquippableItemsList.cpp.i
+
+Objects/EquippableItemsList.s: Objects/EquippableItemsList.cpp.s
+
+.PHONY : Objects/EquippableItemsList.s
+
+# target to generate assembly for a file
+Objects/EquippableItemsList.cpp.s:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/EquippableItemsList.cpp.s
+.PHONY : Objects/EquippableItemsList.cpp.s
+
+Objects/SchematicList.obj: Objects/SchematicList.cpp.obj
+
+.PHONY : Objects/SchematicList.obj
+
+# target to build an object file
+Objects/SchematicList.cpp.obj:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/SchematicList.cpp.obj
+.PHONY : Objects/SchematicList.cpp.obj
+
+Objects/SchematicList.i: Objects/SchematicList.cpp.i
+
+.PHONY : Objects/SchematicList.i
+
+# target to preprocess a source file
+Objects/SchematicList.cpp.i:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/SchematicList.cpp.i
+.PHONY : Objects/SchematicList.cpp.i
+
+Objects/SchematicList.s: Objects/SchematicList.cpp.s
+
+.PHONY : Objects/SchematicList.s
+
+# target to generate assembly for a file
+Objects/SchematicList.cpp.s:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/SchematicList.cpp.s
+.PHONY : Objects/SchematicList.cpp.s
 
 Operators.obj: Operators.cpp.obj
 
@@ -311,33 +392,6 @@ PlayerModel.cpp.s:
 	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.s
 .PHONY : PlayerModel.cpp.s
 
-SchematicList.obj: SchematicList.cpp.obj
-
-.PHONY : SchematicList.obj
-
-# target to build an object file
-SchematicList.cpp.obj:
-	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/SchematicList.cpp.obj
-.PHONY : SchematicList.cpp.obj
-
-SchematicList.i: SchematicList.cpp.i
-
-.PHONY : SchematicList.i
-
-# target to preprocess a source file
-SchematicList.cpp.i:
-	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/SchematicList.cpp.i
-.PHONY : SchematicList.cpp.i
-
-SchematicList.s: SchematicList.cpp.s
-
-.PHONY : SchematicList.s
-
-# target to generate assembly for a file
-SchematicList.cpp.s:
-	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/SchematicList.cpp.s
-.PHONY : SchematicList.cpp.s
-
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -380,12 +434,21 @@ help:
 	@echo ... Actions.obj
 	@echo ... Actions.i
 	@echo ... Actions.s
-	@echo ... EquippableItemsList.obj
-	@echo ... EquippableItemsList.i
-	@echo ... EquippableItemsList.s
 	@echo ... Game.obj
 	@echo ... Game.i
 	@echo ... Game.s
+	@echo ... Objects/BlueprintsList.obj
+	@echo ... Objects/BlueprintsList.i
+	@echo ... Objects/BlueprintsList.s
+	@echo ... Objects/BuildingsList.obj
+	@echo ... Objects/BuildingsList.i
+	@echo ... Objects/BuildingsList.s
+	@echo ... Objects/EquippableItemsList.obj
+	@echo ... Objects/EquippableItemsList.i
+	@echo ... Objects/EquippableItemsList.s
+	@echo ... Objects/SchematicList.obj
+	@echo ... Objects/SchematicList.i
+	@echo ... Objects/SchematicList.s
 	@echo ... Operators.obj
 	@echo ... Operators.i
 	@echo ... Operators.s
@@ -395,9 +458,6 @@ help:
 	@echo ... PlayerModel.obj
 	@echo ... PlayerModel.i
 	@echo ... PlayerModel.s
-	@echo ... SchematicList.obj
-	@echo ... SchematicList.i
-	@echo ... SchematicList.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

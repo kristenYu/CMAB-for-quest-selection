@@ -95,11 +95,23 @@ Game::Game(Player &p) {
     this->baseRefinedResourceMap[gatheredResources::BearPelt] = gatheredResources::BearLeather;
     this->baseRefinedResourceMap[gatheredResources::WolfPelt] = gatheredResources::WolfLeather;
     this->baseRefinedResourceMap[gatheredResources::Vines] = gatheredResources::VineRope;
+    //maps the location to the blueprints that are at that location
+    this->locationBlueprints[locations::Forest] = forestBlueprints;
+    this->locationBlueprints[locations::Homestead] = homesteadBlueprints;
+    this->locationBlueprints[locations::Nightingale] = nightingaleBlueprints;
+    this->locationBlueprints[locations::Swamp] = swampBlueprints;
+    this->locationBlueprints[locations::Mountain] = mountainBlueprints;
+    //maps the location to the buildings that are at that location
+    this->locationBuildings[locations::Forest] = forestBuildings;
+    this->locationBuildings[locations::Homestead] = homesteadBuildings;
+    this->locationBuildings[locations::Nightingale] = nightingaleBuildings;
+    this->locationBuildings[locations::Swamp] = swampBuildings;
+    this->locationBuildings[locations::Mountain] = mountainBuildings;
 
     //axpick
-    p.unlockedSchematics.push_back(schematicList.list[0]);
+    p.unlockSchematic(schematicList.list[0]);
     //toolbelt
-    p.unlockedSchematics.push_back(schematicList.list[5]);
+    p.unlockSchematic(schematicList.list[5]);
 
     //axepick
     p.addToEquippableInventory(equippableItemsList.list[0]);
@@ -107,6 +119,20 @@ Game::Game(Player &p) {
     p.addToEquippableInventory(equippableItemsList.list[1]);
     //bear armor
     p.addToEquippableInventory(equippableItemsList.list[2]);
+
+    //tinyhouse
+    p.unlockBlueprint(blueprintsList.list[0]);
+    //crafting bench
+    p.unlockBlueprint(blueprintsList.list[1]);
+    //wall
+    p.unlockBlueprint(blueprintsList.list[2]);
+    //turret
+    p.unlockBlueprint(blueprintsList.list[3]);
+
+    p.addToInventory(gatheredResources::Lumber);
+    p.addToInventory(gatheredResources::Lumber);
+
+
 }
 
 bool Game::isRefined(int resource) {
@@ -133,6 +159,45 @@ bool Game::move(Player &p) {
     a.action = actions::Move;
     a.target = loc;
     p.addAction(a);
+    return true;
+}
+
+bool Game::Blueprint(Player &p) {
+    inputMap.clear();
+    std::cout<<"Please select a building to blueprint"<<std::endl;
+    for(int i = 0; i < p.unlockedBlueprints.size(); i++)
+    {
+        std::cout<<"["<<i<<"] "<<p.unlockedBlueprints[i].name<<",";
+        inputMap[i] = i;
+    }
+    std::cout<<std::endl;
+    int bp;
+    std::cin>>bp;
+    if(bp >= p.unlockedBlueprints.size())
+    {
+        return false;
+    }
+    if(p.unlockedBlueprints[bp].name == "TinyHouse")
+    {
+        if(p.location != locations::Homestead)
+        {
+            std::cout<<"Tinyhouse can only be placed on the homestead"<<std::endl;
+            return false;
+        }
+    }
+    std::cout<<"You blueprinted "<<p.unlockedBlueprints[bp].name<<" at "<<locationMap[p.location]<<std::endl;
+    locationBlueprints[p.location].push_back(p.unlockedBlueprints[bp]);
+    //printBlueprintLocation(locationBlueprints[p.location]);
+    std::cout<<"The requirements for this blueprint are ";
+    for(int i = 0; i<p.unlockedBlueprints[bp].requirements.size(); i++)
+    {
+        std::cout<<gatheredResourceMap[p.unlockedBlueprints[bp].requirements[i]]<<", ";
+    }
+    std::cout<<std::endl;
+    actionStruct a;
+    a.action = actions::Blueprint;
+    a.otherTarget = p.unlockedBlueprints[bp].name;
+    p.actionStack.push_back(a);
     return true;
 }
 
@@ -206,6 +271,52 @@ bool Game::mine(Player &p) {
     }
 }
 
+bool Game::Build(Player &p) {
+    usedCrafting.clear();
+    inputMap.clear();
+    std::cout<<"Please select a blueprint to build"<<std::endl;
+    for(int i = 0; i < locationBlueprints[p.location].size(); i++)
+    {
+        std::cout<<"["<<i<<"] "<<locationBlueprints[p.location][i].name;
+    }
+    std::cout<<std::endl;
+    int bp;
+    std::cin>>bp;
+    if(bp >= locationBlueprints[p.location].size()) {
+        return false;
+    }
+    std::string buildingName = locationBlueprints[p.location][bp].name;
+    building desiredBuilding;
+    for(int i = 0; i<buildingsList.list.size(); i++)
+    {
+        if(buildingsList.list[i].name == buildingName)
+        {
+            desiredBuilding = buildingsList.list[i];
+            for(int j = 0; j < locationBlueprints[p.location][bp].requirements.size(); j++)
+            {
+                bool temp = removeFromVector(p.inventory, locationBlueprints[p.location][bp].requirements[i]);
+                if(temp){
+                    usedCrafting.push_back(locationBlueprints[p.location][bp].requirements[i]);
+                }
+            }
+           break;
+        }
+    }
+    if(usedCrafting.size() != locationBlueprints[p.location][bp].requirements.size())
+    {
+        std::cout<<"You don't have the items required to build this"<<std::endl;
+        return false;
+    }
+    locationBuildings[p.location].push_back(desiredBuilding);
+    removeFromVector(locationBlueprints[p.location], buildingName);
+    std::cout<<"You built "<<buildingName<<" at "<<locationMap[p.location]<<std::endl;
+    actionStruct a;
+    a.action = actions::Build;
+    a.otherTarget = buildingName;
+    p.addAction(a);
+    return true;
+}
+
 bool Game::craft(Player &p) {
     usedCrafting.clear();
     inputMap.clear();
@@ -258,7 +369,6 @@ bool Game::craft(Player &p) {
     a.action = actions::Craft;
     a.otherTarget = p.unlockedSchematics[schematic].name;
     p.addAction(a);
-    return true;
     return true;
 }
 
@@ -370,56 +480,6 @@ bool Game::equipItem(Player &p) {
         return false;}
 }
 
-void Game::updateAptitudes(Player &p, equippableItem item) {
-    if(item.name == "AxePick" || item.name == "SharpenedAxePick" || item.name == "FancyGun") {
-        if(p.tool.name != "null")
-        {
-            //remove aptitudes of the current tool.
-            p.gumption -= p.tool.gumption;
-            p.moxie -= p.tool.moxie;
-            p.precision -= p.tool.precision;
-            p.finesse -= p.tool.finesse;
-            p.brawn -= p.tool.brawn;
-            p.reason -= p.tool.reason;
-            p.ingenuity -= p.tool.ingenuity;
-            p.mystique -= p.tool.mystique;
-        }
-        std::cout<<item.reason<<std::endl;
-        p.gumption = p.gumption + item.gumption;
-        //std::cout<<p.gumption<<std::endl;
-        p.moxie = p.moxie + item.moxie;
-        p.precision = p.precision + item.precision;
-        p.finesse = p.finesse + item.finesse;
-        p.brawn = p.brawn + item.brawn;
-        p.reason = p.reason + item.reason;
-        p.ingenuity = p.ingenuity + item.ingenuity;
-        p.mystique = p.mystique + item.mystique;
-    }else if(item.name == "BearArmor" || item.name == "DefensiveArmor" || item.name == "ToolBelt") {
-        if(p.armor.name != "null")
-        {
-            //remove aptitudes of the current armor
-            p.gumption -= p.armor.gumption;
-            p.moxie -= p.armor.moxie;
-            p.precision -= p.armor.precision;
-            p.finesse -= p.armor.finesse;
-            p.brawn -= p.armor.brawn;
-            p.reason -= p.armor.reason;
-            p.ingenuity -= p.armor.ingenuity;
-            p.mystique -= p.armor.mystique;
-        }
-        std::cout<<item.reason<<std::endl;
-        p.gumption = p.gumption + item.gumption;
-        //std::cout<<p.gumption<<std::endl;
-        p.moxie = p.moxie + item.moxie;
-        p.precision = p.precision + item.precision;
-        p.finesse = p.finesse + item.finesse;
-        p.brawn = p.brawn + item.brawn;
-        p.reason = p.reason + item.reason;
-        p.ingenuity = p.ingenuity + item.ingenuity;
-        p.mystique = p.mystique + item.mystique;
-    }
-}
-
 void Game::printPlayerLocation(Player &p) {
     std::cout<<"Player is in "<< locationMap[p.location]<<std::endl;
 }
@@ -437,11 +497,17 @@ void Game::printPlayerActionStack(Player &p) {
             case actions::Move:
                 std::cout<<locationMap[currentAction.target];
                 break;
+            case actions::Blueprint:
+                std::cout<<currentAction.otherTarget;
+                break;
             case actions::Chop:
                 std::cout<<gatheredResourceMap[currentAction.target];
                 break;
             case actions::Mine:
                 std::cout<<gatheredResourceMap[currentAction.target];
+                break;
+            case actions::Build:
+                std::cout<<currentAction.otherTarget;
                 break;
             case actions::Craft:
                 std::cout<<currentAction.otherTarget;
@@ -510,7 +576,41 @@ bool Game::removeFromVector(std::vector<int> &v, int value) {
     return true;
 }
 
+void Game::printBlueprintLocation(std::vector<blueprint> &v) {
+    for(int i =0; i < v.size(); i++)
+    {
+        std::cout<<v[i].name<<", ";
+    }
+    std::cout<<std::endl;
+}
+
+void Game::printBuildingLocation(std::vector<building> &v) {
+    for(int i =0; i < v.size(); i++)
+    {
+        std::cout<<v[i].name<<", ";
+    }
+    std::cout<<std::endl;
+}
+
 bool Game::removeFromVector(std::vector<equippableItem> &v, std::string name) {
+    int index = 1000;
+    for(int i = 0; i < v.size(); i++)
+    {
+        if(v[i].name == name)
+        {
+            index = i;
+        }
+    }
+    if (index == 1000)
+    {
+        return false;
+    }
+    v[index] = v.back();
+    v.pop_back();
+    return true;
+}
+
+bool Game::removeFromVector(std::vector<blueprint> &v, std::string name) {
     int index = 1000;
     for(int i = 0; i < v.size(); i++)
     {

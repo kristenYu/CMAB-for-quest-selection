@@ -76,6 +76,7 @@ int main() {
         else if(actionInput == actions::Equip_Item)
         {
             checkAction = game.equipItem(player);
+            //game.printPlayerAptitudes(player);
             playerModel.updatePlayerStyle(player);
             playerModel.printPlayerStyle();
             if(!checkAction)

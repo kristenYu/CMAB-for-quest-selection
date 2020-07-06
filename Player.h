@@ -34,7 +34,7 @@ public:
     int reason; //intellectual, effect resistance, concentration
     int ingenuity; //mechanical, crit power
     int mystique; //magical, crit chance
-    void updateTraits(equippableItem item);
+    void updateAptitudes(equippableItem item);
     void resetTraits();
     /* Offensive:
      *  Physical Damage - gumption + brawn

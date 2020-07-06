@@ -105,6 +105,8 @@ Game::Game(Player &p) {
     p.addToEquippableInventory(equippableItemsList.list[0]);
     //fancygun
     p.addToEquippableInventory(equippableItemsList.list[1]);
+    //bear armor
+    p.addToEquippableInventory(equippableItemsList.list[2]);
 }
 
 bool Game::isRefined(int resource) {
@@ -335,15 +337,13 @@ bool Game::equipItem(Player &p) {
     std::string itemName = p.equippableItemsInventory[item].name;
     if(itemName == "AxePick" || itemName == "SharpenedAxePick" || itemName == "FancyGun")
     {
+        p.updateAptitudes(p.equippableItemsInventory[item]);
         if(p.tool.name != "null")
         {
             p.addToEquippableInventory(p.tool);
         }
+        printPlayerAptitudes(p);
         p.tool = p.equippableItemsInventory[item];
-        std::cout<<p.tool.gumption<<std::endl;
-        printPlayerAptitudes(p);
-        updateAptitudes(p, p.tool);
-        printPlayerAptitudes(p);
         removeFromVector(p.equippableItemsInventory, itemName);
         actionStruct a;
         a.action = actions::Equip_Item;
@@ -352,12 +352,14 @@ bool Game::equipItem(Player &p) {
         return true;
     }else if(itemName == "BearArmor" || itemName == "DefensiveArmor" || itemName == "ToolBelt")
     {
+
+        p.updateAptitudes(p.equippableItemsInventory[item]);
         if(p.armor.name != "null")
         {
             p.addToEquippableInventory(p.armor);
         }
+        printPlayerAptitudes(p);
         p.armor = p.equippableItemsInventory[item];
-        p.updateTraits(p.armor);
         removeFromVector(p.equippableItemsInventory, itemName);
         actionStruct a;
         a.action = actions::Equip_Item;
@@ -382,6 +384,16 @@ void Game::updateAptitudes(Player &p, equippableItem item) {
             p.ingenuity -= p.tool.ingenuity;
             p.mystique -= p.tool.mystique;
         }
+        std::cout<<item.reason<<std::endl;
+        p.gumption = p.gumption + item.gumption;
+        //std::cout<<p.gumption<<std::endl;
+        p.moxie = p.moxie + item.moxie;
+        p.precision = p.precision + item.precision;
+        p.finesse = p.finesse + item.finesse;
+        p.brawn = p.brawn + item.brawn;
+        p.reason = p.reason + item.reason;
+        p.ingenuity = p.ingenuity + item.ingenuity;
+        p.mystique = p.mystique + item.mystique;
     }else if(item.name == "BearArmor" || item.name == "DefensiveArmor" || item.name == "ToolBelt") {
         if(p.armor.name != "null")
         {
@@ -395,17 +407,17 @@ void Game::updateAptitudes(Player &p, equippableItem item) {
             p.ingenuity -= p.armor.ingenuity;
             p.mystique -= p.armor.mystique;
         }
+        std::cout<<item.reason<<std::endl;
+        p.gumption = p.gumption + item.gumption;
+        //std::cout<<p.gumption<<std::endl;
+        p.moxie = p.moxie + item.moxie;
+        p.precision = p.precision + item.precision;
+        p.finesse = p.finesse + item.finesse;
+        p.brawn = p.brawn + item.brawn;
+        p.reason = p.reason + item.reason;
+        p.ingenuity = p.ingenuity + item.ingenuity;
+        p.mystique = p.mystique + item.mystique;
     }
-    std::cout<<item.reason<<std::endl;
-    p.gumption = p.gumption + item.gumption;
-    //std::cout<<p.gumption<<std::endl;
-    p.moxie = p.moxie + item.moxie;
-    p.precision = p.precision + item.precision;
-    p.finesse = p.finesse + item.finesse;
-    p.brawn = p.brawn + item.brawn;
-    p.reason = p.reason + item.reason;
-    p.ingenuity = p.ingenuity + item.ingenuity;
-    p.mystique = p.mystique + item.mystique;
 }
 
 void Game::printPlayerLocation(Player &p) {

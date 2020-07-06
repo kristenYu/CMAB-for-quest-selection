@@ -32,7 +32,7 @@ void Player::resetTraits() {
     this->mystique = 0;
 }
 
-void Player::updateTraits(equippableItem item) {
+void Player::updateAptitudes(equippableItem item) {
     if(item.name == "AxePick" || item.name == "SharpenedAxePick" || item.name == "FancyGun") {
         if(this->tool.name != "null")
         {
@@ -49,8 +49,8 @@ void Player::updateTraits(equippableItem item) {
     }else if(item.name == "BearArmor" || item.name == "DefensiveArmor" || item.name == "ToolBelt") {
         if(this->armor.name != "null")
         {
+            std::cout<<"armor is already equipped"<<std::endl;
             //remove aptitudes of the current armor
-            //remove aptitudes of the current tool.
             this->gumption -= this->armor.gumption;
             this->moxie -= this->armor.moxie;
             this->precision -= this->armor.precision;
@@ -64,13 +64,13 @@ void Player::updateTraits(equippableItem item) {
     std::cout<<item.gumption<<std::endl;
     this->gumption = this->gumption + item.gumption;
     std::cout<<this->gumption<<std::endl;
-    moxie += item.moxie;
-    precision += item.precision;
-    finesse += item.finesse;
-    brawn += item.brawn;
-    reason += item.reason;
-    ingenuity += item.ingenuity;
-    mystique += item.mystique;
+    this->moxie += item.moxie;
+    this->precision += item.precision;
+    this->finesse += item.finesse;
+    this->brawn += item.brawn;
+    this->reason += item.reason;
+    this->ingenuity += item.ingenuity;
+    this->mystique += item.mystique;
 }
 
 void Player::addToInventory(int item) {

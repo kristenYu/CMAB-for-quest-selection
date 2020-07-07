@@ -210,6 +210,34 @@ CMakeFiles/AI_Director_Prototype.dir/Objects/BlueprintsList.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_Director_Prototype.dir/Objects/BlueprintsList.cpp.s"
 	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\UofA\Research\AI_Director_Prototype\Objects\BlueprintsList.cpp -o CMakeFiles\AI_Director_Prototype.dir\Objects\BlueprintsList.cpp.s
 
+CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/flags.make
+CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/includes_CXX.rsp
+CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.obj: ../AIDirector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\UofA\Research\AI_Director_Prototype\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.obj"
+	D:\Programs\8.2.1\mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AI_Director_Prototype.dir\AIDirector.cpp.obj -c D:\UofA\Research\AI_Director_Prototype\AIDirector.cpp
+
+CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.i"
+	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\UofA\Research\AI_Director_Prototype\AIDirector.cpp > CMakeFiles\AI_Director_Prototype.dir\AIDirector.cpp.i
+
+CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.s"
+	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\UofA\Research\AI_Director_Prototype\AIDirector.cpp -o CMakeFiles\AI_Director_Prototype.dir\AIDirector.cpp.s
+
+CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/flags.make
+CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/includes_CXX.rsp
+CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.obj: ../Objects/SelfGoalsList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\UofA\Research\AI_Director_Prototype\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.obj"
+	D:\Programs\8.2.1\mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AI_Director_Prototype.dir\Objects\SelfGoalsList.cpp.obj -c D:\UofA\Research\AI_Director_Prototype\Objects\SelfGoalsList.cpp
+
+CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.i"
+	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\UofA\Research\AI_Director_Prototype\Objects\SelfGoalsList.cpp > CMakeFiles\AI_Director_Prototype.dir\Objects\SelfGoalsList.cpp.i
+
+CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.s"
+	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\UofA\Research\AI_Director_Prototype\Objects\SelfGoalsList.cpp -o CMakeFiles\AI_Director_Prototype.dir\Objects\SelfGoalsList.cpp.s
+
 # Object files for target AI_Director_Prototype
 AI_Director_Prototype_OBJECTS = \
 "CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.obj" \
@@ -222,7 +250,9 @@ AI_Director_Prototype_OBJECTS = \
 "CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj" \
 "CMakeFiles/AI_Director_Prototype.dir/Objects/SchematicList.cpp.obj" \
 "CMakeFiles/AI_Director_Prototype.dir/Objects/BuildingsList.cpp.obj" \
-"CMakeFiles/AI_Director_Prototype.dir/Objects/BlueprintsList.cpp.obj"
+"CMakeFiles/AI_Director_Prototype.dir/Objects/BlueprintsList.cpp.obj" \
+"CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.obj" \
+"CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.obj"
 
 # External object files for target AI_Director_Prototype
 AI_Director_Prototype_EXTERNAL_OBJECTS =
@@ -238,11 +268,13 @@ AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/Objects/SchematicList.cpp.obj
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/Objects/BuildingsList.cpp.obj
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/Objects/BlueprintsList.cpp.obj
+AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.obj
+AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.obj
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/build.make
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/linklibs.rsp
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/objects1.rsp
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\UofA\Research\AI_Director_Prototype\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable AI_Director_Prototype.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\UofA\Research\AI_Director_Prototype\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable AI_Director_Prototype.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\AI_Director_Prototype.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

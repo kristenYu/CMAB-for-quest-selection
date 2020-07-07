@@ -122,6 +122,33 @@ AI_Director_Prototype/fast:
 	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/build
 .PHONY : AI_Director_Prototype/fast
 
+AIDirector.obj: AIDirector.cpp.obj
+
+.PHONY : AIDirector.obj
+
+# target to build an object file
+AIDirector.cpp.obj:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.obj
+.PHONY : AIDirector.cpp.obj
+
+AIDirector.i: AIDirector.cpp.i
+
+.PHONY : AIDirector.i
+
+# target to preprocess a source file
+AIDirector.cpp.i:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.i
+.PHONY : AIDirector.cpp.i
+
+AIDirector.s: AIDirector.cpp.s
+
+.PHONY : AIDirector.s
+
+# target to generate assembly for a file
+AIDirector.cpp.s:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.s
+.PHONY : AIDirector.cpp.s
+
 ActionUtils.obj: ActionUtils.cpp.obj
 
 .PHONY : ActionUtils.obj
@@ -311,6 +338,33 @@ Objects/SchematicList.cpp.s:
 	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/SchematicList.cpp.s
 .PHONY : Objects/SchematicList.cpp.s
 
+Objects/SelfGoalsList.obj: Objects/SelfGoalsList.cpp.obj
+
+.PHONY : Objects/SelfGoalsList.obj
+
+# target to build an object file
+Objects/SelfGoalsList.cpp.obj:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.obj
+.PHONY : Objects/SelfGoalsList.cpp.obj
+
+Objects/SelfGoalsList.i: Objects/SelfGoalsList.cpp.i
+
+.PHONY : Objects/SelfGoalsList.i
+
+# target to preprocess a source file
+Objects/SelfGoalsList.cpp.i:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.i
+.PHONY : Objects/SelfGoalsList.cpp.i
+
+Objects/SelfGoalsList.s: Objects/SelfGoalsList.cpp.s
+
+.PHONY : Objects/SelfGoalsList.s
+
+# target to generate assembly for a file
+Objects/SelfGoalsList.cpp.s:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.s
+.PHONY : Objects/SelfGoalsList.cpp.s
+
 Operators.obj: Operators.cpp.obj
 
 .PHONY : Operators.obj
@@ -428,6 +482,9 @@ help:
 	@echo ... AI_Director_Prototype
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... AIDirector.obj
+	@echo ... AIDirector.i
+	@echo ... AIDirector.s
 	@echo ... ActionUtils.obj
 	@echo ... ActionUtils.i
 	@echo ... ActionUtils.s
@@ -449,6 +506,9 @@ help:
 	@echo ... Objects/SchematicList.obj
 	@echo ... Objects/SchematicList.i
 	@echo ... Objects/SchematicList.s
+	@echo ... Objects/SelfGoalsList.obj
+	@echo ... Objects/SelfGoalsList.i
+	@echo ... Objects/SelfGoalsList.s
 	@echo ... Operators.obj
 	@echo ... Operators.i
 	@echo ... Operators.s

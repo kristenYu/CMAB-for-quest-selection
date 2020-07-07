@@ -33,4 +33,4 @@ add_executable(AI_Director_Prototype
     PlayerModel.cpp
     PlayerModel.h
         Objects/SchematicList.cpp
-        Objects/SchematicList.h Objects/BuildingsList.cpp Objects/BuildingsList.h Objects/BlueprintsList.cpp Objects/BlueprintsList.h Structs/BlueprintStruct.h Structs/BuildingStruct.h)
+        Objects/SchematicList.h Objects/BuildingsList.cpp Objects/BuildingsList.h Objects/BlueprintsList.cpp Objects/BlueprintsList.h Structs/BlueprintStruct.h Structs/BuildingStruct.h AIDirector.cpp AIDirector.h Objects/SelfGoalsList.cpp Objects/SelfGoalsList.h Structs/SelfGoalStruct.h Enums/QuestCategory.h)

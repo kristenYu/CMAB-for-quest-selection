@@ -88,6 +88,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/AIDirector.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/AIDirector.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/ActionUtils.cpp">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
@@ -110,6 +116,9 @@
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Enums/NaturalResources.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Enums/QuestCategory.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Enums/RawMaterials.h">
@@ -148,6 +157,12 @@
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/SelfGoalsList.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/SelfGoalsList.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Operators.cpp">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
@@ -179,6 +194,9 @@
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Structs/SelfGoalStruct.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/main.cpp">

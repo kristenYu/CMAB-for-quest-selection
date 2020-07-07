@@ -151,6 +151,12 @@
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.cpp">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
@@ -191,6 +197,9 @@
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Structs/ObjectiveStruct.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h">

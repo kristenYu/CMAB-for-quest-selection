@@ -311,6 +311,33 @@ Objects/EquippableItemsList.cpp.s:
 	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/EquippableItemsList.cpp.s
 .PHONY : Objects/EquippableItemsList.cpp.s
 
+Objects/ObjectivesGenerator.obj: Objects/ObjectivesGenerator.cpp.obj
+
+.PHONY : Objects/ObjectivesGenerator.obj
+
+# target to build an object file
+Objects/ObjectivesGenerator.cpp.obj:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/ObjectivesGenerator.cpp.obj
+.PHONY : Objects/ObjectivesGenerator.cpp.obj
+
+Objects/ObjectivesGenerator.i: Objects/ObjectivesGenerator.cpp.i
+
+.PHONY : Objects/ObjectivesGenerator.i
+
+# target to preprocess a source file
+Objects/ObjectivesGenerator.cpp.i:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/ObjectivesGenerator.cpp.i
+.PHONY : Objects/ObjectivesGenerator.cpp.i
+
+Objects/ObjectivesGenerator.s: Objects/ObjectivesGenerator.cpp.s
+
+.PHONY : Objects/ObjectivesGenerator.s
+
+# target to generate assembly for a file
+Objects/ObjectivesGenerator.cpp.s:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/ObjectivesGenerator.cpp.s
+.PHONY : Objects/ObjectivesGenerator.cpp.s
+
 Objects/SchematicList.obj: Objects/SchematicList.cpp.obj
 
 .PHONY : Objects/SchematicList.obj
@@ -503,6 +530,9 @@ help:
 	@echo ... Objects/EquippableItemsList.obj
 	@echo ... Objects/EquippableItemsList.i
 	@echo ... Objects/EquippableItemsList.s
+	@echo ... Objects/ObjectivesGenerator.obj
+	@echo ... Objects/ObjectivesGenerator.i
+	@echo ... Objects/ObjectivesGenerator.s
 	@echo ... Objects/SchematicList.obj
 	@echo ... Objects/SchematicList.i
 	@echo ... Objects/SchematicList.s

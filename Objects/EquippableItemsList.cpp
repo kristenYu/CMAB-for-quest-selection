@@ -7,7 +7,7 @@
 EquippableItemsList::EquippableItemsList() {
     //schematic list is always loaded the same way so we can assume the index.
     SchematicList schematicList;
-
+    //TODO: Replace all of the schematic list references with schematicList.Object
     axePick.name = "AxePick";
     axePick.schematic = schematicList.list[0];
     axePick.finesse = 7;

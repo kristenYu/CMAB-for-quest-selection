@@ -6,6 +6,7 @@
 #define AI_DIRECTOR_PROTOTYPE_SELFGOALSTRUCT_H
 
 #include <string>
+#include "Enums/QuestCategory.h"
 
 struct selfGoal{
     std::string name;

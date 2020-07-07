@@ -6,14 +6,12 @@
 #define AI_DIRECTOR_PROTOTYPE_QUESTCATEGORY_H
 
 enum questCategory{
-    Blueprint = 0,
-    Chop,
-    Mine,
-    Build,
-    Craft,
-    Refine,
-    Attack,
-    EquipItem
+    GatherCategory = 0,
+    HarvestCategory,
+    BuildCategory,
+    CraftCategory,
+    RefineCategory,
+    AttackCategory,
 };
 
 #endif //AI_DIRECTOR_PROTOTYPE_QUESTCATEGORY_H

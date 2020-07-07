@@ -9,7 +9,7 @@
 #include "Structs/SelfGoalStruct.h"
 
 class SelfGoalsList {
-
+public:
     SelfGoalsList();
 
     std::vector<selfGoal> list;

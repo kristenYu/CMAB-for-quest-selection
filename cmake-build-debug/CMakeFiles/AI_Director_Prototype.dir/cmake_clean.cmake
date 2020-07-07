@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/AI_Director_Prototype.dir/Objects/BlueprintsList.cpp.obj"
   "CMakeFiles/AI_Director_Prototype.dir/Objects/BuildingsList.cpp.obj"
   "CMakeFiles/AI_Director_Prototype.dir/Objects/EquippableItemsList.cpp.obj"
+  "CMakeFiles/AI_Director_Prototype.dir/Objects/ObjectivesGenerator.cpp.obj"
   "CMakeFiles/AI_Director_Prototype.dir/Objects/SchematicList.cpp.obj"
   "CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.obj"
   "CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj"

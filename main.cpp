@@ -7,6 +7,7 @@
 #include "Player.h"
 #include "Operators.h"
 #include "Game.h"
+#include "AIDirector.h"
 
 int main() {
     ActionUtils actionUtils;
@@ -15,6 +16,7 @@ int main() {
     Player player;
     Operators operators;
     Game game(player);
+    AIDirector aiDirector;
 
     bool keepPlaying = true;
     bool checkAction = true;
@@ -100,9 +102,9 @@ int main() {
             }
         }
         else{
-            playerModel.updatePlayerActions(actionUtils.getActionValue(actionInput));
+            playerModel.printPlayerStyle();
             playerModel.printPlayerActions();
-            game.printPlayerActionStack(player);
+            aiDirector.getQuest(playerModel, player);
         }
 
         playerModel.updatePlayerActions(actionUtils.getActionValue(actionInput));

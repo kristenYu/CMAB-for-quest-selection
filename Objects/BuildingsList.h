@@ -12,6 +12,7 @@ public:
     building craftingBench;
     building wall;
     building turret;
+    building wallPainting;
 
     BuildingsList();
 

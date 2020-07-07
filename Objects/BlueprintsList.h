@@ -14,6 +14,7 @@ public:
     blueprint craftingBench;
     blueprint wall;
     blueprint turret;
+    blueprint wallPainting;
 
     BlueprintsList();
 

@@ -149,33 +149,6 @@ AIDirector.cpp.s:
 	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.s
 .PHONY : AIDirector.cpp.s
 
-ActionUtils.obj: ActionUtils.cpp.obj
-
-.PHONY : ActionUtils.obj
-
-# target to build an object file
-ActionUtils.cpp.obj:
-	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/ActionUtils.cpp.obj
-.PHONY : ActionUtils.cpp.obj
-
-ActionUtils.i: ActionUtils.cpp.i
-
-.PHONY : ActionUtils.i
-
-# target to preprocess a source file
-ActionUtils.cpp.i:
-	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/ActionUtils.cpp.i
-.PHONY : ActionUtils.cpp.i
-
-ActionUtils.s: ActionUtils.cpp.s
-
-.PHONY : ActionUtils.s
-
-# target to generate assembly for a file
-ActionUtils.cpp.s:
-	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/ActionUtils.cpp.s
-.PHONY : ActionUtils.cpp.s
-
 Actions.obj: Actions.cpp.obj
 
 .PHONY : Actions.obj
@@ -229,6 +202,33 @@ Game.s: Game.cpp.s
 Game.cpp.s:
 	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Game.cpp.s
 .PHONY : Game.cpp.s
+
+Objects/ActionUtils.obj: Objects/ActionUtils.cpp.obj
+
+.PHONY : Objects/ActionUtils.obj
+
+# target to build an object file
+Objects/ActionUtils.cpp.obj:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/ActionUtils.cpp.obj
+.PHONY : Objects/ActionUtils.cpp.obj
+
+Objects/ActionUtils.i: Objects/ActionUtils.cpp.i
+
+.PHONY : Objects/ActionUtils.i
+
+# target to preprocess a source file
+Objects/ActionUtils.cpp.i:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/ActionUtils.cpp.i
+.PHONY : Objects/ActionUtils.cpp.i
+
+Objects/ActionUtils.s: Objects/ActionUtils.cpp.s
+
+.PHONY : Objects/ActionUtils.s
+
+# target to generate assembly for a file
+Objects/ActionUtils.cpp.s:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/ActionUtils.cpp.s
+.PHONY : Objects/ActionUtils.cpp.s
 
 Objects/BlueprintsList.obj: Objects/BlueprintsList.cpp.obj
 
@@ -512,15 +512,15 @@ help:
 	@echo ... AIDirector.obj
 	@echo ... AIDirector.i
 	@echo ... AIDirector.s
-	@echo ... ActionUtils.obj
-	@echo ... ActionUtils.i
-	@echo ... ActionUtils.s
 	@echo ... Actions.obj
 	@echo ... Actions.i
 	@echo ... Actions.s
 	@echo ... Game.obj
 	@echo ... Game.i
 	@echo ... Game.s
+	@echo ... Objects/ActionUtils.obj
+	@echo ... Objects/ActionUtils.i
+	@echo ... Objects/ActionUtils.s
 	@echo ... Objects/BlueprintsList.obj
 	@echo ... Objects/BlueprintsList.i
 	@echo ... Objects/BlueprintsList.s

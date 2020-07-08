@@ -19,8 +19,8 @@ add_executable(AI_Director_Prototype
     Structs/EquippableItemStruct.h
     Structs/SchematicStruct.h
     Actions.cpp
-    ActionUtils.cpp
-    ActionUtils.h
+        Objects/ActionUtils.cpp
+        Objects/ActionUtils.h
         Objects/EquippableItemsList.cpp
         Objects/EquippableItemsList.h
     Game.cpp

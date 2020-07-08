@@ -94,12 +94,6 @@
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/AIDirector.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
-		<Unit filename="D:/UofA/Research/AI_Director_Prototype/ActionUtils.cpp">
-			<Option target="AI_Director_Prototype"/>
-		</Unit>
-		<Unit filename="D:/UofA/Research/AI_Director_Prototype/ActionUtils.h">
-			<Option target="AI_Director_Prototype"/>
-		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Actions.cpp">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
@@ -131,6 +125,12 @@
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Game.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/ActionUtils.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/ActionUtils.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.cpp">

@@ -14,6 +14,7 @@ public:
 
     std::vector<selfGoal> list;
     int const MAXHOMESTEADOBJECTIVE = 6;
+    //These currently use the abstracted values
     selfGoal recruitNPC;
     selfGoal automateHarvesting;
     selfGoal automateConstruction;
@@ -21,6 +22,13 @@ public:
     selfGoal automateRefinement;
     selfGoal automateSecurity;
     selfGoal automateFarming;
+
+    selfGoal huntCreature;
+    selfGoal addDefenseToVillage;
+    selfGoal gatherResources;
+    selfGoal refineResource;
+
+
 
 };
 

@@ -17,11 +17,11 @@ EquippableItemsList::EquippableItemsList() {
     fancyGun.schematic =  schematicList.list[1];
     fancyGun.gumption = 7;
     fancyGun.ingenuity = 7;
-    fancyGun.reason = 10;
+    fancyGun.reason = 3;
 
     bearArmor.name = "BearArmor";
     bearArmor.schematic =  schematicList.list[2];
-    bearArmor.ingenuity = 8;
+    bearArmor.gumption = 8;
     bearArmor.brawn = 5;
 
     defensiveArmor.name = "DefensiveArmor";
@@ -31,12 +31,12 @@ EquippableItemsList::EquippableItemsList() {
 
     sharpenedAxePick.name = "SharpenedAxePick";
     sharpenedAxePick.schematic =  schematicList.list[4];
-    sharpenedAxePick.gumption = 5;
+    sharpenedAxePick.gumption = 10;
     sharpenedAxePick.brawn = 5;
 
     toolbelt.name = "ToolBelt";
     toolbelt.schematic = schematicList.list[5];
-    toolbelt.ingenuity = 10;
+    toolbelt.finesse = 10;
 
     list.push_back(axePick);
     list.push_back(fancyGun);

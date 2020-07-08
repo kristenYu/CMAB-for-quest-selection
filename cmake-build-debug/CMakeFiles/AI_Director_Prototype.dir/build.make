@@ -70,19 +70,19 @@ CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.s"
 	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\UofA\Research\AI_Director_Prototype\Actions.cpp -o CMakeFiles\AI_Director_Prototype.dir\Actions.cpp.s
 
-CMakeFiles/AI_Director_Prototype.dir/ActionUtils.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/flags.make
-CMakeFiles/AI_Director_Prototype.dir/ActionUtils.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/includes_CXX.rsp
-CMakeFiles/AI_Director_Prototype.dir/ActionUtils.cpp.obj: ../ActionUtils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\UofA\Research\AI_Director_Prototype\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AI_Director_Prototype.dir/ActionUtils.cpp.obj"
-	D:\Programs\8.2.1\mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AI_Director_Prototype.dir\ActionUtils.cpp.obj -c D:\UofA\Research\AI_Director_Prototype\ActionUtils.cpp
+CMakeFiles/AI_Director_Prototype.dir/Objects/ActionUtils.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/flags.make
+CMakeFiles/AI_Director_Prototype.dir/Objects/ActionUtils.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/includes_CXX.rsp
+CMakeFiles/AI_Director_Prototype.dir/Objects/ActionUtils.cpp.obj: ../Objects/ActionUtils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\UofA\Research\AI_Director_Prototype\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AI_Director_Prototype.dir/Objects/ActionUtils.cpp.obj"
+	D:\Programs\8.2.1\mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AI_Director_Prototype.dir\Objects\ActionUtils.cpp.obj -c D:\UofA\Research\AI_Director_Prototype\Objects\ActionUtils.cpp
 
-CMakeFiles/AI_Director_Prototype.dir/ActionUtils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_Director_Prototype.dir/ActionUtils.cpp.i"
-	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\UofA\Research\AI_Director_Prototype\ActionUtils.cpp > CMakeFiles\AI_Director_Prototype.dir\ActionUtils.cpp.i
+CMakeFiles/AI_Director_Prototype.dir/Objects/ActionUtils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_Director_Prototype.dir/Objects/ActionUtils.cpp.i"
+	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\UofA\Research\AI_Director_Prototype\Objects\ActionUtils.cpp > CMakeFiles\AI_Director_Prototype.dir\Objects\ActionUtils.cpp.i
 
-CMakeFiles/AI_Director_Prototype.dir/ActionUtils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_Director_Prototype.dir/ActionUtils.cpp.s"
-	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\UofA\Research\AI_Director_Prototype\ActionUtils.cpp -o CMakeFiles\AI_Director_Prototype.dir\ActionUtils.cpp.s
+CMakeFiles/AI_Director_Prototype.dir/Objects/ActionUtils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_Director_Prototype.dir/Objects/ActionUtils.cpp.s"
+	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\UofA\Research\AI_Director_Prototype\Objects\ActionUtils.cpp -o CMakeFiles\AI_Director_Prototype.dir\Objects\ActionUtils.cpp.s
 
 CMakeFiles/AI_Director_Prototype.dir/Objects/EquippableItemsList.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/flags.make
 CMakeFiles/AI_Director_Prototype.dir/Objects/EquippableItemsList.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/includes_CXX.rsp
@@ -255,7 +255,7 @@ CMakeFiles/AI_Director_Prototype.dir/Objects/ObjectivesGenerator.cpp.s: cmake_fo
 # Object files for target AI_Director_Prototype
 AI_Director_Prototype_OBJECTS = \
 "CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.obj" \
-"CMakeFiles/AI_Director_Prototype.dir/ActionUtils.cpp.obj" \
+"CMakeFiles/AI_Director_Prototype.dir/Objects/ActionUtils.cpp.obj" \
 "CMakeFiles/AI_Director_Prototype.dir/Objects/EquippableItemsList.cpp.obj" \
 "CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj" \
 "CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj" \
@@ -273,7 +273,7 @@ AI_Director_Prototype_OBJECTS = \
 AI_Director_Prototype_EXTERNAL_OBJECTS =
 
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.obj
-AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/ActionUtils.cpp.obj
+AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/Objects/ActionUtils.cpp.obj
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/Objects/EquippableItemsList.cpp.obj
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj

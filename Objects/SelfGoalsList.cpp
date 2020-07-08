@@ -37,6 +37,23 @@ SelfGoalsList::SelfGoalsList() {
     automateFarming.goalVector[2] = 2;
     automateFarming.goalVector[3] = 3;
 
+    huntCreature.name = "HuntCreature";
+    huntCreature.goalVector[0] = 6;
+    huntCreature.goalVector[3] = 2;
+
+    addDefenseToVillage.name = "AddDefenseToVillage";
+    addDefenseToVillage.goalVector[2] = 2;
+    addDefenseToVillage.goalVector[1] = 6;
+
+    gatherResources.name = "GatherResources";
+    gatherResources.goalVector[2] = 2;
+    gatherResources.goalVector[3] = 6;
+
+    refineResource.name = "RefineResources";
+    refineResource.goalVector[0] = 1;
+    refineResource.goalVector[1] = 1;
+    refineResource.goalVector[2] = 6;
+
     list.push_back(recruitNPC);
     list.push_back(automateHarvesting);
     list.push_back(automateConstruction);
@@ -44,4 +61,9 @@ SelfGoalsList::SelfGoalsList() {
     list.push_back(automateRefinement);
     list.push_back(automateSecurity);
     list.push_back(automateFarming);
+
+    list.push_back(huntCreature);
+    list.push_back(addDefenseToVillage);
+    list.push_back(gatherResources);
+    list.push_back(refineResource);
 }

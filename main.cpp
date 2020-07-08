@@ -3,11 +3,12 @@
 #include "PlayerModel.h"
 #include "Enums/Actions.h"
 #include "PlayerModel.h"
-#include "ActionUtils.h"
+#include "Objects/ActionUtils.h"
 #include "Player.h"
 #include "Operators.h"
 #include "Game.h"
 #include "AIDirector.h"
+#include "Structs/ObjectiveStruct.h"
 
 int main() {
     ActionUtils actionUtils;
@@ -17,6 +18,7 @@ int main() {
     Operators operators;
     Game game(player);
     AIDirector aiDirector;
+    objective quest;
 
     bool keepPlaying = true;
     bool checkAction = true;
@@ -27,7 +29,7 @@ int main() {
             break;
         }
         std::cout<< "Please select an action by typing the number next to it"<<std::endl;
-        std::cout<<"[0] Move, [1] Blueprint, [2] Chop, [3] Mine, [4] Build, [5] Craft, \n [6] Refine, [7] Attack, [8] Equip Item, [9] stop playing"<<std::endl;
+        std::cout<<"[0] Move, [1] Blueprint, [2] Chop, [3] Mine, [4] Build, [5] Craft, \n [6] Refine, [7] Attack, [8] Equip Item, [9] stop playing [10] get quest"<<std::endl;
         int actionInput;
         std::cin>> actionInput;
         if(actionInput == 9)
@@ -46,6 +48,9 @@ int main() {
             if(!checkAction)
             {
                 std::cout<<"Invalid action"<<std::endl;
+            }else{
+                playerModel.updatePlayerActions(actionUtils.getActionValue(actionInput));
+                playerModel.printPlayerActions();
             }
         }
         else if(actionInput == actions::Chop)
@@ -54,18 +59,27 @@ int main() {
             if(!checkAction)
             {
                 std::cout<<"Invalid action"<<std::endl;
+            }else{
+                playerModel.updatePlayerActions(actionUtils.getActionValue(actionInput));
+                playerModel.printPlayerActions();
             }
         }
         else if (actionInput == actions::Mine) {
             checkAction = game.mine(player);
             if (!checkAction) {
                 std::cout << "Invalid action" << std::endl;
+            }else{
+                playerModel.updatePlayerActions(actionUtils.getActionValue(actionInput));
+                playerModel.printPlayerActions();
             }
         } else if(actionInput == actions::Build)
         {
             checkAction = game.Build(player);
             if (!checkAction) {
                 std::cout << "Invalid action" << std::endl;
+            }else{
+                playerModel.updatePlayerActions(actionUtils.getActionValue(actionInput));
+                playerModel.printPlayerActions();
             }
         }
 
@@ -74,12 +88,18 @@ int main() {
             if(!checkAction)
             {
                 std::cout<<"Invalid action"<<std::endl;
+            }else{
+                playerModel.updatePlayerActions(actionUtils.getActionValue(actionInput));
+                playerModel.printPlayerActions();
             }
         }else if(actionInput == actions::Refine)
         {
             checkAction = game.refine(player);
             if (!checkAction) {
                 std::cout << "Invalid action" << std::endl;
+            }else{
+                playerModel.updatePlayerActions(actionUtils.getActionValue(actionInput));
+                playerModel.printPlayerActions();
             }
         }
         else if (actionInput == actions::Attack)
@@ -88,6 +108,9 @@ int main() {
             if(!checkAction)
             {
                 std::cout<<"Invalid action"<<std::endl;
+            } else{
+                playerModel.updatePlayerActions(actionUtils.getActionValue(actionInput));
+                playerModel.printPlayerActions();
             }
         }
         else if(actionInput == actions::Equip_Item)
@@ -100,15 +123,18 @@ int main() {
             {
                 std::cout<<"Invalid action"<<std::endl;
             }
+        }else if(actionInput == 10)
+        {
+            playerModel.printPlayerStyle();
+            playerModel.printPlayerActions();
+            quest = aiDirector.getQuest(playerModel, player);
+            std::cout<<quest.task<<std::endl;
         }
         else{
             playerModel.printPlayerStyle();
             playerModel.printPlayerActions();
             aiDirector.getQuest(playerModel, player);
         }
-
-        playerModel.updatePlayerActions(actionUtils.getActionValue(actionInput));
-        playerModel.printPlayerActions();
 
     }
 

@@ -10,8 +10,6 @@
 
 ../Enums/GatheredResources.h
 
-../Enums/Locations.h
-
 ../Structs/BlueprintStruct.h
 string
 -
@@ -45,14 +43,14 @@ Structs/ObjectiveStruct.h
 D:/UofA/Research/AI_Director_Prototype/Structs/ObjectiveStruct.h
 Objects/ObjectivesGenerator.h
 D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.h
-
-D:/UofA/Research/AI_Director_Prototype/ActionUtils.h
-unordered_map
--
+Enums/Locations.h
+D:/UofA/Research/AI_Director_Prototype/Enums/Locations.h
 
 D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
 
 D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
+
+D:/UofA/Research/AI_Director_Prototype/Enums/Locations.h
 
 D:/UofA/Research/AI_Director_Prototype/Enums/QuestCategory.h
 
@@ -71,6 +69,10 @@ Objects/BlueprintsList.h
 D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.h
 Objects/BuildingsList.h
 D:/UofA/Research/AI_Director_Prototype/Objects/BuildingsList.h
+
+D:/UofA/Research/AI_Director_Prototype/Objects/ActionUtils.h
+unordered_map
+-
 
 D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.h
 Structs/BlueprintStruct.h
@@ -181,8 +183,8 @@ Enums/Actions.h
 D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
 PlayerModel.h
 D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
-ActionUtils.h
-D:/UofA/Research/AI_Director_Prototype/ActionUtils.h
+Objects/ActionUtils.h
+D:/UofA/Research/AI_Director_Prototype/Objects/ActionUtils.h
 Player.h
 D:/UofA/Research/AI_Director_Prototype/Player.h
 Operators.h
@@ -191,4 +193,6 @@ Game.h
 D:/UofA/Research/AI_Director_Prototype/Game.h
 AIDirector.h
 D:/UofA/Research/AI_Director_Prototype/AIDirector.h
+Structs/ObjectiveStruct.h
+D:/UofA/Research/AI_Director_Prototype/Structs/ObjectiveStruct.h
 

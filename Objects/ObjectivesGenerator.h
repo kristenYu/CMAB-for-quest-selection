@@ -17,11 +17,45 @@ class ObjectivesGenerator {
 public:
     ObjectivesGenerator();
     std::vector<objective> list;
+    //TODO: Add in a full spectrum of objectives
+    /*
+    Wood,
+    IronOre,
+    CutStone,
+    PlantingEarth,
+    Antlers, //location 4,this is where the resources from animals come from
+    SpiderWeb,
+    BearPelt,
+    WolfPelt,
+    Vines,
+    Lumber, //location 9, refined resources
+    IronBar,
+    Brick,
+    FertileEarth,
+    Gelatin,
+    SpiderRope,
+    BearLeather,
+    WolfLeather,
+    VineRope,
+    */
 
     objective refineWood;
     objective refineIron;
+
+    objective refineStone;
+    objective refinePlantingEarth;
+    objective refineAntlers;
+    objective refineSpiderWeb;
+    objective refineBearPelt;
+    objective refineWolfPelt;
+    objective refineVines;
+
     objective gatherWood;
     objective gatherIron;
+
+    objective gatherStone;
+    objective gatherPlantingEath;
+
     objective addDecoration;
     objective buildWall;
     objective craftBearArmor;

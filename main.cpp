@@ -9,6 +9,7 @@
 #include "Game.h"
 #include "AIDirector.h"
 #include "Structs/ObjectiveStruct.h"
+#include "Enums/AIDirectorBehavior.h"
 
 int main() {
     ActionUtils actionUtils;
@@ -17,7 +18,7 @@ int main() {
     Player player;
     Operators operators;
     Game game(player);
-    AIDirector aiDirector;
+    AIDirector aiDirector(behavior::random);
     objective quest;
 
     bool keepPlaying = true;

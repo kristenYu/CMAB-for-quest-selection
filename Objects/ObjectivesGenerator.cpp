@@ -6,8 +6,11 @@
 
 
 ObjectivesGenerator::ObjectivesGenerator() {
+    //Refine based objectives
+    //TODO: if the objectives become completable the targets for the refine will probably have to be changed to the output, not input
     refineWood.name = "RefineWood";
     refineWood.location.push_back(locations::Homestead);
+    refineWood.location.push_back(locations::Nightingale);
     refineWood.category = questCategory::RefineCategory;
     refineWood.task = "Refine 5 wood into lumber";
     refineWood.target = gatheredResources::Wood;
@@ -15,11 +18,69 @@ ObjectivesGenerator::ObjectivesGenerator() {
 
     refineIron.name = "RefineIron";
     refineIron.location.push_back(locations::Homestead);
+    refineIron.location.push_back(locations::Nightingale);
     refineIron.category = questCategory::RefineCategory;
     refineIron.task = "Refine 5 IronOre into IronBars";
     refineIron.target = gatheredResources::IronOre;
     refineIron.number = 5;
 
+    refineStone.name = "RefineStone";
+    refineStone.location.push_back(locations::Homestead);
+    refineStone.location.push_back(locations::Nightingale);
+    refineStone.category = questCategory::RefineCategory;
+    refineStone.task = "Refine 5 CutStone into Bricks";
+    refineStone.target = gatheredResources::CutStone;
+    refineStone.number = 5;
+
+    refinePlantingEarth.name = "RefinePlantingEarth";
+    refinePlantingEarth.location.push_back(locations::Homestead);
+    refinePlantingEarth.location.push_back(locations::Nightingale);
+    refinePlantingEarth.category = questCategory::RefineCategory;
+    refinePlantingEarth.task = "Refine 5 PlantingEarth into FertileEarth";
+    refinePlantingEarth.target = gatheredResources::PlantingEarth;
+    refinePlantingEarth.number = 5;
+
+    refineAntlers.name = "RefineAntlers";
+    refineAntlers.location.push_back(locations::Homestead);
+    refineAntlers.location.push_back(locations::Nightingale);
+    refineAntlers.category = questCategory::RefineCategory;
+    refineAntlers.task = "Refine 5 Antlers into Gelatin";
+    refineAntlers.target = gatheredResources::Antlers;
+    refineAntlers.number = 5;
+
+    refineSpiderWeb.name = "RefineSpiderWeb";
+    refineSpiderWeb.location.push_back(locations::Homestead);
+    refineSpiderWeb.location.push_back(locations::Nightingale);
+    refineSpiderWeb.category = questCategory::RefineCategory;
+    refineSpiderWeb.task = "Refine 5 SpiderWeb into SpiderRope";
+    refineSpiderWeb.target = gatheredResources::SpiderWeb;
+    refineSpiderWeb.number = 5;
+
+    refineBearPelt.name = "RefineBearPelt";
+    refineBearPelt.location.push_back(locations::Homestead);
+    refineBearPelt.location.push_back(locations::Nightingale);
+    refineBearPelt.category = questCategory::RefineCategory;
+    refineBearPelt.task = "Refine 5 BearPelt into BearLeather";
+    refineBearPelt.target = gatheredResources::BearPelt;
+    refineBearPelt.number = 5;
+
+    refineWolfPelt.name = "RefineWolfPelt";
+    refineWolfPelt.location.push_back(locations::Homestead);
+    refineWolfPelt.location.push_back(locations::Nightingale);
+    refineWolfPelt.category = questCategory::RefineCategory;
+    refineWolfPelt.task = "Refine 5 WolfPelt into WolfLeather";
+    refineWolfPelt.target = gatheredResources::WolfPelt;
+    refineWolfPelt.number = 5;
+
+    refineVines.name = "RefineVines";
+    refineVines.location.push_back(locations::Homestead);
+    refineVines.location.push_back(locations::Nightingale);
+    refineVines.category = questCategory::RefineCategory;
+    refineVines.task = "Refine 5 Vines into VineRope";
+    refineVines.target = gatheredResources::VineRope;
+    refineVines.number = 5;
+
+    //Gathering objectives
     gatherWood.name = "GatherWood";
     gatherWood.location.push_back(locations::Forest);
     gatherWood.category = questCategory::GatherCategory;
@@ -121,8 +182,17 @@ ObjectivesGenerator::ObjectivesGenerator() {
 
     list.push_back(refineWood);
     list.push_back(refineIron);
-    list.push_back(refineWood);
-    list.push_back(refineIron);
+    list.push_back(refineStone);
+    list.push_back(refinePlantingEarth);
+    list.push_back(refineAntlers);
+    list.push_back(refineSpiderWeb);
+    list.push_back(refineBearPelt);
+    list.push_back(refineWolfPelt);
+    list.push_back(refineVines);
+
+
+    list.push_back(gatherWood);
+    list.push_back(gatherIron);
     list.push_back(addDecoration);
     list.push_back(buildWall);
     list.push_back(craftBearArmor);

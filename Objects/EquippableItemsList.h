@@ -11,6 +11,8 @@
 class EquippableItemsList {
 
 public:
+    //TODO: add in tools and armor so that a player can be speced properly for each role.
+
     std::vector<equippableItem> list;
 
     equippableItem axePick;

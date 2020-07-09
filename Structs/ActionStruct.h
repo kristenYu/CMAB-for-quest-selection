@@ -4,9 +4,10 @@
 
 #ifndef AI_DIRECTOR_PROTOTYPE_ACTIONSTRUCT_H
 #define AI_DIRECTOR_PROTOTYPE_ACTIONSTRUCT_H
+#include "Enums/Actions.h"
 
 struct actionStruct{
-    int action;
+    actions action;
     int target;
     std::string otherTarget;
 };

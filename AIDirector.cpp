@@ -5,7 +5,9 @@
 #include <iostream>
 #include "AIDirector.h"
 
-AIDirector::AIDirector() {
+
+AIDirector::AIDirector(behavior behavior) {
+    b = behavior;
     categoryMap["RecruitNPCS"].push_back(questCategory::RefineCategory);
     categoryMap["RecruitNPCS"].push_back(questCategory::GatherCategory);
     categoryMap["RecruitNPCS"].push_back(questCategory::BuildCategory);
@@ -54,15 +56,28 @@ objective AIDirector::getQuest(PlayerModel &playerModel, Player &player) {
     bestSelfGoal = selfGoalsList.list[0];
     add(playerModel.playerStyle, playerModel.playerActions, combinedVector);
     printCombinedVector();
+
     for(int i = 0; i < selfGoalsList.list.size(); i++)
     {
-        currentValue = 0;
-        dotProduct(combinedVector, selfGoalsList.list[i].goalVector, currentValue);
-        std::cout<<"current value: "<<currentValue<<" "<<selfGoalsList.list[i].name<<std::endl;
-        if(currentValue > bestSelfGoalValue)
+        isSameLocation = false;
+        for(int j = 0; j < selfGoalsList.list[i].location.size(); j++)
         {
-            bestSelfGoalValue = currentValue;
-            bestSelfGoal = selfGoalsList.list[i];
+           if(selfGoalsList.list[i].location[j] == player.location)
+           {
+               isSameLocation = true;
+           }
+        }
+
+        if(isSameLocation)
+        {
+            currentValue = 0;
+            dotProduct(combinedVector, selfGoalsList.list[i].goalVector, currentValue);
+            std::cout<<"current value: "<<currentValue<<" "<<selfGoalsList.list[i].name<<std::endl;
+            if(currentValue >= bestSelfGoalValue)
+            {
+                bestSelfGoalValue = currentValue;
+                bestSelfGoal = selfGoalsList.list[i];
+            }
         }
     }
     printCombinedVector();
@@ -72,18 +87,34 @@ objective AIDirector::getQuest(PlayerModel &playerModel, Player &player) {
     randomIndex = rand() % categoryMap[bestSelfGoal.name].size();
     //std::cout<<randomIndex<<std::endl;
     category = categoryMap[bestSelfGoal.name][randomIndex];
-    //std::cout<<category<<std::endl;
+    std::cout<<category<<std::endl;
     //gets all of the objectives in that category
     objectivesGenerator.getAllQuestsOfCategory(category, potentialObjectives);
     printObjectivesVector(potentialObjectives);
     //match objective with the players current location
     getAllObjectivesInLocation(potentialObjectives, player.location, objectivesInSameLocation);
-    //printObjectivesVector(objectivesInSameLocation);
-    //TODO: Update the objective being picked at random, tie this into the previous actions
-    //pick an objective at random -> potentially tie this into the previous actions
-    randomIndex = rand() % objectivesInSameLocation.size();
-    newObjective = objectivesInSameLocation[randomIndex];
-    //std::cout<<newObjective.name<<std::endl;
+    //if its empty, that means that all of the objectives force the player to move somewhere else
+    printObjectivesVector(objectivesInSameLocation);
+    if(objectivesInSameLocation.empty())
+    {
+       randomIndex = rand() % potentialObjectives.size();
+        newObjective = potentialObjectives[randomIndex];
+    } else{
+        if(b = behavior::random)
+        {
+            randomIndex = rand() % objectivesInSameLocation.size();
+            newObjective = objectivesInSameLocation[randomIndex];
+        }
+        //TODO: Update the objective being picked at random, tie this into the previous actions
+        else if(b = behavior::sunkenCost)
+        {
+            //currently checks last 5 actions
+            getActionStack(5, player, previousActions);
+            //TODO: Check that the fequency map works
+        }
+
+
+    }
     return newObjective;
 }
 
@@ -95,11 +126,46 @@ void AIDirector::getAllObjectivesInLocation(std::vector<objective> in, int locat
         {
             if(in[i].location[j] == location)
             {
+                std::cout<<"found valid objective"<<std::endl;
                 out.push_back(in[i]);
             }
         }
     }
 }
+
+void AIDirector::getActionStack(int num, Player &player, std::vector<actionStruct> &out) {
+
+    out.clear();
+    if(num > player.actionStack.size()){
+        num = player.actionStack.size();
+    }
+    for(int i =0; i < num; i++){
+        if(player.actionStack[i].action != actions::Equip_Item || player.actionStack[i].action != actions::Move)
+        {
+            out.push_back(player.actionStack[i]);
+        }
+    }
+}
+
+actions AIDirector::getMostFrequentAction(std::vector<actionStruct> in) {
+    actionFrequency.clear();
+    for(int i = 0; i < in.size(); i++){
+        actionFrequency[in[i].action] += 1;
+    }
+
+    actions maxAction;
+    int maxCount = 0;
+    for( const auto& pair : actionFrequency ) {
+        if(pair.second > maxCount)
+        {
+            maxAction = pair.first;
+            maxCount = pair.second;
+        }
+    }
+    return maxAction;
+}
+
+
 
 void AIDirector::add(float *mat1, float *mat2, float *res) {
     for(int i = 0; i< NUMBEROFROLES; i++)
@@ -128,7 +194,7 @@ void AIDirector::printObjectivesVector(std::vector<objective> v) {
     std::cout<<"Objectives Vector: ";
     for(int i = 0; i < v.size(); i++)
     {
-        std::cout<<v[i].name<<", "<<std::endl;
+        std::cout<<v[i].name<<", ";
     }
     std::cout<<std::endl;
 }

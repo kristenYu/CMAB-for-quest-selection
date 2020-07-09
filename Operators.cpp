@@ -7,18 +7,6 @@
 #include <iostream>
 #include "Game.h"
 
-enum actions{
-    Move = 0,
-    Blueprint,
-    Chop,
-    Mine,
-    Build,
-    Refine,
-    Craft,
-    Attack,
-    Equip_Item
-};
-
 Operators::Operators() {
 
 }

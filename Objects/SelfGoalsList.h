@@ -11,10 +11,11 @@
 class SelfGoalsList {
 public:
     SelfGoalsList();
-
+    //TODO: expand the self-goals list
     std::vector<selfGoal> list;
     int const MAXHOMESTEADOBJECTIVE = 6;
     //These currently use the abstracted values
+    //self goals for the homestead
     selfGoal recruitNPC;
     selfGoal automateHarvesting;
     selfGoal automateConstruction;
@@ -23,6 +24,7 @@ public:
     selfGoal automateSecurity;
     selfGoal automateFarming;
 
+    //self goals for everywhere else?
     selfGoal huntCreature;
     selfGoal addDefenseToVillage;
     selfGoal gatherResources;

@@ -7,6 +7,8 @@
 
 BuildingsList::BuildingsList() {
     //blueprints is always generated the same way so the ordering is guaranteed
+
+    //TODO: add in more buildings, maybe add decorations?
     BlueprintsList blueprintsList;
     tinyHouse.name = "TinyHouse";
     tinyHouse.blueprint = blueprintsList.tinyHouse;

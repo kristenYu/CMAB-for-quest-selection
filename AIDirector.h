@@ -10,27 +10,35 @@
 #include "Structs/ObjectiveStruct.h"
 #include "Objects/ObjectivesGenerator.h"
 #include "Enums/Locations.h"
-
+#include "Enums/AIDirectorBehavior.h"
+#include "Enums/Actions.h"
 
 class AIDirector {
 public:
-    AIDirector();
+    AIDirector(behavior behavior);
     SelfGoalsList selfGoalsList;
     std::unordered_map<std::string, std::vector<questCategory>> categoryMap;
+    behavior b;
 
     objective getQuest(PlayerModel &playerModel, Player &player);
     float combinedVector[4];
     float currentValue;
     float bestSelfGoalValue;
     selfGoal bestSelfGoal;
+    std::vector<actionStruct> previousActions;
+    std::unordered_map<actions, int> actionFrequency;
+
 
     ObjectivesGenerator objectivesGenerator;
     int randomIndex;
     questCategory category;
     std::vector<objective> potentialObjectives;
     std::vector<objective> objectivesInSameLocation;
+    bool isSameLocation;
 
     void getAllObjectivesInLocation(std::vector<objective> in, int location, std::vector<objective> &out);
+    void getActionStack(int num, Player &player, std::vector<actionStruct> &out);
+    actions getMostFrequentAction(std::vector<actionStruct> in);
 
     int const NUMBEROFROLES = 4;
 

@@ -25,6 +25,8 @@ string
 -
 Enums/QuestCategory.h
 ../Structs/Enums/QuestCategory.h
+Enums/Locations.h
+../Structs/Enums/Locations.h
 
 D:/UofA/Research/AI_Director_Prototype/AIDirector.cpp
 iostream
@@ -45,6 +47,12 @@ Objects/ObjectivesGenerator.h
 D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.h
 Enums/Locations.h
 D:/UofA/Research/AI_Director_Prototype/Enums/Locations.h
+Enums/AIDirectorBehavior.h
+D:/UofA/Research/AI_Director_Prototype/Enums/AIDirectorBehavior.h
+Enums/Actions.h
+D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
+
+D:/UofA/Research/AI_Director_Prototype/Enums/AIDirectorBehavior.h
 
 D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
 
@@ -143,6 +151,8 @@ Player.h
 D:/UofA/Research/AI_Director_Prototype/Player.h
 
 D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
+Enums/Actions.h
+D:/UofA/Research/AI_Director_Prototype/Structs/Enums/Actions.h
 
 D:/UofA/Research/AI_Director_Prototype/Structs/BlueprintStruct.h
 string
@@ -195,4 +205,6 @@ AIDirector.h
 D:/UofA/Research/AI_Director_Prototype/AIDirector.h
 Structs/ObjectiveStruct.h
 D:/UofA/Research/AI_Director_Prototype/Structs/ObjectiveStruct.h
+Enums/AIDirectorBehavior.h
+D:/UofA/Research/AI_Director_Prototype/Enums/AIDirectorBehavior.h
 

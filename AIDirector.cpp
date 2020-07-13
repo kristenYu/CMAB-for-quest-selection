@@ -6,8 +6,7 @@
 #include "AIDirector.h"
 
 
-AIDirector::AIDirector(behavior behavior) {
-    b = behavior;
+AIDirector::AIDirector() {
     categoryMap["RecruitNPCS"].push_back(questCategory::RefineCategory);
     categoryMap["RecruitNPCS"].push_back(questCategory::GatherCategory);
     categoryMap["RecruitNPCS"].push_back(questCategory::BuildCategory);
@@ -50,70 +49,87 @@ AIDirector::AIDirector(behavior behavior) {
 
 }
 
+void AIDirector::setBehavior(behavior b) {
+    this->b = b;
+}
+
 objective AIDirector::getQuest(PlayerModel &playerModel, Player &player) {
     objective newObjective;
-    bestSelfGoalValue = 0;
-    bestSelfGoal = selfGoalsList.list[0];
-    add(playerModel.playerStyle, playerModel.playerActions, combinedVector);
-    printCombinedVector();
-
-    for(int i = 0; i < selfGoalsList.list.size(); i++)
+    //tie this into the previous actions
+    if (b == behavior::random){
+        randomIndex = rand() % objectivesGenerator.list.size();
+        newObjective = objectivesGenerator.list[randomIndex];
+        return newObjective;
+    }else if(b == behavior::sunkenCost)
     {
-        isSameLocation = false;
-        for(int j = 0; j < selfGoalsList.list[i].location.size(); j++)
+        //currently checks last 5 actions that are not move or equip item
+        getActionStack(5, player, previousActions);
+        for(int i =  0; i < previousActions.size(); i++)
         {
-           if(selfGoalsList.list[i].location[j] == player.location)
-           {
-               isSameLocation = true;
-           }
+            std::cout<<previousActions[i].action;
         }
+        std::cout<<std::endl;
+        //TODO: Check that the fequency map works
 
-        if(isSameLocation)
+    } else if (b == behavior::hybrid)
+    {
+        //TODO: Finish this part out
+        bestSelfGoalValue = 0;
+        bestSelfGoal = selfGoalsList.list[0];
+        add(playerModel.playerStyle, playerModel.playerActions, combinedVector);
+        printCombinedVector();
+
+        for(int i = 0; i < selfGoalsList.list.size(); i++)
         {
-            currentValue = 0;
-            dotProduct(combinedVector, selfGoalsList.list[i].goalVector, currentValue);
-            std::cout<<"current value: "<<currentValue<<" "<<selfGoalsList.list[i].name<<std::endl;
-            if(currentValue >= bestSelfGoalValue)
+            isSameLocation = false;
+            for(int j = 0; j < selfGoalsList.list[i].location.size(); j++)
             {
-                bestSelfGoalValue = currentValue;
-                bestSelfGoal = selfGoalsList.list[i];
+                if(selfGoalsList.list[i].location[j] == player.location)
+                {
+                    isSameLocation = true;
+                }
+            }
+
+            if(isSameLocation)
+            {
+                currentValue = 0;
+                dotProduct(combinedVector, selfGoalsList.list[i].goalVector, currentValue);
+                std::cout<<"current value: "<<currentValue<<" "<<selfGoalsList.list[i].name<<std::endl;
+                if(currentValue >= bestSelfGoalValue)
+                {
+                    bestSelfGoalValue = currentValue;
+                    bestSelfGoal = selfGoalsList.list[i];
+                }
             }
         }
-    }
-    printCombinedVector();
-    std::cout<<"Best Self Goal: "<<bestSelfGoal.name<<std::endl;
-    //TODO: Potentially update the random category pick by a bandit algorithm
-    //pick category at random -> this can potentially be tuned by a bandit algorithm
-    randomIndex = rand() % categoryMap[bestSelfGoal.name].size();
-    //std::cout<<randomIndex<<std::endl;
-    category = categoryMap[bestSelfGoal.name][randomIndex];
-    std::cout<<category<<std::endl;
-    //gets all of the objectives in that category
-    objectivesGenerator.getAllQuestsOfCategory(category, potentialObjectives);
-    printObjectivesVector(potentialObjectives);
-    //match objective with the players current location
-    getAllObjectivesInLocation(potentialObjectives, player.location, objectivesInSameLocation);
-    //if its empty, that means that all of the objectives force the player to move somewhere else
-    printObjectivesVector(objectivesInSameLocation);
-    if(objectivesInSameLocation.empty())
-    {
-       randomIndex = rand() % potentialObjectives.size();
-        newObjective = potentialObjectives[randomIndex];
-    } else{
-        if(b = behavior::random)
+        printCombinedVector();
+        std::cout<<"Best Self Goal: "<<bestSelfGoal.name<<std::endl;
+        //TODO: Potentially update the random category pick by a bandit algorithm
+        //pick category at random -> this can potentially be tuned by a bandit algorithm
+        randomIndex = rand() % categoryMap[bestSelfGoal.name].size();
+        //std::cout<<randomIndex<<std::endl;
+        category = categoryMap[bestSelfGoal.name][randomIndex];
+        std::cout<<category<<std::endl;
+        //gets all of the objectives in that category
+        objectivesGenerator.getAllQuestsOfCategory(category, potentialObjectives);
+        printObjectivesVector(potentialObjectives);
+        //match objective with the players current location
+        getAllObjectivesInLocation(potentialObjectives, player.location, objectivesInSameLocation);
+        //if its empty, that means that all of the objectives force the player to move somewhere else
+        printObjectivesVector(objectivesInSameLocation);
+        if(objectivesInSameLocation.empty())
         {
-            randomIndex = rand() % objectivesInSameLocation.size();
-            newObjective = objectivesInSameLocation[randomIndex];
-        }
-        //TODO: Update the objective being picked at random, tie this into the previous actions
-        else if(b = behavior::sunkenCost)
-        {
-            //currently checks last 5 actions
-            getActionStack(5, player, previousActions);
-            //TODO: Check that the fequency map works
-        }
+            randomIndex = rand() % potentialObjectives.size();
+            newObjective = potentialObjectives[randomIndex];
+        } else{
+            if(b = behavior::random)
+            {
+                randomIndex = rand() % objectivesInSameLocation.size();
+                newObjective = objectivesInSameLocation[randomIndex];
+            }
 
 
+        }
     }
     return newObjective;
 }
@@ -140,10 +156,11 @@ void AIDirector::getActionStack(int num, Player &player, std::vector<actionStruc
         num = player.actionStack.size();
     }
     for(int i =0; i < num; i++){
-        if(player.actionStack[i].action != actions::Equip_Item || player.actionStack[i].action != actions::Move)
+        if(player.actionStack[i].action == actions::Move || player.actionStack[i].action == actions::Equip_Item)
         {
-            out.push_back(player.actionStack[i]);
+            continue;
         }
+        out.push_back(player.actionStack[i]);
     }
 }
 

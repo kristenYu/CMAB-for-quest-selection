@@ -18,11 +18,34 @@ int main() {
     Player player;
     Operators operators;
     Game game(player);
-    AIDirector aiDirector(behavior::random);
+    AIDirector aiDirector;
     objective quest;
 
     bool keepPlaying = true;
     bool checkAction = true;
+    std::cout<<"Please Select a behavior for the AI director by typing the number next to it"<<std::endl;
+    std::cout<<"[0] Random, [1] Sunken Cost, [2] Hybrid"<<std::endl;
+    int aiBehavior;
+    std::cin>>aiBehavior;
+    if(aiBehavior > 2)
+    {
+        keepPlaying = false;
+        std::cout<<"not a valid AI behavior"<<std::endl;
+    }
+    else if(aiBehavior == behavior::random)
+    {
+        aiDirector.setBehavior(behavior::random);
+    }
+    else if(aiBehavior == behavior::sunkenCost)
+    {
+        aiDirector.setBehavior(behavior::sunkenCost);
+    }
+    else if(aiBehavior == behavior::hybrid)
+    {
+        aiDirector.setBehavior(behavior::hybrid);
+    }
+
+
     while(keepPlaying)
     {
         if(!keepPlaying)

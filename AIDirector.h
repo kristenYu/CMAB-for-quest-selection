@@ -15,9 +15,10 @@
 
 class AIDirector {
 public:
-    AIDirector(behavior behavior);
+    AIDirector();
     SelfGoalsList selfGoalsList;
     std::unordered_map<std::string, std::vector<questCategory>> categoryMap;
+    void setBehavior(behavior b);
     behavior b;
 
     objective getQuest(PlayerModel &playerModel, Player &player);

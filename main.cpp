@@ -21,7 +21,7 @@ int main() {
     AIDirector aiDirector;
     objective quest;
     EquippableItemsList equippableItemsList;
-    int numberOfActions;
+    int numberOfActions = 0;
 
     bool keepPlaying = true;
     bool checkAction = true;
@@ -176,7 +176,7 @@ int main() {
             playerModel.printPlayerStyle();
             playerModel.printPlayerActions();
             quest = aiDirector.getQuest(playerModel, player);
-            game.printPlayerActionStack(player);
+            //game.printPlayerActionStack(player);
             std::cout<<quest.task<<std::endl;
         }
         else{

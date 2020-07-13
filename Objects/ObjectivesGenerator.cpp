@@ -317,6 +317,7 @@ objective ObjectivesGenerator::generateObjective(questCategory category, Player 
     objective newObjective;
     //newObjective.location = static_cast<locations>(p.location);
     newObjective.category = category;
+    return newObjective;
     /*
     switch (category) {
         case questCategory::Gather:

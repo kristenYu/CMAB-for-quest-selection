@@ -113,12 +113,6 @@ Game::Game(Player &p) {
     //toolbelt
     p.unlockSchematic(schematicList.list[5]);
 
-    //axepick
-    p.addToEquippableInventory(equippableItemsList.list[0]);
-    //fancygun
-    p.addToEquippableInventory(equippableItemsList.list[1]);
-    //bear armor
-    p.addToEquippableInventory(equippableItemsList.list[2]);
 
     //tinyhouse
     p.unlockBlueprint(blueprintsList.list[0]);
@@ -128,9 +122,11 @@ Game::Game(Player &p) {
     p.unlockBlueprint(blueprintsList.list[2]);
     //turret
     p.unlockBlueprint(blueprintsList.list[3]);
+    //wall decoraction
+    p.unlockBlueprint(blueprintsList.wallPainting);
 
-    p.addToInventory(gatheredResources::Lumber);
-    p.addToInventory(gatheredResources::Lumber);
+   // p.addToInventory(gatheredResources::Lumber);
+   // p.addToInventory(gatheredResources::Lumber);
 
 
 }

@@ -20,6 +20,8 @@ int main() {
     Game game(player);
     AIDirector aiDirector;
     objective quest;
+    EquippableItemsList equippableItemsList;
+    int numberOfActions;
 
     bool keepPlaying = true;
     bool checkAction = true;
@@ -40,14 +42,34 @@ int main() {
     {
         aiDirector.setBehavior(behavior::sunkenCost);
     }
-    else if(aiBehavior == behavior::hybrid)
+    else if(aiBehavior == behavior::prediction)
     {
-        aiDirector.setBehavior(behavior::hybrid);
+        aiDirector.setBehavior(behavior::prediction);
     }
 
 
     while(keepPlaying)
     {
+        if(numberOfActions == 1)
+        {
+            player.unlockSchematic(equippableItemsList.defensiveArmor.schematic);
+            std::cout<<"You unlocked the defensive armor schematic"<<std::endl;
+        }
+        else if(numberOfActions == 3)
+        {
+            player.unlockSchematic(equippableItemsList.toolbelt.schematic);
+            std::cout<<"You unlocked the toolbelt schematic"<<std::endl;
+        }else if (numberOfActions == 5)
+        {
+            player.unlockSchematic(equippableItemsList.sharpenedAxePick.schematic);
+            std::cout<<"You unlocked the sharpened axepick schematic"<<std::endl;
+        }else if (numberOfActions == 7)
+        {
+            player.unlockSchematic(equippableItemsList.bearArmor.schematic);
+            std::cout<<"You unlocked the bear armor schematic"<<std::endl;
+        }
+
+
         if(!keepPlaying)
         {
             break;
@@ -56,6 +78,7 @@ int main() {
         std::cout<<"[0] Move, [1] Blueprint, [2] Chop, [3] Mine, [4] Build, [5] Craft, \n [6] Refine, [7] Attack, [8] Equip Item, [9] stop playing [10] get quest"<<std::endl;
         int actionInput;
         std::cin>> actionInput;
+        numberOfActions++;
         if(actionInput == 9)
         {
             keepPlaying = false;
@@ -65,6 +88,7 @@ int main() {
             {
                 std::cout<<"Invalid action"<<std::endl;
             }
+
         }
         else if(actionInput == actions::Blueprint)
         {

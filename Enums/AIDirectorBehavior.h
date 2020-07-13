@@ -8,7 +8,7 @@
 enum behavior{
     random = 0,
     sunkenCost,
-    hybrid,
+    prediction,
 };
 
 #endif //AI_DIRECTOR_PROTOTYPE_AIDIRECTORBEHAVIOR_H

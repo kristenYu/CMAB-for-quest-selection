@@ -109,12 +109,14 @@ ObjectivesGenerator::ObjectivesGenerator() {
     gatherPlantingEarth.target = gatheredResources::PlantingEarth;
     gatherPlantingEarth.number = 5;
 
-    addDecoration.name = "AddDecoration";
-    addDecoration.location.push_back(locations::Homestead);
-    addDecoration.category = questCategory::BuildCategory;
-    addDecoration.task = "Build a Wall Hanging";
-    addDecoration.otherTarget = buildingsList.wallPainting.name;
-    addDecoration.number = 1;
+    buildWallPainting.name = "AddDecoration";
+    buildWallPainting.location.push_back(locations::Homestead);
+    buildWallPainting.category = questCategory::BuildCategory;
+    buildWallPainting.task = "Build a Wall Hanging";
+    buildWallPainting.otherTarget = buildingsList.wallPainting.name;
+    buildWallPainting.number = 1;
+
+
 
     //Building a wall can technically happen anywhere -> this testing location sensativity
     buildWall.name = "BuildWall";
@@ -122,10 +124,39 @@ ObjectivesGenerator::ObjectivesGenerator() {
     buildWall.location.push_back(locations::Swamp);
     buildWall.location.push_back(locations::Homestead);
     buildWall.location.push_back(locations::Mountain);
+    buildWall.location.push_back(locations::Homestead);
     buildWall.category = questCategory::BuildCategory;
     buildWall.task = "Build a Wall";
     buildWall.otherTarget = buildingsList.wall.name;
     buildWall.number = 1;
+
+    buildTinyHouse.name = "BuildTinyHouse";
+    buildTinyHouse.location.push_back(locations::Homestead);
+    buildTinyHouse.category = questCategory::BuildCategory;
+    buildTinyHouse.task = "Build a Tiny House";
+    buildTinyHouse.otherTarget = buildingsList.tinyHouse.name;
+    buildTinyHouse.number = 1;
+
+    buildCraftingBench.name = "BuildCraftingBench";
+    buildCraftingBench.location.push_back(locations::Homestead);
+    buildCraftingBench.category = questCategory::BuildCategory;
+    buildCraftingBench.task = "Build a Crafting Bench";
+    buildCraftingBench.otherTarget = buildingsList.craftingBench.name;
+    buildCraftingBench.number = 1;
+
+    //turret can be built anywhere
+    buildTurret.name = "BuildTurret";
+    buildTurret.location.push_back(locations::Forest);
+    buildTurret.location.push_back(locations::Swamp);
+    buildTurret.location.push_back(locations::Homestead);
+    buildTurret.location.push_back(locations::Mountain);
+    buildTurret.location.push_back(locations::Homestead);
+    buildTurret.category = questCategory::BuildCategory;
+    buildTurret.task = "Build a Turret";
+    buildTurret.otherTarget = buildingsList.turret.name;
+    buildTurret.number = 1;
+
+
 
     craftBearArmor.name = "CraftBearArmor";
     craftBearArmor.location.push_back(locations::Homestead);
@@ -141,6 +172,35 @@ ObjectivesGenerator::ObjectivesGenerator() {
     craftFancyGun.otherTarget = equippableItemsList.fancyGun.name;
     craftFancyGun.number = 1;
 
+    craftAxePick.name = "CraftAxePick";
+    craftAxePick.location.push_back(locations::Homestead);
+    craftAxePick.category = questCategory::CraftCategory;
+    craftAxePick.task = "Craft an AxePick";
+    craftAxePick.otherTarget = equippableItemsList.axePick.name;
+    craftAxePick.number = 1;
+
+    craftDefensiveArmor.name = "CraftDefensiveArmor";
+    craftDefensiveArmor.location.push_back(locations::Homestead);
+    craftDefensiveArmor.category = questCategory::CraftCategory;
+    craftDefensiveArmor.task = "Craft a Defensive Armor";
+    craftDefensiveArmor.otherTarget = equippableItemsList.defensiveArmor.name;
+    craftDefensiveArmor.number = 1;
+
+    craftSharpenedAxePick.name = "CraftSharpenedAxePick";
+    craftSharpenedAxePick.location.push_back(locations::Homestead);
+    craftSharpenedAxePick.category = questCategory::CraftCategory;
+    craftSharpenedAxePick.task = "Craft a Sharpened AxePick";
+    craftSharpenedAxePick.otherTarget = equippableItemsList.sharpenedAxePick.name;
+    craftSharpenedAxePick.number = 1;
+
+    craftToolBelt.name = "CraftToolBelt";
+    craftToolBelt.location.push_back(locations::Homestead);
+    craftToolBelt.category = questCategory::CraftCategory;
+    craftToolBelt.task = "Craft a Tool Belt";
+    craftToolBelt.otherTarget = equippableItemsList.sharpenedAxePick.name;
+    craftToolBelt.number = 1;
+
+    //attack/harvest types -> currently the same actions completes both
     harvestAntlers.name = "Harvest Antlers";
     harvestAntlers.location.push_back(locations::Forest);
     harvestAntlers.location.push_back(locations::Nightingale);
@@ -216,10 +276,19 @@ ObjectivesGenerator::ObjectivesGenerator() {
     list.push_back(gatherStone);
     list.push_back(gatherPlantingEarth);
 
-    list.push_back(addDecoration);
+    list.push_back(buildWallPainting);
     list.push_back(buildWall);
+    list.push_back(buildTurret);
+    list.push_back(buildCraftingBench);
+    list.push_back(buildTinyHouse);
+
+
     list.push_back(craftBearArmor);
     list.push_back(craftFancyGun);
+    list.push_back(craftAxePick);
+    list.push_back(craftToolBelt);
+    list.push_back(craftSharpenedAxePick);
+    list.push_back(craftDefensiveArmor);
 
     list.push_back(harvestAntlers);
     list.push_back(harvestVines);

@@ -56,10 +56,20 @@ public:
     objective gatherStone;
     objective gatherPlantingEarth;
 
-    objective addDecoration;
+    objective buildWallPainting;
     objective buildWall;
+    objective buildTinyHouse;
+    objective buildCraftingBench;
+    objective buildTurret;
+
     objective craftBearArmor;
     objective craftFancyGun;
+    objective craftAxePick;
+    objective craftDefensiveArmor;
+    objective craftSharpenedAxePick;
+    objective craftToolBelt;
+
+
     objective harvestAntlers;
     objective harvestVines;
     objective harvestWolfPelt;

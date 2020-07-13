@@ -75,21 +75,27 @@ objective AIDirector::getQuest(PlayerModel &playerModel, Player &player) {
     {
         //currently checks last 5 actions that are not move or equip item
         getActionStack(5, player, previousActions);
-        std::cout<<"---------------"<<std::endl;
+       // std::cout<<"---------------"<<std::endl;
         actions a = getMostFrequentAction(previousActions);
-        int target = getMostRecentTarget(a, previousActions);
-        std::cout<<target<<std::endl;
         category = actionCategoryMap[a];
         objectivesGenerator.getAllQuestsOfCategory(category, potentialObjectives);
-        newObjective = getObjectiveWithTarget(target, potentialObjectives);
+        if(category == questCategory::CraftCategory || category == questCategory::BuildCategory)
+        {
+            std::string otherTarget = getMostRecentOtherTarget(a, previousActions);
+            newObjective = getObjectiveWithOtherTarget(otherTarget, potentialObjectives);
+        }
+        else
+        {
+            int target = getMostRecentTarget(a, previousActions);
+            newObjective = getObjectiveWithTarget(target, potentialObjectives);
+        }
         return newObjective;
-    } else if (b == behavior::hybrid)
+    } else if (b == behavior::prediction)
     {
-        //TODO: Finish this part out
         bestSelfGoalValue = 0;
         bestSelfGoal = selfGoalsList.list[0];
         add(playerModel.playerStyle, playerModel.playerActions, combinedVector);
-        printCombinedVector();
+        //printCombinedVector();
 
         for(int i = 0; i < selfGoalsList.list.size(); i++)
         {
@@ -106,7 +112,7 @@ objective AIDirector::getQuest(PlayerModel &playerModel, Player &player) {
             {
                 currentValue = 0;
                 dotProduct(combinedVector, selfGoalsList.list[i].goalVector, currentValue);
-                std::cout<<"current value: "<<currentValue<<" "<<selfGoalsList.list[i].name<<std::endl;
+                //std::cout<<"current value: "<<currentValue<<" "<<selfGoalsList.list[i].name<<std::endl;
                 if(currentValue >= bestSelfGoalValue)
                 {
                     bestSelfGoalValue = currentValue;
@@ -114,32 +120,40 @@ objective AIDirector::getQuest(PlayerModel &playerModel, Player &player) {
                 }
             }
         }
-        printCombinedVector();
+        //printCombinedVector();
         std::cout<<"Best Self Goal: "<<bestSelfGoal.name<<std::endl;
         //TODO: Potentially update the random category pick by a bandit algorithm
+        //TODO: Potentially find another solution rather than picking random objective
         //pick category at random -> this can potentially be tuned by a bandit algorithm
         randomIndex = rand() % categoryMap[bestSelfGoal.name].size();
         //std::cout<<randomIndex<<std::endl;
         category = categoryMap[bestSelfGoal.name][randomIndex];
-        std::cout<<category<<std::endl;
         //gets all of the objectives in that category
         objectivesGenerator.getAllQuestsOfCategory(category, potentialObjectives);
-        printObjectivesVector(potentialObjectives);
         //match objective with the players current location
         getAllObjectivesInLocation(potentialObjectives, player.location, objectivesInSameLocation);
         //if its empty, that means that all of the objectives force the player to move somewhere else
-        printObjectivesVector(objectivesInSameLocation);
         if(objectivesInSameLocation.empty())
         {
             randomIndex = rand() % potentialObjectives.size();
             newObjective = potentialObjectives[randomIndex];
         } else{
-            if(b = behavior::random)
+            if(category == questCategory::CraftCategory)
             {
+                checkValidCraftObjectives(objectivesInSameLocation, validObjectivesForPlayer, player);
+                //printObjectivesVector(validObjectivesForPlayer);
+                randomIndex = rand() % validObjectivesForPlayer.size();
+                newObjective = validObjectivesForPlayer[randomIndex];
+            }else if(category == questCategory::BuildCategory)
+            {
+                checkValidBuildObjectives(objectivesInSameLocation, validObjectivesForPlayer, player);
+                //printObjectivesVector(validObjectivesForPlayer);
+                randomIndex = rand() % validObjectivesForPlayer.size();
+                newObjective = validObjectivesForPlayer[randomIndex];
+            }else{
                 randomIndex = rand() % objectivesInSameLocation.size();
                 newObjective = objectivesInSameLocation[randomIndex];
             }
-
 
         }
     }
@@ -154,7 +168,33 @@ void AIDirector::getAllObjectivesInLocation(std::vector<objective> in, int locat
         {
             if(in[i].location[j] == location)
             {
-                std::cout<<"found valid objective"<<std::endl;
+                //std::cout<<"found valid objective"<<std::endl;
+                out.push_back(in[i]);
+            }
+        }
+    }
+}
+
+void AIDirector::checkValidCraftObjectives(std::vector<objective> in, std::vector<objective> &out, Player &player) {
+    out.clear();
+    for(int i = 0; i < in.size(); i++)
+    {
+        for(int j = 0; j < player.unlockedSchematics.size(); j++){
+            if(in[i].otherTarget == player.unlockedSchematics[j].name)
+            {
+                out.push_back(in[i]);
+            }
+        }
+    }
+}
+
+void AIDirector::checkValidBuildObjectives(std::vector<objective> in, std::vector<objective> &out, Player &player) {
+    out.clear();
+    for(int i = 0; i < in.size(); i++)
+    {
+        for(int j = 0; j < player.unlockedBlueprints.size(); j++){
+            if(in[i].otherTarget == player.unlockedBlueprints[j].name)
+            {
                 out.push_back(in[i]);
             }
         }
@@ -173,7 +213,7 @@ void AIDirector::getActionStack(int num, Player &player, std::vector<actionStruc
         {
             continue;
         }
-        std::cout<<player.actionStack[i].action<<" "<<player.actionStack[i].target<<std::endl;
+        //std::cout<<player.actionStack[i].action<<" "<<player.actionStack[i].target<<std::endl;
         out.push_back(player.actionStack[i]);
         currentNum++;
         if(currentNum >= num-1)
@@ -214,11 +254,36 @@ int AIDirector::getMostRecentTarget(actions a, std::vector<actionStruct> in) {
     return target;
 }
 
+std::string AIDirector::getMostRecentOtherTarget(actions a, std::vector<actionStruct> in) {
+    std::string otherTarget = "";
+    for(int i =0; i < in.size(); i++)
+    {
+        if(in[i].action == a){
+            otherTarget = in[i].otherTarget;
+            return otherTarget;
+        }
+    }
+    return otherTarget;
+}
+
 objective AIDirector::getObjectiveWithTarget(int target, std::vector<objective> in) {
     objective newObjective = in[0];
     for(int i = 0; i < in.size(); i++)
     {
         if(in[i].target == target)
+        {
+            newObjective = in[i];
+            break;
+        }
+    }
+    return newObjective;
+}
+
+objective AIDirector::getObjectiveWithOtherTarget(std::string otherTarget, std::vector<objective> in) {
+    objective newObjective = in[0];
+    for(int i = 0; i < in.size(); i++)
+    {
+        if(in[i].otherTarget == otherTarget)
         {
             newObjective = in[i];
             break;

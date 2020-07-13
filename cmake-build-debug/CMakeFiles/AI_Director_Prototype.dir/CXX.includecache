@@ -6,41 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../Enums/Actions.h
-
 ../Enums/Creatures.h
-
-../Enums/GatheredResources.h
-
-../Enums/Locations.h
-
-../Enums/QuestCategory.h
-
-../Objects/EquippableItemsList.h
-SchematicList.h
-../Objects/SchematicList.h
-Structs/EquippableItemStruct.h
-../Objects/Structs/EquippableItemStruct.h
-
-../Player.h
-unordered_map
--
-vector
--
-Structs/ActionStruct.h
-../Structs/ActionStruct.h
-Structs/SchematicStruct.h
-../Structs/SchematicStruct.h
-Objects/EquippableItemsList.h
-../Objects/EquippableItemsList.h
-Structs/EquippableItemStruct.h
-../Structs/EquippableItemStruct.h
-Structs/BlueprintStruct.h
-../Structs/BlueprintStruct.h
-
-../Structs/ActionStruct.h
-Enums/Actions.h
-../Structs/Enums/Actions.h
 
 ../Structs/BlueprintStruct.h
 string
@@ -52,28 +18,6 @@ vector
 BlueprintStruct.h
 ../Structs/BlueprintStruct.h
 
-../Structs/EquippableItemStruct.h
-SchematicStruct.h
-../Structs/SchematicStruct.h
-
-../Structs/ObjectiveStruct.h
-string
--
-vector
--
-Enums/QuestCategory.h
-../Structs/Enums/QuestCategory.h
-Enums/Locations.h
-../Structs/Enums/Locations.h
-Enums/GatheredResources.h
-../Structs/Enums/GatheredResources.h
-
-../Structs/SchematicStruct.h
-string
--
-vector
--
-
 ../Structs/SelfGoalStruct.h
 string
 -
@@ -81,12 +25,6 @@ Enums/QuestCategory.h
 ../Structs/Enums/QuestCategory.h
 Enums/Locations.h
 ../Structs/Enums/Locations.h
-
-D:/UofA/Research/AI_Director_Prototype/AIDirector.cpp
-iostream
--
-AIDirector.h
-D:/UofA/Research/AI_Director_Prototype/AIDirector.h
 
 D:/UofA/Research/AI_Director_Prototype/AIDirector.h
 PlayerModel.h
@@ -110,11 +48,31 @@ D:/UofA/Research/AI_Director_Prototype/Enums/AIDirectorBehavior.h
 
 D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
 
+D:/UofA/Research/AI_Director_Prototype/Enums/Creatures.h
+
 D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
 
 D:/UofA/Research/AI_Director_Prototype/Enums/Locations.h
 
+D:/UofA/Research/AI_Director_Prototype/Enums/NaturalResources.h
+
 D:/UofA/Research/AI_Director_Prototype/Enums/QuestCategory.h
+
+D:/UofA/Research/AI_Director_Prototype/Game.cpp
+Game.h
+D:/UofA/Research/AI_Director_Prototype/Game.h
+Enums/Locations.h
+D:/UofA/Research/AI_Director_Prototype/Enums/Locations.h
+Enums/Creatures.h
+D:/UofA/Research/AI_Director_Prototype/Enums/Creatures.h
+Enums/Actions.h
+D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
+Enums/GatheredResources.h
+D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
+Enums/NaturalResources.h
+D:/UofA/Research/AI_Director_Prototype/Enums/NaturalResources.h
+iostream
+-
 
 D:/UofA/Research/AI_Director_Prototype/Game.h
 string
@@ -151,10 +109,6 @@ SchematicList.h
 D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h
 Structs/EquippableItemStruct.h
 D:/UofA/Research/AI_Director_Prototype/Objects/Structs/EquippableItemStruct.h
-
-D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.cpp
-ObjectivesGenerator.h
-D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.h
 
 D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.h
 Structs/ObjectiveStruct.h

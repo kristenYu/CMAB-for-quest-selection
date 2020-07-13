@@ -36,13 +36,19 @@ public:
     questCategory category;
     std::vector<objective> potentialObjectives;
     std::vector<objective> objectivesInSameLocation;
+    std::vector<objective> validObjectivesForPlayer;
     bool isSameLocation;
 
     void getAllObjectivesInLocation(std::vector<objective> in, int location, std::vector<objective> &out);
     void getActionStack(int num, Player &player, std::vector<actionStruct> &out);
+    void checkValidCraftObjectives(std::vector<objective> in, std::vector<objective> &out, Player &player);
+    void checkValidBuildObjectives(std::vector<objective> in,std::vector<objective> &out, Player &player);
     actions getMostFrequentAction(std::vector<actionStruct> in);
     int getMostRecentTarget(actions a, std::vector<actionStruct> in);
+    std::string getMostRecentOtherTarget(actions a, std::vector<actionStruct> in);
     objective getObjectiveWithTarget(int target, std::vector<objective> in);
+    objective getObjectiveWithOtherTarget(std::string otherTarget, std::vector<objective> in);
+
 
     int const NUMBEROFROLES = 4;
 

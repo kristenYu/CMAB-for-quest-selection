@@ -95,6 +95,20 @@ ObjectivesGenerator::ObjectivesGenerator() {
     gatherIron.target = gatheredResources::IronOre;
     gatherIron.number = 5;
 
+    gatherStone.name = "GatherStone";
+    gatherStone.location.push_back(locations::Mountain);
+    gatherStone.category = questCategory::GatherCategory;
+    gatherStone.task = "Mine 7 CutStone";
+    gatherStone.target = gatheredResources::CutStone;
+    gatherStone.number = 7;
+
+    gatherPlantingEarth.name = "GatherPlantingEarth";
+    gatherPlantingEarth.location.push_back(locations::Mountain);
+    gatherPlantingEarth.category = questCategory::GatherCategory;
+    gatherPlantingEarth.task = "Mine 5 PlantingEarth";
+    gatherPlantingEarth.target = gatheredResources::PlantingEarth;
+    gatherPlantingEarth.number = 5;
+
     addDecoration.name = "AddDecoration";
     addDecoration.location.push_back(locations::Homestead);
     addDecoration.category = questCategory::BuildCategory;
@@ -180,6 +194,13 @@ ObjectivesGenerator::ObjectivesGenerator() {
     attackWolf.target= creatures::Wolf;
     attackWolf.number = 10;
 
+    attackSpider.name = "AttackSpider";
+    attackSpider.location.push_back(locations::Forest);
+    attackSpider.category = questCategory::AttackCategory;
+    attackSpider.task = "Attack 10 Spiders";
+    attackSpider.target = creatures::Spider;
+    attackSpider.number = 10;
+
     list.push_back(refineWood);
     list.push_back(refineIron);
     list.push_back(refineStone);
@@ -190,13 +211,16 @@ ObjectivesGenerator::ObjectivesGenerator() {
     list.push_back(refineWolfPelt);
     list.push_back(refineVines);
 
-
     list.push_back(gatherWood);
     list.push_back(gatherIron);
+    list.push_back(gatherStone);
+    list.push_back(gatherPlantingEarth);
+
     list.push_back(addDecoration);
     list.push_back(buildWall);
     list.push_back(craftBearArmor);
     list.push_back(craftFancyGun);
+
     list.push_back(harvestAntlers);
     list.push_back(harvestVines);
     list.push_back(harvestWolfPelt);
@@ -204,6 +228,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     list.push_back(attackDeer);
     list.push_back(attackBear);
     list.push_back(attackWolf);
+    list.push_back(attackSpider);
 }
 
 void ObjectivesGenerator::getAllQuestsOfCategory(questCategory category, std::vector<objective> &outputVector) {

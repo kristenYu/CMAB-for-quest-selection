@@ -18,6 +18,7 @@ public:
     AIDirector();
     SelfGoalsList selfGoalsList;
     std::unordered_map<std::string, std::vector<questCategory>> categoryMap;
+    std::unordered_map<actions, questCategory> actionCategoryMap;
     void setBehavior(behavior b);
     behavior b;
 
@@ -40,6 +41,8 @@ public:
     void getAllObjectivesInLocation(std::vector<objective> in, int location, std::vector<objective> &out);
     void getActionStack(int num, Player &player, std::vector<actionStruct> &out);
     actions getMostFrequentAction(std::vector<actionStruct> in);
+    int getMostRecentTarget(actions a, std::vector<actionStruct> in);
+    objective getObjectiveWithTarget(int target, std::vector<objective> in);
 
     int const NUMBEROFROLES = 4;
 

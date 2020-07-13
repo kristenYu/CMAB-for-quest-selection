@@ -47,6 +47,17 @@ AIDirector::AIDirector() {
     categoryMap["RefineResources"].push_back(questCategory::CraftCategory);
     categoryMap["RefineResources"].push_back(questCategory::BuildCategory);
 
+
+
+    //action category map
+    actionCategoryMap[actions::Attack] = questCategory::AttackCategory;
+    //TODO: Potentially add a blueprint quest category
+    actionCategoryMap[actions::Blueprint] = questCategory::BuildCategory;
+    actionCategoryMap[actions::Build] = questCategory::BuildCategory;
+    actionCategoryMap[actions::Mine] = questCategory::GatherCategory;
+    actionCategoryMap[actions::Chop] = questCategory::GatherCategory;
+    actionCategoryMap[actions::Craft] = questCategory::CraftCategory;
+    actionCategoryMap[actions::Refine] = questCategory::RefineCategory;
 }
 
 void AIDirector::setBehavior(behavior b) {
@@ -64,13 +75,14 @@ objective AIDirector::getQuest(PlayerModel &playerModel, Player &player) {
     {
         //currently checks last 5 actions that are not move or equip item
         getActionStack(5, player, previousActions);
-        for(int i =  0; i < previousActions.size(); i++)
-        {
-            std::cout<<previousActions[i].action;
-        }
-        std::cout<<std::endl;
-        //TODO: Check that the fequency map works
-
+        std::cout<<"---------------"<<std::endl;
+        actions a = getMostFrequentAction(previousActions);
+        int target = getMostRecentTarget(a, previousActions);
+        std::cout<<target<<std::endl;
+        category = actionCategoryMap[a];
+        objectivesGenerator.getAllQuestsOfCategory(category, potentialObjectives);
+        newObjective = getObjectiveWithTarget(target, potentialObjectives);
+        return newObjective;
     } else if (b == behavior::hybrid)
     {
         //TODO: Finish this part out
@@ -150,17 +162,24 @@ void AIDirector::getAllObjectivesInLocation(std::vector<objective> in, int locat
 }
 
 void AIDirector::getActionStack(int num, Player &player, std::vector<actionStruct> &out) {
-
     out.clear();
     if(num > player.actionStack.size()){
         num = player.actionStack.size();
     }
-    for(int i =0; i < num; i++){
+    int currentNum = 0;
+
+    for(int i = player.actionStack.size()-1; i >= 0 ; --i){
         if(player.actionStack[i].action == actions::Move || player.actionStack[i].action == actions::Equip_Item)
         {
             continue;
         }
+        std::cout<<player.actionStack[i].action<<" "<<player.actionStack[i].target<<std::endl;
         out.push_back(player.actionStack[i]);
+        currentNum++;
+        if(currentNum >= num-1)
+        {
+            break;
+        }
     }
 }
 
@@ -182,6 +201,31 @@ actions AIDirector::getMostFrequentAction(std::vector<actionStruct> in) {
     return maxAction;
 }
 
+int AIDirector::getMostRecentTarget(actions a, std::vector<actionStruct> in) {
+    int target = in[0].target;
+    for(int i = 0; i < in.size(); i++)
+    {
+        if(in[i].action == a){
+            target = in[i].target;
+            return target;
+        }
+    }
+    //gets the most recent target done by the player
+    return target;
+}
+
+objective AIDirector::getObjectiveWithTarget(int target, std::vector<objective> in) {
+    objective newObjective = in[0];
+    for(int i = 0; i < in.size(); i++)
+    {
+        if(in[i].target == target)
+        {
+            newObjective = in[i];
+            break;
+        }
+    }
+    return newObjective;
+}
 
 
 void AIDirector::add(float *mat1, float *mat2, float *res) {

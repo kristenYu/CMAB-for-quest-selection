@@ -54,7 +54,7 @@ public:
     objective gatherIron;
 
     objective gatherStone;
-    objective gatherPlantingEath;
+    objective gatherPlantingEarth;
 
     objective addDecoration;
     objective buildWall;
@@ -64,9 +64,12 @@ public:
     objective harvestVines;
     objective harvestWolfPelt;
     objective harvestSpiderWeb;
+
+
     objective attackDeer;
     objective attackBear;
     objective attackWolf;
+    objective attackSpider;
 
     BuildingsList buildingsList;
     EquippableItemsList equippableItemsList;

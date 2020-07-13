@@ -152,6 +152,7 @@ int main() {
             playerModel.printPlayerStyle();
             playerModel.printPlayerActions();
             quest = aiDirector.getQuest(playerModel, player);
+            game.printPlayerActionStack(player);
             std::cout<<quest.task<<std::endl;
         }
         else{

@@ -50,20 +50,20 @@ int main() {
 
     while(keepPlaying)
     {
-        if(numberOfActions == 1)
+        if(numberOfActions == 5)
         {
             player.unlockSchematic(equippableItemsList.defensiveArmor.schematic);
             std::cout<<"You unlocked the defensive armor schematic"<<std::endl;
         }
-        else if(numberOfActions == 3)
+        else if(numberOfActions == 10)
         {
             player.unlockSchematic(equippableItemsList.toolbelt.schematic);
             std::cout<<"You unlocked the toolbelt schematic"<<std::endl;
-        }else if (numberOfActions == 5)
+        }else if (numberOfActions == 15)
         {
             player.unlockSchematic(equippableItemsList.sharpenedAxePick.schematic);
             std::cout<<"You unlocked the sharpened axepick schematic"<<std::endl;
-        }else if (numberOfActions == 7)
+        }else if (numberOfActions == 20)
         {
             player.unlockSchematic(equippableItemsList.bearArmor.schematic);
             std::cout<<"You unlocked the bear armor schematic"<<std::endl;

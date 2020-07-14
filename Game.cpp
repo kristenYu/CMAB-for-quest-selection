@@ -370,7 +370,8 @@ bool Game::craft(Player &p) {
 
 bool Game::refine(Player &p) {
     inputMap.clear();
-    if(p.location != locations::Homestead || p.location != locations::Nightingale)
+    std::cout<<p.location<<std::endl;
+    if(p.location == locations::Forest || p.location == locations::Mountain || p.location == locations::Swamp)
     {
         std::cout<<"Refinement can only be done at the Homestead or Nightingale"<<std::endl;
         return false;

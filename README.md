@@ -20,3 +20,5 @@ To use, simply open the folder with visul studio. Then, select file > open > cma
   checks the previous 5 actions, and assigns an objective that the player has completed in those previous actions. 
 1. Prediction:
   This is the prediction model as proposed in the AI Director Quest Category Document. When more than one objective meets both the location and category requirements, the objective is chosen at random.
+1. Learned:
+  This is the nonstationary UCBI learning model which weights the other behaviors according to player preference.

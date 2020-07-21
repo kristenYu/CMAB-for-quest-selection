@@ -4,6 +4,9 @@
 
 #include <iostream>
 #include "AIDirector.h"
+#include <math.h>
+#include <iostream>
+#include <fstream>
 
 
 AIDirector::AIDirector() {
@@ -64,14 +67,123 @@ void AIDirector::setBehavior(behavior b) {
     this->b = b;
 }
 
-objective AIDirector::getQuest(PlayerModel &playerModel, Player &player) {
+
+objective AIDirector::getLearnedQuest(PlayerModel &playerModel, Player &player) {
+    behavior optimal  = getMaxQValue();
+    previousBehavior = optimal;
+    t += 1;
+    return getQuest(playerModel, player, optimal);
+}
+
+void AIDirector::updateLearnedVector() {
+    learnedBehaviorVector[previousBehavior] = learnedBehaviorVector[previousBehavior] + alpha*(rewardVector[previousBehavior] - learnedBehaviorVector[previousBehavior]);
+}
+
+void AIDirector::updateNumberOfActions() {
+    numberOfActions[previousBehavior] += 1;
+}
+
+behavior AIDirector::getMaxQValue() {
+    //UCBI
+    maxValue = 0;
+    maxIndex = 0;
+    for(int i = 0; i < LEARNEDBEHAVIORS; i++)
+    {
+        float currentValue = learnedBehaviorVector[i] + c*sqrt(log(t)/(numberOfActions[i]));
+        if(isnan(currentValue))
+        {
+            continue;
+        }
+        if(currentValue>maxValue)
+        {
+            maxIndex = i;
+            maxValue = currentValue;
+        }
+    }
+    return static_cast<behavior>(maxIndex);
+
+    //Epsilon Greedy
+    //gets random number between 0 and 1 inclusive
+    /*
+    random = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+    if(random < epsilon)
+    {
+        //returns a random behavior that is not learned - learned is value 3
+        return static_cast<behavior>(rand() % 3);
+    }
+    else
+    {
+        maxValue = 0;
+        maxIndex = 0;
+        for(int i = 0; i < LEARNEDBEHAVIORS; i++)
+        {
+            if(learnedBehaviorVector[i] > maxValue)
+            {
+                maxValue = learnedBehaviorVector[i];
+                maxIndex = i;
+            }
+        }
+        return static_cast<behavior>(maxIndex);
+    }
+     */
+}
+
+void AIDirector::clearRewardVector() {
+    for(int i = 0; i < LEARNEDBEHAVIORS; i++)
+    {
+        rewardVector[i] = 0;
+    }
+}
+
+void AIDirector::updateRewardVector(int reward) {
+    for(int i = 0; i < LEARNEDBEHAVIORS; i++)
+    {
+        if(i == previousBehavior)
+        {
+            rewardVector[i] = reward;
+        }
+        else
+        {
+            rewardVector[i] = 0;
+        }
+    }
+}
+
+void AIDirector::saveLearnedBehavior() {
+    std::ofstream myfile;
+    myfile.open ("learnedData.txt");
+    for(int i = 0; i < LEARNEDBEHAVIORS; i++)
+    {
+        myfile<<learnedBehaviorVector[i]<<"\n";
+    }
+    myfile.close();
+}
+
+void AIDirector::loadLearnedBehavior() {
+    std::string line;
+    std::ifstream myfile ("learnedData.txt");
+    int current = 0;
+    if (myfile.is_open())
+    {
+        while ( getline (myfile,line) )
+        {
+            learnedBehaviorVector[current] = std::stof(line);
+            current++;
+        }
+        myfile.close();
+    }
+    else std::cout << "Unable to open file";
+}
+
+
+objective AIDirector::getQuest(PlayerModel &playerModel, Player &player, behavior behavior) {
     objective newObjective;
     //tie this into the previous actions
-    if (b == behavior::random){
+    if (behavior == behavior::random){
         randomIndex = rand() % objectivesGenerator.list.size();
         newObjective = objectivesGenerator.list[randomIndex];
         return newObjective;
-    }else if(b == behavior::sunkenCost)
+    }else if(behavior == behavior::sunkenCost)
     {
         //currently checks last 5 actions that are not move or equip item
         getActionStack(5, player, previousActions);
@@ -90,7 +202,7 @@ objective AIDirector::getQuest(PlayerModel &playerModel, Player &player) {
             newObjective = getObjectiveWithTarget(target, potentialObjectives);
         }
         return newObjective;
-    } else if (b == behavior::prediction)
+    } else if (behavior == behavior::prediction)
     {
         bestSelfGoalValue = 0;
         bestSelfGoal = selfGoalsList.list[0];
@@ -321,6 +433,33 @@ void AIDirector::printObjectivesVector(std::vector<objective> v) {
     for(int i = 0; i < v.size(); i++)
     {
         std::cout<<v[i].name<<", ";
+    }
+    std::cout<<std::endl;
+}
+
+void AIDirector::printRewardVector() {
+    std::cout<<"Reward Vector: ";
+    for(int i = 0; i < LEARNEDBEHAVIORS; i++)
+    {
+        std::cout<<rewardVector[i]<<",";
+    }
+    std::cout<<std::endl;
+}
+
+void AIDirector::printQValue() {
+    std::cout<<"Learned Vector: ";
+    for(int i = 0; i < LEARNEDBEHAVIORS; i++)
+    {
+        std::cout<<learnedBehaviorVector[i]<<",";
+    }
+    std::cout<<std::endl;
+}
+
+void AIDirector::printNumberOfActions() {
+    std::cout<<"Number of Actions: ";
+    for(int i = 0; i < LEARNEDBEHAVIORS; i++)
+    {
+        std::cout<<numberOfActions[i]<<",";
     }
     std::cout<<std::endl;
 }

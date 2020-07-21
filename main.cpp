@@ -26,10 +26,10 @@ int main() {
     bool keepPlaying = true;
     bool checkAction = true;
     std::cout<<"Please Select a behavior for the AI director by typing the number next to it"<<std::endl;
-    std::cout<<"[0] Random, [1] Sunken Cost, [2] Hybrid"<<std::endl;
+    std::cout<<"[0] Random, [1] Sunken Cost, [2] Prediction, [3] Learned"<<std::endl;
     int aiBehavior;
     std::cin>>aiBehavior;
-    if(aiBehavior > 2)
+    if(aiBehavior > 3)
     {
         keepPlaying = false;
         std::cout<<"not a valid AI behavior"<<std::endl;
@@ -45,6 +45,12 @@ int main() {
     else if(aiBehavior == behavior::prediction)
     {
         aiDirector.setBehavior(behavior::prediction);
+    }
+    else if (aiBehavior == behavior::learned)
+    {
+        aiDirector.setBehavior(behavior::learned);
+        aiDirector.loadLearnedBehavior();
+        aiDirector.printQValue();
     }
 
 
@@ -82,6 +88,10 @@ int main() {
         if(actionInput == 9)
         {
             keepPlaying = false;
+            if(aiDirector.b == behavior::learned)
+            {
+                aiDirector.saveLearnedBehavior();
+            }
         } else if(actionInput == actions::Move) {
             checkAction = game.move(player);
             if(!checkAction)
@@ -175,14 +185,35 @@ int main() {
         {
             playerModel.printPlayerStyle();
             playerModel.printPlayerActions();
-            quest = aiDirector.getQuest(playerModel, player);
+            if(aiDirector.b == behavior::learned)
+            {
+                quest = aiDirector.getLearnedQuest(playerModel, player);
+            } else{
+                quest = aiDirector.getQuest(playerModel, player, aiDirector.b);
+            }
+
             //game.printPlayerActionStack(player);
             std::cout<<quest.task<<std::endl;
+            if(aiDirector.b == behavior::learned)
+            {
+                std::cout<<"Would you like to accept this quest?"<<std::endl;
+                int accept;
+                std::cout<<"[0] No [1] Yes"<<std::endl;
+                std::cin>>accept;
+                aiDirector.updateRewardVector(accept);
+                aiDirector.printRewardVector();
+                aiDirector.updateLearnedVector();
+                aiDirector.printQValue();
+                aiDirector.updateNumberOfActions();
+                aiDirector.printNumberOfActions();
+            }
+
+
         }
         else{
             playerModel.printPlayerStyle();
             playerModel.printPlayerActions();
-            aiDirector.getQuest(playerModel, player);
+            //aiDirector.getQuest(playerModel, player);
         }
 
     }

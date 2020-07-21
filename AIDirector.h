@@ -20,9 +20,12 @@ public:
     std::unordered_map<std::string, std::vector<questCategory>> categoryMap;
     std::unordered_map<actions, questCategory> actionCategoryMap;
     void setBehavior(behavior b);
+
+
+
     behavior b;
 
-    objective getQuest(PlayerModel &playerModel, Player &player);
+
     float combinedVector[4];
     float currentValue;
     float bestSelfGoalValue;
@@ -39,6 +42,8 @@ public:
     std::vector<objective> validObjectivesForPlayer;
     bool isSameLocation;
 
+
+    objective getQuest(PlayerModel &playerModel, Player &player, behavior behavior);
     void getAllObjectivesInLocation(std::vector<objective> in, int location, std::vector<objective> &out);
     void getActionStack(int num, Player &player, std::vector<actionStruct> &out);
     void checkValidCraftObjectives(std::vector<objective> in, std::vector<objective> &out, Player &player);
@@ -48,6 +53,33 @@ public:
     std::string getMostRecentOtherTarget(actions a, std::vector<actionStruct> in);
     objective getObjectiveWithTarget(int target, std::vector<objective> in);
     objective getObjectiveWithOtherTarget(std::string otherTarget, std::vector<objective> in);
+
+
+
+    //RL variables
+    behavior getMaxQValue();
+    behavior previousBehavior;
+    objective getLearnedQuest(PlayerModel &playerModel, Player &player);
+    void updateLearnedVector();
+    void clearRewardVector();
+    void updateRewardVector(int reward);
+    int numberOfActions[3] = {0};
+    void updateNumberOfActions();
+
+    int rewardVector[3] = {0};
+    //set for optimistic initial behaviors
+    float learnedBehaviorVector[3] = {1, 1, 1};
+    float epsilon = 0.05;
+    int t = 1;
+    float c = 2;
+    float alpha = 0.1;
+    float random;
+    int const LEARNEDBEHAVIORS = 3;
+    float maxValue = 0;
+    int maxIndex = 0;
+
+    void saveLearnedBehavior();
+    void loadLearnedBehavior();
 
 
     int const NUMBEROFROLES = 4;
@@ -60,6 +92,9 @@ public:
     //printing for debug purposes
     void printCombinedVector();
     void printObjectivesVector(std::vector<objective> v);
+    void printRewardVector();
+    void printQValue();
+    void printNumberOfActions();
 };
 
 

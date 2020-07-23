@@ -175,7 +175,7 @@ bool Game::Blueprint(Player &p) {
     }
     if(p.unlockedBlueprints[bp].name == "TinyHouse")
     {
-        if(p.location != locations::Homestead)
+        if(p.location == locations::Forest || p.location == locations::Swamp || p.location == locations::Mountain || p.location == locations::Nightingale)
         {
             std::cout<<"Tinyhouse can only be placed on the homestead"<<std::endl;
             return false;
@@ -371,13 +371,16 @@ bool Game::craft(Player &p) {
 bool Game::refine(Player &p) {
     inputMap.clear();
     std::cout<<p.location<<std::endl;
-    if(p.location == locations::Forest || p.location == locations::Mountain || p.location == locations::Swamp)
+    if(p.location == locations::Forest || p.location == locations::Mountain || p.location == locations::Swamp) {
+        std::cout << "Refinement can only be done at the Homestead or Nightingale" << std::endl;
+        return false;
+    }
+    if(p.inventory.empty())
     {
-        std::cout<<"Refinement can only be done at the Homestead or Nightingale"<<std::endl;
+        std::cout<<"There is nothing in your inventory to refine."<<std::endl;
         return false;
     }
     std::cout<<"Please select an item from your inventory to refine:"<<std::endl;
-    //TODO: Doesn't skip if there isn't anything that can be refined
     for(int i = 0; i < p.inventory.size(); ++i)
     {
         if(!isRefined(p.inventory[i]))
@@ -398,7 +401,6 @@ bool Game::refine(Player &p) {
     //std::cout<<inputMap[refine]<<std::endl;
     std::cout<<"You refined "<<gatheredResourceMap[inputMap[refine]]<<" into "<<gatheredResourceMap[baseRefinedResourceMap[inputMap[refine]]]<<std::endl;
     bool temp = removeFromVector(p.inventory, inputMap[refine]);
-    std::cout<<temp<<std::endl;
     p.inventory.push_back(baseRefinedResourceMap[inputMap[refine]]);
     //printPlayerInventory(p);
     actionStruct a;
@@ -433,6 +435,11 @@ bool Game::attack(Player &p) {
 }
 
 bool Game::equipItem(Player &p) {
+    if(p.equippableItemsInventory.empty())
+    {
+        std::cout<<"There is nothing to equip. Please craft something."<<std::endl;
+        return false;
+    }
     std::cout<<"Please select an item to equip"<<std::endl;
     for(int i = 0; i < p.equippableItemsInventory.size(); i++)
     {

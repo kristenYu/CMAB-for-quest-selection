@@ -290,9 +290,11 @@ bool Game::Build(Player &p) {
             desiredBuilding = buildingsList.list[i];
             for(int j = 0; j < locationBlueprints[p.location][bp].requirements.size(); j++)
             {
-                bool temp = removeFromVector(p.inventory, locationBlueprints[p.location][bp].requirements[i]);
+                std::cout<<locationBlueprints[p.location][bp].requirements[j]<<std::endl;
+                bool temp = removeFromVector(p.inventory, locationBlueprints[p.location][bp].requirements[j]);
+                std::cout<<temp<<std::endl;
                 if(temp){
-                    usedCrafting.push_back(locationBlueprints[p.location][bp].requirements[i]);
+                    usedCrafting.push_back(locationBlueprints[p.location][bp].requirements[j]);
                 }
             }
            break;

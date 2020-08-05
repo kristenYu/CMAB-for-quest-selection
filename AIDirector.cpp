@@ -41,7 +41,7 @@ AIDirector::AIDirector() {
     categoryMap["HuntCreature"].push_back(questCategory::HarvestCategory);
 
     categoryMap["AddDefenseToVillage"].push_back(questCategory::RefineCategory);
-    categoryMap["AddDefenseToVilalge"].push_back(questCategory::BuildCategory);
+    categoryMap["AddDefenseToVillage"].push_back(questCategory::BuildCategory);
 
     categoryMap["GatherResources"].push_back(questCategory::GatherCategory);
     categoryMap["GatherResources"].push_back(questCategory::RefineCategory);

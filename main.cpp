@@ -81,7 +81,8 @@ int main() {
             break;
         }
         std::cout<< "Please select an action by typing the number next to it"<<std::endl;
-        std::cout<<"[0] Move, [1] Blueprint, [2] Chop, [3] Mine, [4] Build, [5] Craft, \n [6] Refine, [7] Attack, [8] Equip Item, [9] stop playing [10] get quest"<<std::endl;
+        std::cout<<"[0] Move, [1] Blueprint, [2] Chop, [3] Mine, [4] Build, [5] Craft, \n[6] Refine, [7] Attack, [8] Equip Item, [9] stop playing [10] get quest"<<std::endl;
+        std::cout<<"[11] check inventory"<<std::endl;
         int actionInput;
         std::cin>> actionInput;
         numberOfActions++;
@@ -92,13 +93,19 @@ int main() {
             {
                 aiDirector.saveLearnedBehavior();
             }
-        } else if(actionInput == actions::Move) {
+        }else if(actionInput == 11)
+        {
+            //inventory
+            game.printPlayerInventory(player);
+            game.printPlayerEquippableItems(player);
+        }
+
+        else if(actionInput == actions::Move) {
             checkAction = game.move(player);
             if(!checkAction)
             {
                 std::cout<<"Invalid action"<<std::endl;
             }
-
         }
         else if(actionInput == actions::Blueprint)
         {

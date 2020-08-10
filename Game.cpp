@@ -303,6 +303,10 @@ bool Game::Build(Player &p) {
     if(usedCrafting.size() != locationBlueprints[p.location][bp].requirements.size())
     {
         std::cout<<"You don't have the items required to build this"<<std::endl;
+        for(int i = 0; i < usedCrafting.size(); i++)
+        {
+            p.inventory.push_back(usedCrafting[i]);
+        }
         return false;
     }
     locationBuildings[p.location].push_back(desiredBuilding);

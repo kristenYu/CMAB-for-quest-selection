@@ -15,13 +15,14 @@ struct objective
 {
     std::string name;
     std::string task;
-    questCategory category;
     std::vector<locations> location;
+    questCategory category;
     //what the quest should use. target for enums, othertarget for structs
     int target;
     std::string otherTarget;
     //number refers to the number of target that needs to be done to be finished
     int number;
+    int currentCompleted;
 };
 
 

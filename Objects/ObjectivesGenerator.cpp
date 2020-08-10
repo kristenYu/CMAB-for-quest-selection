@@ -15,6 +15,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     refineWood.task = "Refine 5 wood into lumber";
     refineWood.target = gatheredResources::Wood;
     refineWood.number = 5;
+    refineWood.currentCompleted = 0;
 
     refineIron.name = "RefineIron";
     refineIron.location.push_back(locations::Homestead);
@@ -23,6 +24,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     refineIron.task = "Refine 5 IronOre into IronBars";
     refineIron.target = gatheredResources::IronOre;
     refineIron.number = 5;
+    refineIron.currentCompleted = 0;
 
     refineStone.name = "RefineStone";
     refineStone.location.push_back(locations::Homestead);
@@ -31,6 +33,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     refineStone.task = "Refine 5 CutStone into Bricks";
     refineStone.target = gatheredResources::CutStone;
     refineStone.number = 5;
+    refineStone.currentCompleted = 0;
 
     refinePlantingEarth.name = "RefinePlantingEarth";
     refinePlantingEarth.location.push_back(locations::Homestead);
@@ -39,6 +42,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     refinePlantingEarth.task = "Refine 5 PlantingEarth into FertileEarth";
     refinePlantingEarth.target = gatheredResources::PlantingEarth;
     refinePlantingEarth.number = 5;
+    refinePlantingEarth.currentCompleted = 0;
 
     refineAntlers.name = "RefineAntlers";
     refineAntlers.location.push_back(locations::Homestead);
@@ -47,6 +51,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     refineAntlers.task = "Refine 5 Antlers into Gelatin";
     refineAntlers.target = gatheredResources::Antlers;
     refineAntlers.number = 5;
+    refineAntlers.currentCompleted = 0;
 
     refineSpiderWeb.name = "RefineSpiderWeb";
     refineSpiderWeb.location.push_back(locations::Homestead);
@@ -55,6 +60,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     refineSpiderWeb.task = "Refine 5 SpiderWeb into SpiderRope";
     refineSpiderWeb.target = gatheredResources::SpiderWeb;
     refineSpiderWeb.number = 5;
+    refineSpiderWeb.currentCompleted = 0;
 
     refineBearPelt.name = "RefineBearPelt";
     refineBearPelt.location.push_back(locations::Homestead);
@@ -63,6 +69,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     refineBearPelt.task = "Refine 5 BearPelt into BearLeather";
     refineBearPelt.target = gatheredResources::BearPelt;
     refineBearPelt.number = 5;
+    refineBearPelt.currentCompleted = 0;
 
     refineWolfPelt.name = "RefineWolfPelt";
     refineWolfPelt.location.push_back(locations::Homestead);
@@ -71,6 +78,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     refineWolfPelt.task = "Refine 5 WolfPelt into WolfLeather";
     refineWolfPelt.target = gatheredResources::WolfPelt;
     refineWolfPelt.number = 5;
+    refineWolfPelt.currentCompleted = 0;
 
     refineVines.name = "RefineVines";
     refineVines.location.push_back(locations::Homestead);
@@ -79,6 +87,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     refineVines.task = "Refine 5 Vines into VineRope";
     refineVines.target = gatheredResources::VineRope;
     refineVines.number = 5;
+    refineVines.currentCompleted = 0;
 
     //Gathering objectives
     gatherWood.name = "GatherWood";
@@ -87,6 +96,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     gatherWood.task = "Chop 5 wood";
     gatherWood.target = gatheredResources::Wood;
     gatherWood.number = 5;
+    gatherWood.currentCompleted = 0;
 
     gatherIron.name = "GatherIron";
     gatherIron.location.push_back(locations::Mountain);
@@ -94,6 +104,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     gatherIron.task = "Mine 5 IronOre";
     gatherIron.target = gatheredResources::IronOre;
     gatherIron.number = 5;
+    gatherIron.currentCompleted = 0;
 
     gatherStone.name = "GatherStone";
     gatherStone.location.push_back(locations::Mountain);
@@ -101,6 +112,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     gatherStone.task = "Mine 7 CutStone";
     gatherStone.target = gatheredResources::CutStone;
     gatherStone.number = 7;
+    gatherStone.currentCompleted = 0;
 
     gatherPlantingEarth.name = "GatherPlantingEarth";
     gatherPlantingEarth.location.push_back(locations::Mountain);
@@ -108,6 +120,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     gatherPlantingEarth.task = "Mine 5 PlantingEarth";
     gatherPlantingEarth.target = gatheredResources::PlantingEarth;
     gatherPlantingEarth.number = 5;
+    gatherPlantingEarth.currentCompleted = 0;
 
     buildWallPainting.name = "AddDecoration";
     buildWallPainting.location.push_back(locations::Homestead);
@@ -115,6 +128,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     buildWallPainting.task = "Build a Wall Hanging";
     buildWallPainting.otherTarget = buildingsList.wallPainting.name;
     buildWallPainting.number = 1;
+    buildWallPainting.currentCompleted = 0;
 
 
 
@@ -129,6 +143,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     buildWall.task = "Build a Wall";
     buildWall.otherTarget = buildingsList.wall.name;
     buildWall.number = 1;
+    buildWall.currentCompleted = 0;
 
     buildTinyHouse.name = "BuildTinyHouse";
     buildTinyHouse.location.push_back(locations::Homestead);
@@ -136,6 +151,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     buildTinyHouse.task = "Build a Tiny House";
     buildTinyHouse.otherTarget = buildingsList.tinyHouse.name;
     buildTinyHouse.number = 1;
+    buildTinyHouse.currentCompleted = 0;
 
     buildCraftingBench.name = "BuildCraftingBench";
     buildCraftingBench.location.push_back(locations::Homestead);
@@ -143,6 +159,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     buildCraftingBench.task = "Build a Crafting Bench";
     buildCraftingBench.otherTarget = buildingsList.craftingBench.name;
     buildCraftingBench.number = 1;
+    buildCraftingBench.currentCompleted = 0;
 
     //turret can be built anywhere
     buildTurret.name = "BuildTurret";
@@ -155,7 +172,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     buildTurret.task = "Build a Turret";
     buildTurret.otherTarget = buildingsList.turret.name;
     buildTurret.number = 1;
-
+    buildTurret.currentCompleted = 0;
 
 
     craftBearArmor.name = "CraftBearArmor";
@@ -164,6 +181,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     craftBearArmor.task = "Craft a Bear Armor";
     craftBearArmor.otherTarget = equippableItemsList.bearArmor.name;
     craftBearArmor.number = 1;
+    craftBearArmor.currentCompleted = 0;
 
     craftFancyGun.name = "CraftFancyGun";
     craftFancyGun.location.push_back(locations::Homestead);
@@ -171,6 +189,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     craftFancyGun.task = "Craft a Fancy Gun";
     craftFancyGun.otherTarget = equippableItemsList.fancyGun.name;
     craftFancyGun.number = 1;
+    craftFancyGun.currentCompleted = 0;
 
     craftAxePick.name = "CraftAxePick";
     craftAxePick.location.push_back(locations::Homestead);
@@ -178,6 +197,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     craftAxePick.task = "Craft an AxePick";
     craftAxePick.otherTarget = equippableItemsList.axePick.name;
     craftAxePick.number = 1;
+    craftAxePick.currentCompleted = 0;
 
     craftDefensiveArmor.name = "CraftDefensiveArmor";
     craftDefensiveArmor.location.push_back(locations::Homestead);
@@ -185,6 +205,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     craftDefensiveArmor.task = "Craft a Defensive Armor";
     craftDefensiveArmor.otherTarget = equippableItemsList.defensiveArmor.name;
     craftDefensiveArmor.number = 1;
+    craftDefensiveArmor.currentCompleted = 0;
 
     craftSharpenedAxePick.name = "CraftSharpenedAxePick";
     craftSharpenedAxePick.location.push_back(locations::Homestead);
@@ -192,6 +213,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     craftSharpenedAxePick.task = "Craft a Sharpened AxePick";
     craftSharpenedAxePick.otherTarget = equippableItemsList.sharpenedAxePick.name;
     craftSharpenedAxePick.number = 1;
+    craftSharpenedAxePick.currentCompleted = 0;
 
     craftToolBelt.name = "CraftToolBelt";
     craftToolBelt.location.push_back(locations::Homestead);
@@ -199,6 +221,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     craftToolBelt.task = "Craft a Tool Belt";
     craftToolBelt.otherTarget = equippableItemsList.sharpenedAxePick.name;
     craftToolBelt.number = 1;
+    craftToolBelt.currentCompleted = 0;
 
     //attack/harvest types -> currently the same actions completes both
     harvestAntlers.name = "Harvest Antlers";
@@ -209,6 +232,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     harvestAntlers.task = "Harvest 2 antlers from Deer";
     harvestAntlers.target = gatheredResources::Antlers;
     harvestAntlers.number = 2;
+    harvestAntlers.currentCompleted = 0;
 
     harvestVines.name = "HarvestVines";
     harvestVines.location.push_back(locations::Swamp);
@@ -216,6 +240,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     harvestVines.task = "Harvest 3 vines from swamp monsters";
     harvestVines.target = gatheredResources::Vines;
     harvestVines.number = 3;
+    harvestVines.currentCompleted = 0;
 
     harvestWolfPelt.name = "HarvestWolfPelt";
     harvestWolfPelt.location.push_back(locations::Forest);
@@ -223,6 +248,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     harvestWolfPelt.task = "Harvest 10 wolf pelts from wolves";
     harvestWolfPelt.target = gatheredResources::WolfPelt;
     harvestWolfPelt.number = 10;
+    harvestWolfPelt.currentCompleted = 0;
 
     harvestSpiderWeb.name = "HarvestSpiderWeb";
     harvestSpiderWeb.location.push_back(locations::Forest);
@@ -230,6 +256,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     harvestSpiderWeb.task = "Harvest 5 spider webs from spiders";
     harvestSpiderWeb.target = gatheredResources::SpiderWeb;
     harvestSpiderWeb.number = 5;
+    harvestSpiderWeb.currentCompleted = 0;
 
     attackDeer.name = "AttackDeer";
     attackDeer.location.push_back(locations::Forest);
@@ -239,6 +266,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     attackDeer.task = "Attack 10 deer";
     attackDeer.target = creatures::Deer;
     attackDeer.number = 10;
+    attackDeer.currentCompleted = 0;
 
     attackBear.name = "AttackBear";
     attackBear.location.push_back(locations::Forest);
@@ -246,6 +274,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     attackBear.task = "Attack 10 Bear";
     attackBear.target = creatures::Bear;
     attackBear.number = 10;
+    attackBear.currentCompleted = 0;
 
     attackWolf.name = "AttackWolf";
     attackWolf.location.push_back(locations::Forest);
@@ -253,6 +282,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     attackWolf.task = "Attack 10 Wolves";
     attackWolf.target= creatures::Wolf;
     attackWolf.number = 10;
+    attackWolf.currentCompleted = 0;
 
     attackSpider.name = "AttackSpider";
     attackSpider.location.push_back(locations::Forest);
@@ -260,6 +290,7 @@ ObjectivesGenerator::ObjectivesGenerator() {
     attackSpider.task = "Attack 10 Spiders";
     attackSpider.target = creatures::Spider;
     attackSpider.number = 10;
+    attackSpider.currentCompleted = 0;
 
     list.push_back(refineWood);
     list.push_back(refineIron);

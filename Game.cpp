@@ -107,6 +107,15 @@ Game::Game(Player &p) {
     this->locationBuildings[locations::Nightingale] = nightingaleBuildings;
     this->locationBuildings[locations::Swamp] = swampBuildings;
     this->locationBuildings[locations::Mountain] = mountainBuildings;
+    //maps the quest category to the action required to complete it
+    this->questCategoryActionMap[questCategory::GatherCategory].push_back(actions::Mine);
+    this->questCategoryActionMap[questCategory::GatherCategory].push_back(actions::Chop);
+    this->questCategoryActionMap[questCategory::BuildCategory].push_back(actions::Build);
+    this->questCategoryActionMap[questCategory::CraftCategory].push_back(actions::Craft);
+    this->questCategoryActionMap[questCategory::RefineCategory].push_back(actions::Refine);
+    this->questCategoryActionMap[questCategory::AttackCategory].push_back(actions::Attack);
+    //Harvest and attack do the same thing in the current model
+    this->questCategoryActionMap[questCategory::HarvestCategory].push_back(actions::Attack);
 
     //axpick
     p.unlockSchematic(schematicList.list[0]);
@@ -495,6 +504,72 @@ bool Game::equipItem(Player &p) {
         return false;}
 }
 
+
+bool Game::trackQuest(Player &p) {
+    if(p.actionStack.empty())
+    {
+        return false;
+    }
+    currentAction = p.actionStack.back();
+    for(int i = 0; i < p.currentQuests.size(); i++)
+    {
+        //gather has two possible actions
+        if(p.currentQuests[i].category == questCategory::GatherCategory)
+        {
+            if(p.currentQuests[i].target == naturalResources::Tree)
+            {
+                if(currentAction.action == actions::Chop)
+                {
+                    p.currentQuests[i].currentCompleted += 1;
+                }
+            }
+            else if(currentAction.action == actions::Mine)
+            {
+                if(currentAction.target == p.currentQuests[i].target)
+                {
+                    p.currentQuests[i].currentCompleted += 1;
+                }
+            }
+        }
+        //everything has only one action right now
+        else if (questCategoryActionMap[p.currentQuests[i].category][0] == currentAction.action)
+        {
+            if(p.currentQuests[i].category == questCategory::RefineCategory || p.currentQuests[i].category == questCategory::AttackCategory)
+            {
+                if(currentAction.target == p.currentQuests[i].target)
+                {
+                    p.currentQuests[i].currentCompleted += 1;
+                }
+            }
+            else
+            {
+                if(currentAction.otherTarget == p.currentQuests[i].otherTarget)
+                {
+                    p.currentQuests[i].currentCompleted += 1;
+                }
+            }
+        }
+
+        if(p.currentQuests[i].currentCompleted == p.currentQuests[i].number)
+        {
+            std::cout<<"You completed quest "<<p.currentQuests[i].name<<std::endl;
+            p.completedQuests += 1;
+            removeFromVector(p.currentQuests, p.currentQuests[i].name);
+            break;
+        }
+    }
+    return true;
+}
+
+void Game::printPlayerQuests(Player &p) {
+    for(int i = 0; i < p.currentQuests.size(); i++)
+    {
+        std::cout<<p.currentQuests[i].name<<" "<<p.currentQuests[i].currentCompleted<<",";
+    }
+    std::cout<<std::endl;
+}
+
+
 void Game::printPlayerLocation(Player &p) {
     std::cout<<"Player is in "<< locationMap[p.location]<<std::endl;
 }
@@ -626,6 +701,24 @@ bool Game::removeFromVector(std::vector<equippableItem> &v, std::string name) {
 }
 
 bool Game::removeFromVector(std::vector<blueprint> &v, std::string name) {
+    int index = 1000;
+    for(int i = 0; i < v.size(); i++)
+    {
+        if(v[i].name == name)
+        {
+            index = i;
+        }
+    }
+    if (index == 1000)
+    {
+        return false;
+    }
+    v[index] = v.back();
+    v.pop_back();
+    return true;
+}
+
+bool Game::removeFromVector(std::vector<objective> &v, std::string name) {
     int index = 1000;
     for(int i = 0; i < v.size(); i++)
     {

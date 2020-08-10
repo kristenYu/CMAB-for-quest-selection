@@ -16,7 +16,6 @@ int main() {
     //initialize values
     PlayerModel playerModel;
     Player player;
-    Operators operators;
     Game game(player);
     AIDirector aiDirector;
     objective quest;
@@ -201,12 +200,16 @@ int main() {
 
             //game.printPlayerActionStack(player);
             std::cout<<quest.task<<std::endl;
+            std::cout<<"Would you like to accept this quest?"<<std::endl;
+            int accept;
+            std::cout<<"[0] No [1] Yes"<<std::endl;
+            std::cin>>accept;
+            if(accept)
+            {
+                player.currentQuests.push_back(quest);
+            }
             if(aiDirector.b == behavior::learned)
             {
-                std::cout<<"Would you like to accept this quest?"<<std::endl;
-                int accept;
-                std::cout<<"[0] No [1] Yes"<<std::endl;
-                std::cin>>accept;
                 aiDirector.updateRewardVector(accept);
                 aiDirector.printRewardVector();
                 aiDirector.updateLearnedVector();
@@ -214,14 +217,14 @@ int main() {
                 aiDirector.updateNumberOfActions();
                 aiDirector.printNumberOfActions();
             }
-
-
         }
         else{
             playerModel.printPlayerStyle();
             playerModel.printPlayerActions();
             //aiDirector.getQuest(playerModel, player);
         }
+        game.trackQuest(player);
+        game.printPlayerQuests(player);
 
     }
 

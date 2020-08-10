@@ -92,3 +92,7 @@ void Player::addToEquippableInventory(equippableItem item) {
 void Player::unlockBlueprint(blueprint bp) {
     this->unlockedBlueprints.push_back(bp);
 }
+
+bool Player::TrackQuest() {
+
+}

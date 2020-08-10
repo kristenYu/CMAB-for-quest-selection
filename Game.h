@@ -11,6 +11,7 @@
 #include "Enums/GatheredResources.h"
 #include "Objects/BlueprintsList.h"
 #include "Objects/BuildingsList.h"
+#include "Objects/ObjectivesGenerator.h"
 
 class Game {
 public:
@@ -27,6 +28,7 @@ public:
     std::unordered_map<int, int> baseRefinedResourceMap;
     std::unordered_map<int, std::vector<blueprint>> locationBlueprints;
     std::unordered_map<int, std::vector<building>> locationBuildings;
+    std::unordered_map<int, std::vector<int>> questCategoryActionMap;
     //std::unordered_map<int, std::string> refinedResourceMap;
     //std::unordered_map<std::string, int> itemMap;
 
@@ -59,6 +61,7 @@ public:
     bool removeFromVector(std::vector<int> &v, int value);
     bool removeFromVector(std::vector<equippableItem> &v, std::string name);
     bool removeFromVector(std::vector<blueprint> &v, std::string name);
+    bool removeFromVector(std::vector<objective> &v, std::string  name);
 
     //actions
     bool move(Player &p);
@@ -71,6 +74,11 @@ public:
     bool attack(Player &p);
     bool equipItem(Player &p);
 
+    //quest tracking
+    bool trackQuest(Player &p);
+
+
+
 
     //utility/make life easier things
     void printPlayerLocation(Player &p);
@@ -78,6 +86,7 @@ public:
     void printPlayerInventory(Player &p);
     void printPlayerEquippableItems(Player &p);
     void printPlayerAptitudes(Player &p);
+    void printPlayerQuests(Player &p);
     void printBuildingLocation(std::vector<building> &v);
     void printBlueprintLocation(std::vector<blueprint> &v);
 

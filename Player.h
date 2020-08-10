@@ -12,6 +12,7 @@
 #include "Objects/EquippableItemsList.h"
 #include "Structs/EquippableItemStruct.h"
 #include "Structs/BlueprintStruct.h"
+#include "Structs/ObjectiveStruct.h"
 
 class Player {
     //holds all the information for the player
@@ -23,7 +24,7 @@ public:
     std::vector<actionStruct> reverseActionStack;
     std::vector<schematic> unlockedSchematics;
     std::vector<blueprint> unlockedBlueprints;
-
+    std::vector<objective> currentQuests;
 
     equippableItem armor;
     equippableItem tool;
@@ -39,6 +40,8 @@ public:
     int mystique; //magical, crit chance
     void updateAptitudes(equippableItem item);
     void resetTraits();
+
+    int completedQuests = 0;
     /* Offensive:
      *  Physical Damage - gumption + brawn
      *  Mechanical Damage - gumption + ingenuity
@@ -68,12 +71,14 @@ public:
      *
      */
 
-
     void addAction(actionStruct a);
     void addToInventory(int item);
     void unlockSchematic(schematic unlock);
     void addToEquippableInventory(equippableItem item);
     void unlockBlueprint(blueprint bp);
+
+    bool TrackQuest();
+
 
     Player();
 

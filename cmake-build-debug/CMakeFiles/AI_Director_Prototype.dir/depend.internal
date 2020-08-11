@@ -29,6 +29,8 @@ CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.obj
  D:/UofA/Research/AI_Director_Prototype/Actions.cpp
  D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
 CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj
+ ../Enums/Consumables.h
+ ../Enums/GatheredResources.h
  ../Enums/QuestCategory.h
  ../Structs/BlueprintStruct.h
  ../Structs/BuildingStruct.h
@@ -42,6 +44,7 @@ CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj
  D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.h
  D:/UofA/Research/AI_Director_Prototype/Objects/BuildingsList.h
  D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/Merchant.h
  D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.h
  D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h
  D:/UofA/Research/AI_Director_Prototype/Player.h
@@ -72,6 +75,11 @@ CMakeFiles/AI_Director_Prototype.dir/Objects/EquippableItemsList.cpp.obj
  D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.cpp
  D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h
  D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h
+CMakeFiles/AI_Director_Prototype.dir/Objects/Merchant.cpp.obj
+ ../Enums/Consumables.h
+ ../Enums/GatheredResources.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/Merchant.cpp
+ D:/UofA/Research/AI_Director_Prototype/Objects/Merchant.h
 CMakeFiles/AI_Director_Prototype.dir/Objects/ObjectivesGenerator.cpp.obj
  ../Enums/Actions.h
  ../Enums/Creatures.h
@@ -102,28 +110,6 @@ CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.obj
  ../Structs/SelfGoalStruct.h
  D:/UofA/Research/AI_Director_Prototype/Objects/SelfGoalsList.cpp
  D:/UofA/Research/AI_Director_Prototype/Objects/SelfGoalsList.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj
- ../Enums/Actions.h
- ../Enums/Creatures.h
- ../Enums/Locations.h
- ../Enums/QuestCategory.h
- ../Structs/BlueprintStruct.h
- ../Structs/BuildingStruct.h
- D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
- D:/UofA/Research/AI_Director_Prototype/Game.h
- D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.h
- D:/UofA/Research/AI_Director_Prototype/Objects/BuildingsList.h
- D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h
- D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.h
- D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h
- D:/UofA/Research/AI_Director_Prototype/Operators.cpp
- D:/UofA/Research/AI_Director_Prototype/Operators.h
- D:/UofA/Research/AI_Director_Prototype/Player.h
- D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
- D:/UofA/Research/AI_Director_Prototype/Structs/BlueprintStruct.h
- D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h
- D:/UofA/Research/AI_Director_Prototype/Structs/ObjectiveStruct.h
- D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
 CMakeFiles/AI_Director_Prototype.dir/Player.cpp.obj
  ../Enums/Actions.h
  ../Enums/GatheredResources.h
@@ -154,7 +140,9 @@ CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj
  D:/UofA/Research/AI_Director_Prototype/Structs/ObjectiveStruct.h
  D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj
+ ../Enums/Consumables.h
  ../Enums/Creatures.h
+ ../Enums/GatheredResources.h
  ../Structs/BlueprintStruct.h
  ../Structs/BuildingStruct.h
  ../Structs/SelfGoalStruct.h
@@ -169,10 +157,10 @@ CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj
  D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.h
  D:/UofA/Research/AI_Director_Prototype/Objects/BuildingsList.h
  D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h
+ D:/UofA/Research/AI_Director_Prototype/Objects/Merchant.h
  D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.h
  D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h
  D:/UofA/Research/AI_Director_Prototype/Objects/SelfGoalsList.h
- D:/UofA/Research/AI_Director_Prototype/Operators.h
  D:/UofA/Research/AI_Director_Prototype/Player.h
  D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
  D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h

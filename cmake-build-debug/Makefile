@@ -311,6 +311,33 @@ Objects/EquippableItemsList.cpp.s:
 	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/EquippableItemsList.cpp.s
 .PHONY : Objects/EquippableItemsList.cpp.s
 
+Objects/Merchant.obj: Objects/Merchant.cpp.obj
+
+.PHONY : Objects/Merchant.obj
+
+# target to build an object file
+Objects/Merchant.cpp.obj:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/Merchant.cpp.obj
+.PHONY : Objects/Merchant.cpp.obj
+
+Objects/Merchant.i: Objects/Merchant.cpp.i
+
+.PHONY : Objects/Merchant.i
+
+# target to preprocess a source file
+Objects/Merchant.cpp.i:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/Merchant.cpp.i
+.PHONY : Objects/Merchant.cpp.i
+
+Objects/Merchant.s: Objects/Merchant.cpp.s
+
+.PHONY : Objects/Merchant.s
+
+# target to generate assembly for a file
+Objects/Merchant.cpp.s:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/Merchant.cpp.s
+.PHONY : Objects/Merchant.cpp.s
+
 Objects/ObjectivesGenerator.obj: Objects/ObjectivesGenerator.cpp.obj
 
 .PHONY : Objects/ObjectivesGenerator.obj
@@ -391,33 +418,6 @@ Objects/SelfGoalsList.s: Objects/SelfGoalsList.cpp.s
 Objects/SelfGoalsList.cpp.s:
 	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.s
 .PHONY : Objects/SelfGoalsList.cpp.s
-
-Operators.obj: Operators.cpp.obj
-
-.PHONY : Operators.obj
-
-# target to build an object file
-Operators.cpp.obj:
-	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj
-.PHONY : Operators.cpp.obj
-
-Operators.i: Operators.cpp.i
-
-.PHONY : Operators.i
-
-# target to preprocess a source file
-Operators.cpp.i:
-	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.i
-.PHONY : Operators.cpp.i
-
-Operators.s: Operators.cpp.s
-
-.PHONY : Operators.s
-
-# target to generate assembly for a file
-Operators.cpp.s:
-	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.s
-.PHONY : Operators.cpp.s
 
 Player.obj: Player.cpp.obj
 
@@ -530,6 +530,9 @@ help:
 	@echo ... Objects/EquippableItemsList.obj
 	@echo ... Objects/EquippableItemsList.i
 	@echo ... Objects/EquippableItemsList.s
+	@echo ... Objects/Merchant.obj
+	@echo ... Objects/Merchant.i
+	@echo ... Objects/Merchant.s
 	@echo ... Objects/ObjectivesGenerator.obj
 	@echo ... Objects/ObjectivesGenerator.i
 	@echo ... Objects/ObjectivesGenerator.s
@@ -539,9 +542,6 @@ help:
 	@echo ... Objects/SelfGoalsList.obj
 	@echo ... Objects/SelfGoalsList.i
 	@echo ... Objects/SelfGoalsList.s
-	@echo ... Operators.obj
-	@echo ... Operators.i
-	@echo ... Operators.s
 	@echo ... Player.obj
 	@echo ... Player.i
 	@echo ... Player.s

@@ -5,7 +5,6 @@
 #include "PlayerModel.h"
 #include "Objects/ActionUtils.h"
 #include "Player.h"
-#include "Operators.h"
 #include "Game.h"
 #include "AIDirector.h"
 #include "Structs/ObjectiveStruct.h"
@@ -80,23 +79,24 @@ int main() {
             break;
         }
         std::cout<< "Please select an action by typing the number next to it"<<std::endl;
-        std::cout<<"[0] Move, [1] Blueprint, [2] Chop, [3] Mine, [4] Build, [5] Craft, \n[6] Refine, [7] Attack, [8] Equip Item, [9] stop playing [10] get quest"<<std::endl;
-        std::cout<<"[11] check inventory"<<std::endl;
+        std::cout<<"[0] Move, [1] Blueprint, [2] Chop, [3] Mine, [4] Build, [5] Craft, \n[6] Refine, [7] Attack, [8] Equip Item, [9] Buy, [10] Sell,"<<std::endl;
+        std::cout<<"[11] stop playing [12] get quest [13] Show Inventory"<<std::endl;
         int actionInput;
         std::cin>> actionInput;
         numberOfActions++;
-        if(actionInput == 9)
+        if(actionInput == 11)
         {
             keepPlaying = false;
             if(aiDirector.b == behavior::learned)
             {
                 aiDirector.saveLearnedBehavior();
             }
-        }else if(actionInput == 11)
+        }else if(actionInput == 13)
         {
             //inventory
             game.printPlayerInventory(player);
             game.printPlayerEquippableItems(player);
+            game.printPlayerConsumables(player);
         }
 
         else if(actionInput == actions::Move) {
@@ -187,7 +187,23 @@ int main() {
             {
                 std::cout<<"Invalid action"<<std::endl;
             }
-        }else if(actionInput == 10)
+        }else if(actionInput == actions::Buy)
+        {
+            checkAction = game.Buy(player);
+            if(!checkAction)
+            {
+                std::cout<<"Invalid action"<<std::endl;
+            }
+        }
+        else if(actionInput == actions::Sell)
+        {
+            checkAction = game.Sell(player);
+            if(!checkAction)
+            {
+                std::cout<<"Invalid action"<<std::endl;
+            }
+        }
+        else if(actionInput == 12)
         {
             playerModel.printPlayerStyle();
             playerModel.printPlayerActions();

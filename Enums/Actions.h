@@ -15,6 +15,8 @@ enum actions{
     Craft,
     Refine,
     Attack,
-    Equip_Item
+    Equip_Item,
+    Buy,
+    Sell,
 };
 #endif //AI_DIRECTOR_PROTOTYPE_ACTIONS_H

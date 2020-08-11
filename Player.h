@@ -25,9 +25,13 @@ public:
     std::vector<schematic> unlockedSchematics;
     std::vector<blueprint> unlockedBlueprints;
     std::vector<objective> currentQuests;
+    std::vector<int> consumables;
 
     equippableItem armor;
     equippableItem tool;
+
+    //currency
+    int M;
 
     //player traits
     int gumption; //offense
@@ -73,6 +77,7 @@ public:
 
     void addAction(actionStruct a);
     void addToInventory(int item);
+    void addToConsumables(int item);
     void unlockSchematic(schematic unlock);
     void addToEquippableInventory(equippableItem item);
     void unlockBlueprint(blueprint bp);

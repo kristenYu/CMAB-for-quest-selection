@@ -24,6 +24,8 @@ Game::Game(Player &p) {
     this->actionMap[actions::Craft] = "Craft";
     this->actionMap[actions::Attack] = "Attack";
     this->actionMap[actions::Equip_Item] = "EquipItem";
+    this->actionMap[actions::Buy] = "Buy";
+    this->actionMap[actions::Sell] = "Sell";
     //maps the location to the string for printing purposes
     this->locationMap[locations::Forest] = "Forest";
     this->locationMap[locations::Homestead] = "Homestead";
@@ -504,6 +506,104 @@ bool Game::equipItem(Player &p) {
         return false;}
 }
 
+bool Game::Buy(Player &p) {
+    if(p.location == locations::Nightingale)
+    {
+        merchant.showWares();
+        std::cout<<"You have "<<p.M<<"M.";
+
+        int storeItem;
+        std::cin>>storeItem;
+        //THIS IS HARDCODED TO THE SIZE OF THE CONSUMABLES ENUM
+        if(storeItem > 6)
+        {
+            return false;
+        }
+        //can buy
+        if(merchant.priceMap[storeItem] <= p.M)
+        {
+            p.M -= merchant.priceMap[storeItem];
+            std::cout<<merchant.waresMap[storeItem]<<std::endl;
+
+            p.addToConsumables(storeItem);
+            printPlayerConsumables(p);
+            std::cout<<"You have "<<p.M<<"M.";
+            actionStruct a;
+            a.action = actions::Buy;
+            a.target = storeItem;
+            p.addAction(a);
+            return true;
+        } else{
+            std::cout<<"You don't have enough money to buy that"<<std::endl;
+            return false;
+        }
+    } else{
+        std::cout<<"You can only buy things in Nightingale"<<std::endl;
+        return false;
+    }
+
+}
+
+bool Game::Sell(Player &p) {
+    if(p.location == locations::Nightingale)
+    {
+        std::cout<<"What would you like to sell?"<<std::endl;
+        std::cout<<"[0] gathered resources, [1] consumables"<<std::endl;
+        int selling;
+        int choice;
+        std::cin>>choice;
+        //HARDCODED FOR THE NUMBER OF ITEM LISTS
+        if(choice > 1)
+        {
+            return false;
+        }
+        else if (choice == 0) {
+            for (int i = 0; i < p.inventory.size(); i++)
+            {
+                std::cout<<"["<<i<<"] "<<gatheredResourceMap[p.inventory[i]]<<", ";
+            }
+            std::cout<<std::endl;
+            std::cin>>selling;
+            if(selling >= p.inventory.size())
+            {
+                return false;
+            }
+            else
+            {
+                p.M += merchant.resourcePriceMap[p.inventory[selling]];
+                removeFromVector(p.inventory, p.inventory[selling]);
+                std::cout<<"You have "<<p.M<<"M.";
+                return true;
+            }
+        }else if (choice == 1)
+        {
+            for(int i = 0; i < p.consumables.size(); i++)
+            {
+                std::cout<<"["<<i<<"] "<<merchant.waresMap[p.consumables[i]]<<", ";
+            }
+            std::cout<<std::endl;
+            std::cin>>selling;
+            if(selling >= p.consumables.size())
+            {
+                return false;
+            } else{
+                p.M += merchant.priceMap[p.consumables[selling]];
+                removeFromVector(p.consumables, p.consumables[selling]);
+                std::cout<<"You have "<<p.M<<"M.";
+                return true;
+            }
+        }
+
+
+
+    }
+    else{
+        std::cout<<"You can only sell things in Nightingale"<<std::endl;
+        return false;
+    }
+
+}
+
 
 bool Game::trackQuest(Player &p) {
     if(p.actionStack.empty())
@@ -610,6 +710,8 @@ void Game::printPlayerActionStack(Player &p) {
                 break;
             case actions::Equip_Item:
                 std::cout<<currentAction.otherTarget;
+            case actions::Buy:
+                std::cout<<merchant.waresMap[currentAction.target];
         }
         std::cout<<",";
     }
@@ -619,6 +721,14 @@ void Game::printPlayerActionStack(Player &p) {
         p.actionStack.push_back(p.reverseActionStack.back());
         p.reverseActionStack.pop_back();
     }
+}
+
+void Game::printPlayerConsumables(Player &p) {
+    for(int i =0; i < p.consumables.size(); i++)
+    {
+        std::cout<<merchant.waresMap[p.consumables[i]]<<" ";
+    }
+    std::cout<<std::endl;
 }
 
 void Game::printPlayerInventory(Player &p) {

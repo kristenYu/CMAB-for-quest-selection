@@ -26,11 +26,9 @@ add_executable(AI_Director_Prototype
     Game.cpp
     Game.h
     main.cpp
-    Operators.cpp
-    Operators.h
-    Player.cpp
+        Player.cpp
     Player.h
     PlayerModel.cpp
     PlayerModel.h
         Objects/SchematicList.cpp
-        Objects/SchematicList.h Objects/BuildingsList.cpp Objects/BuildingsList.h Objects/BlueprintsList.cpp Objects/BlueprintsList.h Structs/BlueprintStruct.h Structs/BuildingStruct.h AIDirector.cpp AIDirector.h Objects/SelfGoalsList.cpp Objects/SelfGoalsList.h Structs/SelfGoalStruct.h Enums/QuestCategory.h Objects/ObjectivesGenerator.cpp Objects/ObjectivesGenerator.h Structs/ObjectiveStruct.h Enums/AIDirectorBehavior.h)
+        Objects/SchematicList.h Objects/BuildingsList.cpp Objects/BuildingsList.h Objects/BlueprintsList.cpp Objects/BlueprintsList.h Structs/BlueprintStruct.h Structs/BuildingStruct.h AIDirector.cpp AIDirector.h Objects/SelfGoalsList.cpp Objects/SelfGoalsList.h Structs/SelfGoalStruct.h Enums/QuestCategory.h Objects/ObjectivesGenerator.cpp Objects/ObjectivesGenerator.h Structs/ObjectiveStruct.h Enums/AIDirectorBehavior.h Objects/Merchant.cpp Objects/Merchant.h Enums/Consumables.h)

@@ -6,43 +6,11 @@
 
 #IncludeRegexTransform: 
 
-../Enums/Actions.h
-
-../Enums/Creatures.h
+../Enums/Consumables.h
 
 ../Enums/GatheredResources.h
 
-../Enums/Locations.h
-
 ../Enums/QuestCategory.h
-
-../Objects/EquippableItemsList.h
-SchematicList.h
-../Objects/SchematicList.h
-Structs/EquippableItemStruct.h
-../Objects/Structs/EquippableItemStruct.h
-
-../Player.h
-unordered_map
--
-vector
--
-Structs/ActionStruct.h
-../Structs/ActionStruct.h
-Structs/SchematicStruct.h
-../Structs/SchematicStruct.h
-Objects/EquippableItemsList.h
-../Objects/EquippableItemsList.h
-Structs/EquippableItemStruct.h
-../Structs/EquippableItemStruct.h
-Structs/BlueprintStruct.h
-../Structs/BlueprintStruct.h
-Structs/ObjectiveStruct.h
-../Structs/ObjectiveStruct.h
-
-../Structs/ActionStruct.h
-Enums/Actions.h
-../Structs/Enums/Actions.h
 
 ../Structs/BlueprintStruct.h
 string
@@ -54,68 +22,6 @@ vector
 BlueprintStruct.h
 ../Structs/BlueprintStruct.h
 
-../Structs/EquippableItemStruct.h
-SchematicStruct.h
-../Structs/SchematicStruct.h
-
-../Structs/ObjectiveStruct.h
-string
--
-vector
--
-Enums/QuestCategory.h
-../Structs/Enums/QuestCategory.h
-Enums/Locations.h
-../Structs/Enums/Locations.h
-Enums/GatheredResources.h
-../Structs/Enums/GatheredResources.h
-
-../Structs/SchematicStruct.h
-string
--
-vector
--
-
-../Structs/SelfGoalStruct.h
-string
--
-Enums/QuestCategory.h
-../Structs/Enums/QuestCategory.h
-Enums/Locations.h
-../Structs/Enums/Locations.h
-
-D:/UofA/Research/AI_Director_Prototype/AIDirector.cpp
-iostream
--
-AIDirector.h
-D:/UofA/Research/AI_Director_Prototype/AIDirector.h
-math.h
--
-iostream
--
-fstream
--
-
-D:/UofA/Research/AI_Director_Prototype/AIDirector.h
-PlayerModel.h
-D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
-Enums/QuestCategory.h
-D:/UofA/Research/AI_Director_Prototype/Enums/QuestCategory.h
-Objects/SelfGoalsList.h
-D:/UofA/Research/AI_Director_Prototype/Objects/SelfGoalsList.h
-Structs/ObjectiveStruct.h
-D:/UofA/Research/AI_Director_Prototype/Structs/ObjectiveStruct.h
-Objects/ObjectivesGenerator.h
-D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.h
-Enums/Locations.h
-D:/UofA/Research/AI_Director_Prototype/Enums/Locations.h
-Enums/AIDirectorBehavior.h
-D:/UofA/Research/AI_Director_Prototype/Enums/AIDirectorBehavior.h
-Enums/Actions.h
-D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
-
-D:/UofA/Research/AI_Director_Prototype/Enums/AIDirectorBehavior.h
-
 D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
 
 D:/UofA/Research/AI_Director_Prototype/Enums/Creatures.h
@@ -125,8 +31,6 @@ D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
 D:/UofA/Research/AI_Director_Prototype/Enums/Locations.h
 
 D:/UofA/Research/AI_Director_Prototype/Enums/NaturalResources.h
-
-D:/UofA/Research/AI_Director_Prototype/Enums/QuestCategory.h
 
 D:/UofA/Research/AI_Director_Prototype/Game.cpp
 Game.h
@@ -161,10 +65,8 @@ Objects/BuildingsList.h
 D:/UofA/Research/AI_Director_Prototype/Objects/BuildingsList.h
 Objects/ObjectivesGenerator.h
 D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.h
-
-D:/UofA/Research/AI_Director_Prototype/Objects/ActionUtils.h
-unordered_map
--
+Objects/Merchant.h
+D:/UofA/Research/AI_Director_Prototype/Objects/Merchant.h
 
 D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.h
 Structs/BlueprintStruct.h
@@ -182,9 +84,15 @@ D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h
 Structs/EquippableItemStruct.h
 D:/UofA/Research/AI_Director_Prototype/Objects/Structs/EquippableItemStruct.h
 
-D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.cpp
-ObjectivesGenerator.h
-D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.h
+D:/UofA/Research/AI_Director_Prototype/Objects/Merchant.h
+vector
+-
+unordered_map
+-
+Consumables.h
+D:/UofA/Research/AI_Director_Prototype/Objects/Consumables.h
+GatheredResources.h
+D:/UofA/Research/AI_Director_Prototype/Objects/GatheredResources.h
 
 D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.h
 Structs/ObjectiveStruct.h
@@ -208,34 +116,6 @@ vector
 Structs/SchematicStruct.h
 D:/UofA/Research/AI_Director_Prototype/Objects/Structs/SchematicStruct.h
 
-D:/UofA/Research/AI_Director_Prototype/Objects/SelfGoalsList.h
-vector
--
-Structs/SelfGoalStruct.h
-D:/UofA/Research/AI_Director_Prototype/Objects/Structs/SelfGoalStruct.h
-
-D:/UofA/Research/AI_Director_Prototype/Operators.cpp
-Operators.h
-D:/UofA/Research/AI_Director_Prototype/Operators.h
-Player.h
-D:/UofA/Research/AI_Director_Prototype/Player.h
-iostream
--
-Game.h
-D:/UofA/Research/AI_Director_Prototype/Game.h
-
-D:/UofA/Research/AI_Director_Prototype/Operators.h
-Player.h
-D:/UofA/Research/AI_Director_Prototype/Player.h
-
-D:/UofA/Research/AI_Director_Prototype/Player.cpp
-Player.h
-D:/UofA/Research/AI_Director_Prototype/Player.h
-iostream
--
-Enums/Locations.h
-D:/UofA/Research/AI_Director_Prototype/Enums/Locations.h
-
 D:/UofA/Research/AI_Director_Prototype/Player.h
 unordered_map
 -
@@ -253,16 +133,6 @@ Structs/BlueprintStruct.h
 D:/UofA/Research/AI_Director_Prototype/Structs/BlueprintStruct.h
 Structs/ObjectiveStruct.h
 D:/UofA/Research/AI_Director_Prototype/Structs/ObjectiveStruct.h
-
-D:/UofA/Research/AI_Director_Prototype/PlayerModel.cpp
-iostream
--
-PlayerModel.h
-D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
-
-D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
-Player.h
-D:/UofA/Research/AI_Director_Prototype/Player.h
 
 D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
 Enums/Actions.h
@@ -295,30 +165,4 @@ string
 -
 vector
 -
-
-D:/UofA/Research/AI_Director_Prototype/main.cpp
-iostream
--
-unordered_map
--
-PlayerModel.h
-D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
-Enums/Actions.h
-D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
-PlayerModel.h
-D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
-Objects/ActionUtils.h
-D:/UofA/Research/AI_Director_Prototype/Objects/ActionUtils.h
-Player.h
-D:/UofA/Research/AI_Director_Prototype/Player.h
-Operators.h
-D:/UofA/Research/AI_Director_Prototype/Operators.h
-Game.h
-D:/UofA/Research/AI_Director_Prototype/Game.h
-AIDirector.h
-D:/UofA/Research/AI_Director_Prototype/AIDirector.h
-Structs/ObjectiveStruct.h
-D:/UofA/Research/AI_Director_Prototype/Structs/ObjectiveStruct.h
-Enums/AIDirectorBehavior.h
-D:/UofA/Research/AI_Director_Prototype/Enums/AIDirectorBehavior.h
 

@@ -20,6 +20,7 @@ Player::Player() {
 
     tool.name = "null";
     armor.name = "null";
+    this->M = 20;
 }
 void Player::resetTraits() {
     this->gumption = 0;
@@ -75,6 +76,10 @@ void Player::updateAptitudes(equippableItem item) {
 
 void Player::addToInventory(int item) {
     this->inventory.push_back(item);
+}
+
+void Player::addToConsumables(int item) {
+    this->consumables.push_back(item);
 }
 
 void Player::addAction(actionStruct a) {

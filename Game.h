@@ -12,6 +12,7 @@
 #include "Objects/BlueprintsList.h"
 #include "Objects/BuildingsList.h"
 #include "Objects/ObjectivesGenerator.h"
+#include "Objects/Merchant.h"
 
 class Game {
 public:
@@ -73,6 +74,11 @@ public:
     bool refine(Player &p);
     bool attack(Player &p);
     bool equipItem(Player &p);
+    bool Buy(Player &p);
+    bool Sell(Player &p);
+
+    //Merchant live in nightingale
+    Merchant merchant;
 
     //quest tracking
     bool trackQuest(Player &p);
@@ -83,6 +89,7 @@ public:
     //utility/make life easier things
     void printPlayerLocation(Player &p);
     void printPlayerActionStack(Player &p);
+    void printPlayerConsumables(Player &p);
     void printPlayerInventory(Player &p);
     void printPlayerEquippableItems(Player &p);
     void printPlayerAptitudes(Player &p);

@@ -103,6 +103,9 @@
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Enums/Consumables.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Enums/Creatures.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
@@ -154,6 +157,12 @@
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/Merchant.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/Merchant.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.cpp">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
@@ -170,12 +179,6 @@
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Objects/SelfGoalsList.h">
-			<Option target="AI_Director_Prototype"/>
-		</Unit>
-		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Operators.cpp">
-			<Option target="AI_Director_Prototype"/>
-		</Unit>
-		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Operators.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Player.cpp">

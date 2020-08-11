@@ -28,6 +28,8 @@ CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.obj: ../Structs/SchematicStr
 CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.obj: ../Actions.cpp
 CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.obj: ../Enums/Actions.h
 
+CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Enums/Consumables.h
+CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Enums/GatheredResources.h
 CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Enums/QuestCategory.h
 CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Structs/BlueprintStruct.h
 CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Structs/BuildingStruct.h
@@ -41,6 +43,7 @@ CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Game.h
 CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Objects/BlueprintsList.h
 CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Objects/BuildingsList.h
 CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Objects/EquippableItemsList.h
+CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Objects/Merchant.h
 CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Objects/ObjectivesGenerator.h
 CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Objects/SchematicList.h
 CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj: ../Player.h
@@ -72,6 +75,11 @@ CMakeFiles/AI_Director_Prototype.dir/Objects/EquippableItemsList.cpp.obj: ../Obj
 CMakeFiles/AI_Director_Prototype.dir/Objects/EquippableItemsList.cpp.obj: ../Objects/EquippableItemsList.h
 CMakeFiles/AI_Director_Prototype.dir/Objects/EquippableItemsList.cpp.obj: ../Objects/SchematicList.h
 
+CMakeFiles/AI_Director_Prototype.dir/Objects/Merchant.cpp.obj: ../Enums/Consumables.h
+CMakeFiles/AI_Director_Prototype.dir/Objects/Merchant.cpp.obj: ../Enums/GatheredResources.h
+CMakeFiles/AI_Director_Prototype.dir/Objects/Merchant.cpp.obj: ../Objects/Merchant.cpp
+CMakeFiles/AI_Director_Prototype.dir/Objects/Merchant.cpp.obj: ../Objects/Merchant.h
+
 CMakeFiles/AI_Director_Prototype.dir/Objects/ObjectivesGenerator.cpp.obj: ../Enums/Actions.h
 CMakeFiles/AI_Director_Prototype.dir/Objects/ObjectivesGenerator.cpp.obj: ../Enums/Creatures.h
 CMakeFiles/AI_Director_Prototype.dir/Objects/ObjectivesGenerator.cpp.obj: ../Enums/GatheredResources.h
@@ -102,28 +110,6 @@ CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.obj: ../Structs/S
 CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.obj: ../Objects/SelfGoalsList.cpp
 CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.obj: ../Objects/SelfGoalsList.h
 
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Enums/Actions.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Enums/Creatures.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Enums/Locations.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Enums/QuestCategory.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Structs/BlueprintStruct.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Structs/BuildingStruct.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Enums/GatheredResources.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Game.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Objects/BlueprintsList.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Objects/BuildingsList.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Objects/EquippableItemsList.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Objects/ObjectivesGenerator.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Objects/SchematicList.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Operators.cpp
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Operators.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Player.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Structs/ActionStruct.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Structs/BlueprintStruct.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Structs/EquippableItemStruct.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Structs/ObjectiveStruct.h
-CMakeFiles/AI_Director_Prototype.dir/Operators.cpp.obj: ../Structs/SchematicStruct.h
-
 CMakeFiles/AI_Director_Prototype.dir/Player.cpp.obj: ../Enums/Actions.h
 CMakeFiles/AI_Director_Prototype.dir/Player.cpp.obj: ../Enums/GatheredResources.h
 CMakeFiles/AI_Director_Prototype.dir/Player.cpp.obj: ../Enums/QuestCategory.h
@@ -153,7 +139,9 @@ CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj: ../Structs/EquippableI
 CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj: ../Structs/ObjectiveStruct.h
 CMakeFiles/AI_Director_Prototype.dir/PlayerModel.cpp.obj: ../Structs/SchematicStruct.h
 
+CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Enums/Consumables.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Enums/Creatures.h
+CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Enums/GatheredResources.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Structs/BlueprintStruct.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Structs/BuildingStruct.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Structs/SelfGoalStruct.h
@@ -168,10 +156,10 @@ CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Objects/ActionUtils.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Objects/BlueprintsList.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Objects/BuildingsList.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Objects/EquippableItemsList.h
+CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Objects/Merchant.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Objects/ObjectivesGenerator.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Objects/SchematicList.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Objects/SelfGoalsList.h
-CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Operators.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Player.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../PlayerModel.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Structs/ActionStruct.h

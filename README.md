@@ -4,7 +4,7 @@
 this is a text based prototype of an AI Director. This is written in CPP for intented unreal compatibility. This is supposed to test different AI director behaviors outside of the game setting, in order to determine which behavior is most desired. This allows for the AI director to be built upon the intended design, and not what is currently working within the game. 
 
 ## Running the project
-In the release section of this github, please download the latest version. This will down load a .exe file to your computer. From there you can simply double click the file and it will run.
+In the release section of this github, click the link for the latest version. Then, click the link for the .exe and it will automatically download the file for you. From there you can simply double click the file and it will run.
 
 ## Known Issues
 1. If you try to build before you blueprint something, you will end up in an infinite loop

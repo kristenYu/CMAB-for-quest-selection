@@ -252,6 +252,62 @@ CMakeFiles/AI_Director_Prototype.dir/Objects/Merchant.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_Director_Prototype.dir/Objects/Merchant.cpp.s"
 	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\UofA\Research\AI_Director_Prototype\Objects\Merchant.cpp -o CMakeFiles\AI_Director_Prototype.dir\Objects\Merchant.cpp.s
 
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/flags.make
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/includes_CXX.rsp
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj: ../Automatic\ Testing/AutomaticTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\UofA\Research\AI_Director_Prototype\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj"
+	D:\Programs\8.2.1\mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AI_Director_Prototype.dir\Automatic_Testing\AutomaticTest.cpp.obj -c "D:\UofA\Research\AI_Director_Prototype\Automatic Testing\AutomaticTest.cpp"
+
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.i"
+	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\UofA\Research\AI_Director_Prototype\Automatic Testing\AutomaticTest.cpp" > CMakeFiles\AI_Director_Prototype.dir\Automatic_Testing\AutomaticTest.cpp.i
+
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.s"
+	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\UofA\Research\AI_Director_Prototype\Automatic Testing\AutomaticTest.cpp" -o CMakeFiles\AI_Director_Prototype.dir\Automatic_Testing\AutomaticTest.cpp.s
+
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/flags.make
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/includes_CXX.rsp
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj: ../Automatic\ Testing/bots/Bot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\UofA\Research\AI_Director_Prototype\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj"
+	D:\Programs\8.2.1\mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AI_Director_Prototype.dir\Automatic_Testing\bots\Bot.cpp.obj -c "D:\UofA\Research\AI_Director_Prototype\Automatic Testing\bots\Bot.cpp"
+
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.i"
+	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\UofA\Research\AI_Director_Prototype\Automatic Testing\bots\Bot.cpp" > CMakeFiles\AI_Director_Prototype.dir\Automatic_Testing\bots\Bot.cpp.i
+
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.s"
+	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\UofA\Research\AI_Director_Prototype\Automatic Testing\bots\Bot.cpp" -o CMakeFiles\AI_Director_Prototype.dir\Automatic_Testing\bots\Bot.cpp.s
+
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/flags.make
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/includes_CXX.rsp
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.obj: ../Automatic\ Testing/bots/GatherBot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\UofA\Research\AI_Director_Prototype\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.obj"
+	D:\Programs\8.2.1\mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AI_Director_Prototype.dir\Automatic_Testing\bots\GatherBot.cpp.obj -c "D:\UofA\Research\AI_Director_Prototype\Automatic Testing\bots\GatherBot.cpp"
+
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.i"
+	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\UofA\Research\AI_Director_Prototype\Automatic Testing\bots\GatherBot.cpp" > CMakeFiles\AI_Director_Prototype.dir\Automatic_Testing\bots\GatherBot.cpp.i
+
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.s"
+	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\UofA\Research\AI_Director_Prototype\Automatic Testing\bots\GatherBot.cpp" -o CMakeFiles\AI_Director_Prototype.dir\Automatic_Testing\bots\GatherBot.cpp.s
+
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/flags.make
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj: CMakeFiles/AI_Director_Prototype.dir/includes_CXX.rsp
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj: ../Automatic\ Testing/JobBoard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\UofA\Research\AI_Director_Prototype\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj"
+	D:\Programs\8.2.1\mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\AI_Director_Prototype.dir\Automatic_Testing\JobBoard.cpp.obj -c "D:\UofA\Research\AI_Director_Prototype\Automatic Testing\JobBoard.cpp"
+
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.i"
+	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\UofA\Research\AI_Director_Prototype\Automatic Testing\JobBoard.cpp" > CMakeFiles\AI_Director_Prototype.dir\Automatic_Testing\JobBoard.cpp.i
+
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.s"
+	D:\Programs\8.2.1\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\UofA\Research\AI_Director_Prototype\Automatic Testing\JobBoard.cpp" -o CMakeFiles\AI_Director_Prototype.dir\Automatic_Testing\JobBoard.cpp.s
+
 # Object files for target AI_Director_Prototype
 AI_Director_Prototype_OBJECTS = \
 "CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.obj" \
@@ -267,7 +323,11 @@ AI_Director_Prototype_OBJECTS = \
 "CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.obj" \
 "CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.obj" \
 "CMakeFiles/AI_Director_Prototype.dir/Objects/ObjectivesGenerator.cpp.obj" \
-"CMakeFiles/AI_Director_Prototype.dir/Objects/Merchant.cpp.obj"
+"CMakeFiles/AI_Director_Prototype.dir/Objects/Merchant.cpp.obj" \
+"CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj" \
+"CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj" \
+"CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.obj" \
+"CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj"
 
 # External object files for target AI_Director_Prototype
 AI_Director_Prototype_EXTERNAL_OBJECTS =
@@ -286,11 +346,15 @@ AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.o
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/Objects/SelfGoalsList.cpp.obj
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/Objects/ObjectivesGenerator.cpp.obj
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/Objects/Merchant.cpp.obj
+AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj
+AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj
+AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.obj
+AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/build.make
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/linklibs.rsp
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/objects1.rsp
 AI_Director_Prototype.exe: CMakeFiles/AI_Director_Prototype.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\UofA\Research\AI_Director_Prototype\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable AI_Director_Prototype.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\UofA\Research\AI_Director_Prototype\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable AI_Director_Prototype.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\AI_Director_Prototype.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

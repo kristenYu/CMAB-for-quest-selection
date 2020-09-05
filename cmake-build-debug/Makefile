@@ -176,6 +176,114 @@ Actions.cpp.s:
 	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.s
 .PHONY : Actions.cpp.s
 
+Automatic_Testing/AutomaticTest.obj: Automatic_Testing/AutomaticTest.cpp.obj
+
+.PHONY : Automatic_Testing/AutomaticTest.obj
+
+# target to build an object file
+Automatic_Testing/AutomaticTest.cpp.obj:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj
+.PHONY : Automatic_Testing/AutomaticTest.cpp.obj
+
+Automatic_Testing/AutomaticTest.i: Automatic_Testing/AutomaticTest.cpp.i
+
+.PHONY : Automatic_Testing/AutomaticTest.i
+
+# target to preprocess a source file
+Automatic_Testing/AutomaticTest.cpp.i:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.i
+.PHONY : Automatic_Testing/AutomaticTest.cpp.i
+
+Automatic_Testing/AutomaticTest.s: Automatic_Testing/AutomaticTest.cpp.s
+
+.PHONY : Automatic_Testing/AutomaticTest.s
+
+# target to generate assembly for a file
+Automatic_Testing/AutomaticTest.cpp.s:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.s
+.PHONY : Automatic_Testing/AutomaticTest.cpp.s
+
+Automatic_Testing/JobBoard.obj: Automatic_Testing/JobBoard.cpp.obj
+
+.PHONY : Automatic_Testing/JobBoard.obj
+
+# target to build an object file
+Automatic_Testing/JobBoard.cpp.obj:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj
+.PHONY : Automatic_Testing/JobBoard.cpp.obj
+
+Automatic_Testing/JobBoard.i: Automatic_Testing/JobBoard.cpp.i
+
+.PHONY : Automatic_Testing/JobBoard.i
+
+# target to preprocess a source file
+Automatic_Testing/JobBoard.cpp.i:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.i
+.PHONY : Automatic_Testing/JobBoard.cpp.i
+
+Automatic_Testing/JobBoard.s: Automatic_Testing/JobBoard.cpp.s
+
+.PHONY : Automatic_Testing/JobBoard.s
+
+# target to generate assembly for a file
+Automatic_Testing/JobBoard.cpp.s:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.s
+.PHONY : Automatic_Testing/JobBoard.cpp.s
+
+Automatic_Testing/bots/Bot.obj: Automatic_Testing/bots/Bot.cpp.obj
+
+.PHONY : Automatic_Testing/bots/Bot.obj
+
+# target to build an object file
+Automatic_Testing/bots/Bot.cpp.obj:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj
+.PHONY : Automatic_Testing/bots/Bot.cpp.obj
+
+Automatic_Testing/bots/Bot.i: Automatic_Testing/bots/Bot.cpp.i
+
+.PHONY : Automatic_Testing/bots/Bot.i
+
+# target to preprocess a source file
+Automatic_Testing/bots/Bot.cpp.i:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.i
+.PHONY : Automatic_Testing/bots/Bot.cpp.i
+
+Automatic_Testing/bots/Bot.s: Automatic_Testing/bots/Bot.cpp.s
+
+.PHONY : Automatic_Testing/bots/Bot.s
+
+# target to generate assembly for a file
+Automatic_Testing/bots/Bot.cpp.s:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.s
+.PHONY : Automatic_Testing/bots/Bot.cpp.s
+
+Automatic_Testing/bots/GatherBot.obj: Automatic_Testing/bots/GatherBot.cpp.obj
+
+.PHONY : Automatic_Testing/bots/GatherBot.obj
+
+# target to build an object file
+Automatic_Testing/bots/GatherBot.cpp.obj:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.obj
+.PHONY : Automatic_Testing/bots/GatherBot.cpp.obj
+
+Automatic_Testing/bots/GatherBot.i: Automatic_Testing/bots/GatherBot.cpp.i
+
+.PHONY : Automatic_Testing/bots/GatherBot.i
+
+# target to preprocess a source file
+Automatic_Testing/bots/GatherBot.cpp.i:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.i
+.PHONY : Automatic_Testing/bots/GatherBot.cpp.i
+
+Automatic_Testing/bots/GatherBot.s: Automatic_Testing/bots/GatherBot.cpp.s
+
+.PHONY : Automatic_Testing/bots/GatherBot.s
+
+# target to generate assembly for a file
+Automatic_Testing/bots/GatherBot.cpp.s:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.s
+.PHONY : Automatic_Testing/bots/GatherBot.cpp.s
+
 Game.obj: Game.cpp.obj
 
 .PHONY : Game.obj
@@ -515,6 +623,18 @@ help:
 	@echo ... Actions.obj
 	@echo ... Actions.i
 	@echo ... Actions.s
+	@echo ... Automatic_Testing/AutomaticTest.obj
+	@echo ... Automatic_Testing/AutomaticTest.i
+	@echo ... Automatic_Testing/AutomaticTest.s
+	@echo ... Automatic_Testing/JobBoard.obj
+	@echo ... Automatic_Testing/JobBoard.i
+	@echo ... Automatic_Testing/JobBoard.s
+	@echo ... Automatic_Testing/bots/Bot.obj
+	@echo ... Automatic_Testing/bots/Bot.i
+	@echo ... Automatic_Testing/bots/Bot.s
+	@echo ... Automatic_Testing/bots/GatherBot.obj
+	@echo ... Automatic_Testing/bots/GatherBot.i
+	@echo ... Automatic_Testing/bots/GatherBot.s
 	@echo ... Game.obj
 	@echo ... Game.i
 	@echo ... Game.s

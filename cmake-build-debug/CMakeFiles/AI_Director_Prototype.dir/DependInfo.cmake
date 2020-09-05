@@ -6,6 +6,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/UofA/Research/AI_Director_Prototype/AIDirector.cpp" "D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.obj"
   "D:/UofA/Research/AI_Director_Prototype/Actions.cpp" "D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.obj"
+  "D:/UofA/Research/AI_Director_Prototype/Automatic Testing/AutomaticTest.cpp" "D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj"
+  "D:/UofA/Research/AI_Director_Prototype/Automatic Testing/JobBoard.cpp" "D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj"
+  "D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.cpp" "D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj"
+  "D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/GatherBot.cpp" "D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.obj"
   "D:/UofA/Research/AI_Director_Prototype/Game.cpp" "D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj"
   "D:/UofA/Research/AI_Director_Prototype/Objects/ActionUtils.cpp" "D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Objects/ActionUtils.cpp.obj"
   "D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.cpp" "D:/UofA/Research/AI_Director_Prototype/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Objects/BlueprintsList.cpp.obj"

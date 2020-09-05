@@ -97,6 +97,30 @@
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Actions.cpp">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Automatic Testing/AutomaticTest.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Automatic Testing/AutomaticTest.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Automatic Testing/JobBoard.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Automatic Testing/JobBoard.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/GatherBot.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/GatherBot.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Enums/AIDirectorBehavior.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>

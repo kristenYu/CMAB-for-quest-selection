@@ -8,17 +8,35 @@
 
 ../Enums/QuestCategory.h
 
-D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.cpp
-cstdlib
--
+D:/UofA/Research/AI_Director_Prototype/Automatic Testing/AutomaticTest.cpp
 iostream
 -
-chrono
--
-Bot.h
+AutomaticTest.h
+D:/UofA/Research/AI_Director_Prototype/Automatic Testing/AutomaticTest.h
+bots/Bot.h
 D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.h
+JobBoard.h
+D:/UofA/Research/AI_Director_Prototype/Automatic Testing/JobBoard.h
+bots/GatherBot.h
+D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/GatherBot.h
+fstream
+-
+
+D:/UofA/Research/AI_Director_Prototype/Automatic Testing/AutomaticTest.h
+unordered_map
+-
+map
+-
+JobBoard.h
+D:/UofA/Research/AI_Director_Prototype/Automatic Testing/JobBoard.h
+
+D:/UofA/Research/AI_Director_Prototype/Automatic Testing/JobBoard.h
 
 D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.h
 Enums/QuestCategory.h
 D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Enums/QuestCategory.h
+
+D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/GatherBot.h
+Bot.h
+D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.h
 

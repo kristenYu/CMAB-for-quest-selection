@@ -8,7 +8,9 @@
 
 class JobBoard {
 public:
-    int* generateJobs(int num);
+    int * generateJobs(int num);
+    const int QUESTCATEGORYNUM = 6;
+    JobBoard();
 };
 
 

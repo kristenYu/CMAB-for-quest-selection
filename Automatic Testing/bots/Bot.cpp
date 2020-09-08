@@ -14,7 +14,6 @@ Bot::Bot() {
 bool Bot::makeChoice(questCategory category) {
     std::srand(time(NULL) + rand() %100);
     r = rand() % 2;
-    std::cout<<r<<std::endl;
     if (r == 0)
     {
         return true;

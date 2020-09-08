@@ -26,6 +26,7 @@ int main() {
     if(runAutomation == 0)
     {
         AutomaticTest automaticTest;
+        std::cout<<"automatic test"<<std::endl;
         automaticTest.runTest(20);
     } else{
         bool keepPlaying = true;

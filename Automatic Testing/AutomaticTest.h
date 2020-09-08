@@ -15,6 +15,7 @@ public:
     AutomaticTest();
     std::unordered_map<int, std::string> questCategoryMap;
     std::unordered_map<int, int> statsMap;
+    int totalAcceptedQuests;
     static const int QUESTCATEGORYNUM = 6;
     //int questMakeup[QUESTCATEGORYNUM];
     typedef std::array<unsigned int, QUESTCATEGORYNUM> questTypes;

@@ -38,7 +38,7 @@ void AutomaticTest::runTest(int num) {
 
     int *array;
     int arraySize = 5;
-
+    totalAcceptedQuests = 0;
 
     for(int i = 0; i < num; i++)
     {
@@ -54,6 +54,7 @@ void AutomaticTest::runTest(int num) {
             if(choice == true)
             {
                 numAccepted ++;
+                totalAcceptedQuests++;
             }
             questMakeup[array[j]] += 1;
 
@@ -76,6 +77,7 @@ void AutomaticTest::runTest(int num) {
         std::cout<<"file is open"<<std::endl;
         myfile<<"write,to,file"<<std::endl;
     }
+    std::cout<<totalAcceptedQuests<<" have been accepted"<<std::endl;
 
    for(int i = 0; i < statsMap.size(); i++)
    {

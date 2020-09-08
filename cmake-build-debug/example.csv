@@ -1,19 +1,21 @@
 write,to,file
-number of 0 accepted: ,6
-number of 1 accepted: ,8
-number of 2 accepted: ,6
-number of 3 accepted: ,0
+number of 0 accepted: ,11
+number of 1 accepted: ,3
+number of 2 accepted: ,3
+number of 3 accepted: ,3
 number of 4 accepted: ,0
 number of 5 accepted: ,0
-011102,2
-011111,1
-021011,1
-021101,1
-022010,1
-101120,1
-110102,1
-110201,5
-120101,1
-200102,3
-201101,1
-210110,2
+001112,1
+002102,2
+002111,1
+003101,2
+010112,2
+011102,1
+011111,2
+101012,1
+101102,1
+112001,1
+202001,2
+211010,1
+300020,1
+302000,2

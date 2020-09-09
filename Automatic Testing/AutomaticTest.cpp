@@ -69,13 +69,12 @@ void AutomaticTest::runTest(int num) {
         statsMap[numAccepted] += 1;
     }
     std::ofstream myfile;
-    myfile.open ("example.csv");
+    //HARDCODED FOR THE DIRECTORY ON MY COMPUTER
+    myfile.open ("D:\\UofA\\Research\\AI_Director_Prototype\\output\\example.csv");
 
     if(myfile.is_open())
     {
-        //TODO: get file writing
         std::cout<<"file is open"<<std::endl;
-        myfile<<"write,to,file"<<std::endl;
     }
     std::cout<<totalAcceptedQuests<<" have been accepted"<<std::endl;
 

@@ -169,6 +169,8 @@ CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj
  D:/UofA/Research/AI_Director_Prototype/AIDirector.h
  D:/UofA/Research/AI_Director_Prototype/Automatic Testing/AutomaticTest.h
  D:/UofA/Research/AI_Director_Prototype/Automatic Testing/JobBoard.h
+ D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.h
+ D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/GatherBot.h
  D:/UofA/Research/AI_Director_Prototype/Enums/AIDirectorBehavior.h
  D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
  D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h

@@ -29,11 +29,9 @@ AutomaticTest::AutomaticTest() {
 
 }
 
-void AutomaticTest::runTest(int num) {
-    Bot bot;
-    GatherBot gatherBot;
+void AutomaticTest::runTest(int num, std::string filename, Bot bot) {
     //No wiggling of choices for now
-    gatherBot.epsilon = 0;
+    bot.epsilon = 0;
     JobBoard jobBoard;
 
     int *array;
@@ -48,7 +46,7 @@ void AutomaticTest::runTest(int num) {
         int numAccepted = 0;
         for(int j = 0; j < arraySize; j++)
         {
-            choice = gatherBot.makeChoice( static_cast<questCategory>(array[j]));
+            choice = bot.makeChoice( static_cast<questCategory>(array[j]));
 
 
             if(choice == true)
@@ -68,34 +66,31 @@ void AutomaticTest::runTest(int num) {
 
         statsMap[numAccepted] += 1;
     }
-    std::ofstream myfile;
+    std::ofstream fstreamAccepted;
+    std::ofstream fstreamHeatMap;
     //HARDCODED FOR THE DIRECTORY ON MY COMPUTER
-    myfile.open ("D:\\UofA\\Research\\AI_Director_Prototype\\output\\example.csv");
+    fstreamAccepted.open ("D:\\UofA\\Research\\AI_Director_Prototype\\output\\" + filename + std::to_string(num) + "_a.csv");
+    fstreamHeatMap.open("D:\\UofA\\Research\\AI_Director_Prototype\\output\\" + filename + std::to_string(num) + "_h.csv");
 
-    if(myfile.is_open())
-    {
-        std::cout<<"file is open"<<std::endl;
-    }
     std::cout<<totalAcceptedQuests<<" have been accepted"<<std::endl;
-
+    fstreamAccepted<<"total accepted,"<<totalAcceptedQuests<<","<<num*5<<std::endl;
    for(int i = 0; i < statsMap.size(); i++)
    {
        std::cout<<"number of "<<i<<" accepted: "<<statsMap[i]<<std::endl;
-       myfile<<"number of "<<i<<" accepted: ,"<<statsMap[i]<<std::endl;
-
+       fstreamAccepted << i << " accepted: ," << statsMap[i] << std::endl;
    }
 
    for(std::map<questTypes ,int>::iterator it = frequency.begin(); it != frequency.end(); ++it) {
         for(int i = 0; i < QUESTCATEGORYNUM; i++)
         {
             std::cout<<it->first[i]<<",";
-            myfile <<it->first[i];
+            fstreamHeatMap << it->first[i];
         }
         std::cout<<": "<<it->second<<std::endl;
-        myfile<<","<<it->second<<std::endl;
+        fstreamHeatMap << "," << it->second << std::endl;
     }
-    myfile.close();
-
+    fstreamAccepted.close();
+    fstreamHeatMap.close();
 }
 
 void AutomaticTest::ResetQuestMakeup() {

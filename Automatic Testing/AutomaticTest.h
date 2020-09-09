@@ -8,10 +8,11 @@
 #include <unordered_map>
 #include <map>
 #include "JobBoard.h"
+#include "bots/Bot.h"
 
 class AutomaticTest {
 public:
-    void runTest(int num);
+    void runTest(int num, std::string filename, Bot bot);
     AutomaticTest();
     std::unordered_map<int, std::string> questCategoryMap;
     std::unordered_map<int, int> statsMap;

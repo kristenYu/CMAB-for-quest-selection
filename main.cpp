@@ -10,6 +10,8 @@
 #include "Structs/ObjectiveStruct.h"
 #include "Enums/AIDirectorBehavior.h"
 #include "Automatic Testing/AutomaticTest.h"
+#include "Automatic Testing/bots/Bot.h"
+#include "Automatic Testing/bots/GatherBot.h"
 
 int main() {
     ActionUtils actionUtils;
@@ -27,7 +29,8 @@ int main() {
     {
         AutomaticTest automaticTest;
         std::cout<<"automatic test"<<std::endl;
-        automaticTest.runTest(20);
+        GatherBot gatherBot;
+        automaticTest.runTest(1000, "gatherBot", gatherBot);
     } else{
         bool keepPlaying = true;
         bool checkAction = true;

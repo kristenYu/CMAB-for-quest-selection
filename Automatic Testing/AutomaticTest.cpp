@@ -29,7 +29,7 @@ AutomaticTest::AutomaticTest() {
 
 }
 
-void AutomaticTest::runTest(int num, std::string filename, Bot bot) {
+void AutomaticTest::runTest(int num, std::string filename, Bot& bot) {
     //No wiggling of choices for now
     bot.epsilon = 0;
     JobBoard jobBoard;
@@ -47,8 +47,6 @@ void AutomaticTest::runTest(int num, std::string filename, Bot bot) {
         for(int j = 0; j < arraySize; j++)
         {
             choice = bot.makeChoice( static_cast<questCategory>(array[j]));
-
-
             if(choice == true)
             {
                 numAccepted ++;
@@ -77,7 +75,7 @@ void AutomaticTest::runTest(int num, std::string filename, Bot bot) {
    for(int i = 0; i < statsMap.size(); i++)
    {
        std::cout<<"number of "<<i<<" accepted: "<<statsMap[i]<<std::endl;
-       fstreamAccepted << i << " accepted: ," << statsMap[i] << std::endl;
+       fstreamAccepted << i << " accepted," << statsMap[i] << std::endl;
    }
 
    for(std::map<questTypes ,int>::iterator it = frequency.begin(); it != frequency.end(); ++it) {

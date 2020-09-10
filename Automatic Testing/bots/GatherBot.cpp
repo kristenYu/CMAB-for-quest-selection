@@ -4,6 +4,7 @@
 
 #include <cstdlib>
 #include <ctime>
+#include <iostream>
 #include "GatherBot.h"
 GatherBot::GatherBot() {
     epsilon = 0.1;
@@ -11,17 +12,22 @@ GatherBot::GatherBot() {
 
 
 bool GatherBot::makeChoice(questCategory category) {
-    std::srand(time(NULL) + rand() %100);
+    std::srand(time(NULL));
     if(category == questCategory::GatherCategory)
     {
         return true;
     } else{
+        return false;
+        /*
         //random chance of accepting a random quest
         f = rand();
         if(f < epsilon)
         {
+            std::cout<<"epsilon acceptance"<<std::endl;
             return true;
         }
+
+         */
     }
-    return false;
+
 }

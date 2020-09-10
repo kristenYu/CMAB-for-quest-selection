@@ -16,6 +16,9 @@ JobBoard::JobBoard() {
 int * JobBoard::generateJobs(int num) {
     //this currently generates random jobs
     int* jobs = new int[num];
+    for (int i = 0; i < num; i++) {
+        jobs[i] = 0;    // Initialize all elements to zero.
+    }
     //to evaluate based off of different bots - generatea 1000 numbers at the beginning using the given seed
     //and then iterate through that list
     for(int i = 0; i < num; i++)
@@ -25,7 +28,7 @@ int * JobBoard::generateJobs(int num) {
         std::srand((time_t)ts.tv_nsec);
         //randomly populate with categories
         int r = rand() % QUESTCATEGORYNUM;
-        jobs[i] = r;
+        jobs[i] += r;
     }
     return jobs;
 }

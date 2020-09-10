@@ -8,7 +8,7 @@
 
 class Bot {
 public:
-    bool makeChoice(questCategory category);
+    virtual bool makeChoice(questCategory category);
     int r;
     float epsilon;
     Bot();

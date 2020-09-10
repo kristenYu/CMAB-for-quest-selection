@@ -28,9 +28,8 @@ int main() {
     if(runAutomation == 0)
     {
         AutomaticTest automaticTest;
-        std::cout<<"automatic test"<<std::endl;
         GatherBot gatherBot;
-        automaticTest.runTest(1000, "gatherBot", gatherBot);
+        automaticTest.runTest(10000, "gatherBot", gatherBot);
     } else{
         bool keepPlaying = true;
         bool checkAction = true;

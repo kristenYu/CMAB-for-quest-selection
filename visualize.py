@@ -3,60 +3,125 @@ import csv
 import matplotlib.pyplot as plt
 import numpy as np
 
-
-
 #code for the accepted graph 
-'''
-firstRow = True
-accepted = 0
-total = 0
-labels = []
-values = []
-with open('output/gatherBot1000_a.csv','rt')as f:
-	data = csv.reader(f)
-	for row in data:
-		if firstRow:
-			accepted = int(row[1])
-			total = int(row[2])
-			firstRow = False
-		labels.append(row[0])
-		values.append(int(row[1]))
+def generateAcceptedGraph(filename):
+	firstRow = True
+	accepted = 0
+	total = 0
+	labels = []
+	values = []
+	with open(f'output/{filename}','rt')as f:
+		data = csv.reader(f)
+		for row in data:
+			if firstRow:
+				accepted = int(row[1])
+				total = int(row[2])
+				firstRow = False
+			labels.append(row[0])
+			values.append(int(row[1]))
 
-labels = labels[1:]
-values = values[1:]
+	labels = labels[1:]
+	values = values[1:]
 
-print(accepted/total)
+	print(accepted/total)
 
 
-index = np.arange(len(labels))
-plt.bar(index, values)
-plt.xlabel('Type distribution', fontsize=10)
-plt.ylabel('Frequency', fontsize=10)
-plt.xticks(index, labels, fontsize=10, rotation=30)
-plt.title('Number of Quest Proposals with X accepted')
-plt.show()
-'''
+	index = np.arange(len(labels))
+	plt.bar(index, values)
+	plt.xlabel('Type distribution', fontsize=12)
+	plt.ylabel('Frequency', fontsize=12)
+	plt.xticks(index, labels, fontsize=9)
+	plt.title('Number of Quest Proposals with X accepted')
+	plt.savefig(f'graphs/gatherbot/{filename[:-4]}')
+	plt.close()
 
-#code for 1 of the heatmaps
-allData = []
-with open('output/gatherBot1000_h.csv','rt')as f:
-	data = csv.reader(f)
-	for row in data:
-		allData.append(row)
+#code for batch heatmaps
+def generateBatchHeatmaps(filename):
+	questTypes = ["gather", "harvest", "build", "craft", "refine", "attack"]
+	QUESTNUM = 6;
 
-#generate heatmap data for the "gather" quests
+	for type1 in questTypes:
+		for type2 in questTypes:
+			xaxis = []
+			yaxis = []
+			for i in range(QUESTNUM):
+				xaxis.append(f'{i} {type1}')
+				yaxis.append(f'{i} {type2}')
 
-#auto generate axis labels
-questTypes = ["gather", "harvest", "build", "craft", "refine", "attack"]
-otherTypes = ["harvest", "build", "craft", "refine", "attack"]
-yaxis = []
-for type in otherTypes:
-	for i in range(0, 6):
-		yaxis.append(str(i) + " " + type)
+			heatmap = []
+			for i in range(QUESTNUM):
+				heatmap.append([0, 0, 0, 0, 0, 0])
 
-xaxis = ["0 gather", "1 gather", "2 gather", "3 gather", "4 gather", "5 gather"]
+			with open(f'output/{filename}','rt')as f:
+				data = csv.reader(f)
+				for row in data:
+					r = int(row[0][questTypes.index(type1)])
+					c = int(row[0][questTypes.index(type2)])
+					heatmap[r][c] += int(row[1])
 
-#generate the heatmap data from the data
-for i in range(len(allData)):
-	for j in range(len(allData[0])):
+			m = np.array(heatmap)
+			fig, ax = plt.subplots()
+			heatmap = np.rot90(m, k=1)
+			yaxis = np.flip(yaxis)
+			im = ax.imshow(heatmap, cmap = 'Blues')
+			cb = fig.colorbar(im)
+			# We want to show all ticks...
+			ax.set_xticks(np.arange(len(xaxis)))
+			ax.set_yticks(np.arange(len(yaxis)))
+			# ... and label them with the respective list entries
+			ax.set_xticklabels(xaxis)
+			ax.set_yticklabels(yaxis)
 
+
+
+			# Rotate the tick labels and set their alignment.
+			plt.setp(ax.get_xticklabels(), ha="right", rotation_mode="anchor")
+
+			# Loop over data dimensions and create text annotations.
+			for i in range(len(yaxis)):
+			    for j in range(len(xaxis)):
+			        text = ax.text(j, i, heatmap[i][j], ha="center", va="center", color="w")
+
+			ax.set_title(f"Correlation between {type1} and {type2} quests")
+			fig.tight_layout()
+			#plt.show()
+			plt.savefig(f"graphs/gatherbot/heatmaps/{type1}{type2}.png")
+			plt.close()
+
+
+#calculate the variety of the quests
+def generateVarietyGraph(filename):
+	variety = [0, 0, 0, 0, 0] #0 is considered to be a variety of 1
+	with open(f'output/{filename}','rt')as f:
+		data = csv.reader(f)
+		for row in data:
+			v = 0
+			for char in row[0]:
+				if char != "0":
+					v += 1
+			variety[v-1] += 1
+
+	labels = ["1", "2", "3", "4", "5"]
+
+	index = np.arange(len(labels))
+	plt.bar(index, variety)
+	plt.xlabel('Variety of the Quest Proposal', fontsize=10)
+	plt.ylabel('Frequency', fontsize=10)
+	plt.xticks(index, labels, fontsize=10)
+	plt.title('Number of Quest Proposals with Variety of X')
+	plt.savefig(f'graphs/gatherbot/variety_{filename[:-4]}.png')
+	plt.close()
+
+def generateStateSpaceMap(filename):
+	xaxis = []
+	for i in range(2):
+		for j in range(2):
+			for k in range(2):
+				xaxis.append(f'{i}{j}{k}')
+
+
+	
+
+generateAcceptedGraph('gatherBot10000_a.csv')
+generateVarietyGraph('gatherBot10000_h.csv')
+generateBatchHeatmaps('gatherBot10000_h.csv')

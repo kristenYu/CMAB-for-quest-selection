@@ -113,15 +113,49 @@ def generateVarietyGraph(filename):
 	plt.close()
 
 def generateStateSpaceMap(filename):
+	from matplotlib.pyplot import figure
+	#figure(num=None, figsize=(40, 8), dpi=80, facecolor='w', edgecolor='k')
+
+	xQuests = ["gather", "harvest", "build"]
+	yQuests = ["craft", "refine", "attack"]
+
 	xaxis = []
+	yaxis = []
 	for i in range(2):
 		for j in range(2):
 			for k in range(2):
 				xaxis.append(f'{i}{j}{k}')
+				yaxis.append(f'{i}{j}{k}')
 
 
-	
+	xdata = []
+	ydata = []
+	with open(f'output/{filename}','rt')as f:
+		data = csv.reader(f)
+		for row in data:
+			generate = ""
+			for bit in row[0]:
+				if int(bit) != 0:
+					generate += "1"
+				else:
+					generate += "0"
+			xdata.append(xaxis.index(generate[:3]))
+			ydata.append(yaxis.index(generate[3:]))
 
-generateAcceptedGraph('gatherBot10000_a.csv')
-generateVarietyGraph('gatherBot10000_h.csv')
-generateBatchHeatmaps('gatherBot10000_h.csv')
+
+	index = np.arange(len(xaxis))
+	plt.plot(xdata, ydata, "o")
+	plt.margins(x=0.05, y=0.05)
+	plt.xticks(index, xaxis, fontsize=8)
+	plt.xlabel("Occurance of gather, harvest, build")
+	plt.yticks(index, yaxis, fontsize=8)
+	plt.ylabel("Occurance of craft, refine, attack")
+	plt.title("Range of Quest Proposals Generated")
+	plt.savefig(f'graphs/gatherbot/range_{filename[:-4]}.png')
+	plt.close()
+
+
+generateStateSpaceMap('gatherBot10000_h.csv')
+#generateAcceptedGraph('gatherBot10000_a.csv')
+#generateVarietyGraph('gatherBot10000_h.csv')
+#generateBatchHeatmaps('gatherBot10000_h.csv')

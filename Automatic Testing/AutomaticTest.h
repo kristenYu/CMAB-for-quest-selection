@@ -12,7 +12,7 @@
 
 class AutomaticTest {
 public:
-    void runTest(int num, std::string filename, Bot& bot);
+    void runTest(int num, std::string filename, Bot& bot, std::string type);
     AutomaticTest();
     std::unordered_map<int, std::string> questCategoryMap;
     std::unordered_map<int, int> statsMap;

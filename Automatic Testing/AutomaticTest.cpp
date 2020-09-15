@@ -29,18 +29,20 @@ AutomaticTest::AutomaticTest() {
 
 }
 
-void AutomaticTest::runTest(int num, std::string filename, Bot& bot) {
+void AutomaticTest::runTest(int num, std::string filename, Bot& bot, std::string type) {
     //No wiggling of choices for now
     bot.epsilon = 0;
-    JobBoard jobBoard;
-
+    std::cout<<bot.getFileName()<<std::endl;
+    JobBoard jobBoard(bot);
     int *array;
     int arraySize = 5;
     totalAcceptedQuests = 0;
 
     for(int i = 0; i < num; i++)
     {
-        array = jobBoard.generateJobs(arraySize);
+        //UNCOMMENT THIS TO GENERATE A NEW SET OF 100 ACTIONS
+        //bot.generatePreviousActions(100);
+        array = jobBoard.generateJobs(arraySize, type);
         ResetQuestMakeup();
         bool choice;
         int numAccepted = 0;
@@ -67,8 +69,8 @@ void AutomaticTest::runTest(int num, std::string filename, Bot& bot) {
     std::ofstream fstreamAccepted;
     std::ofstream fstreamHeatMap;
     //HARDCODED FOR THE DIRECTORY ON MY COMPUTER
-    fstreamAccepted.open ("D:\\UofA\\Research\\AI_Director_Prototype\\output\\" + filename + std::to_string(num) + "_a.csv");
-    fstreamHeatMap.open("D:\\UofA\\Research\\AI_Director_Prototype\\output\\" + filename + std::to_string(num) + "_h.csv");
+    fstreamAccepted.open ("D:\\UofA\\Research\\AI_Director_Prototype\\output\\" + type + "/" + filename + std::to_string(num) + "_a.csv");
+    fstreamHeatMap.open("D:\\UofA\\Research\\AI_Director_Prototype\\output\\" + type + "/" + filename + std::to_string(num) + "_h.csv");
 
     std::cout<<totalAcceptedQuests<<" have been accepted"<<std::endl;
     fstreamAccepted<<"total accepted,"<<totalAcceptedQuests<<","<<num*5<<std::endl;

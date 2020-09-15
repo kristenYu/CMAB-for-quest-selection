@@ -29,7 +29,7 @@ int main() {
     {
         AutomaticTest automaticTest;
         GatherBot gatherBot;
-        automaticTest.runTest(10000, "gatherBot", gatherBot);
+        automaticTest.runTest(10000, "gatherBot", gatherBot, "mc2");
     } else{
         bool keepPlaying = true;
         bool checkAction = true;

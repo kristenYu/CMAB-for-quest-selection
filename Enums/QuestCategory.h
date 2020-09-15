@@ -12,6 +12,8 @@ enum questCategory{
     CraftCategory,
     RefineCategory,
     AttackCategory,
+    //the last one, 6, is a holder category
+    NullCategory,
 };
 
 #endif //AI_DIRECTOR_PROTOTYPE_QUESTCATEGORY_H

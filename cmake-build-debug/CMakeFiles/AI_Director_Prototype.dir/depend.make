@@ -28,6 +28,7 @@ CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.obj: ../Structs/SchematicStr
 CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.obj: ../Actions.cpp
 CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.obj: ../Enums/Actions.h
 
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj: ../Enums/Actions.h
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj: ../Enums/QuestCategory.h
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj: ../Automatic\ Testing/AutomaticTest.cpp
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj: ../Automatic\ Testing/AutomaticTest.h
@@ -35,14 +36,18 @@ CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj: ..
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj: ../Automatic\ Testing/bots/Bot.h
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj: ../Automatic\ Testing/bots/GatherBot.h
 
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj: ../Enums/Actions.h
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj: ../Enums/QuestCategory.h
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj: ../Automatic\ Testing/JobBoard.cpp
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj: ../Automatic\ Testing/JobBoard.h
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj: ../Automatic\ Testing/bots/Bot.h
 
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj: ../Enums/Actions.h
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj: ../Enums/QuestCategory.h
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj: ../Automatic\ Testing/bots/Bot.cpp
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj: ../Automatic\ Testing/bots/Bot.h
 
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.obj: ../Enums/Actions.h
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.obj: ../Enums/QuestCategory.h
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.obj: ../Automatic\ Testing/bots/Bot.h
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.obj: ../Automatic\ Testing/bots/GatherBot.cpp

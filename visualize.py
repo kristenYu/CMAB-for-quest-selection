@@ -4,13 +4,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 #code for the accepted graph 
-def generateAcceptedGraph(filename):
+def generateAcceptedGraph(aidir, filename):
 	firstRow = True
 	accepted = 0
 	total = 0
 	labels = []
 	values = []
-	with open(f'output/{filename}','rt')as f:
+	with open(f'output/{aidir}/{filename}','rt')as f:
 		data = csv.reader(f)
 		for row in data:
 			if firstRow:
@@ -32,11 +32,11 @@ def generateAcceptedGraph(filename):
 	plt.ylabel('Frequency', fontsize=12)
 	plt.xticks(index, labels, fontsize=9)
 	plt.title('Number of Quest Proposals with X accepted')
-	plt.savefig(f'graphs/gatherbot/{filename[:-4]}')
+	plt.savefig(f'graphs/{aidir}/gatherbot/{filename[:-4]}')
 	plt.close()
 
 #code for batch heatmaps
-def generateBatchHeatmaps(filename):
+def generateBatchHeatmaps(aidir, filename):
 	questTypes = ["gather", "harvest", "build", "craft", "refine", "attack"]
 	QUESTNUM = 6;
 
@@ -52,7 +52,7 @@ def generateBatchHeatmaps(filename):
 			for i in range(QUESTNUM):
 				heatmap.append([0, 0, 0, 0, 0, 0])
 
-			with open(f'output/{filename}','rt')as f:
+			with open(f'output/{aidir}/{filename}','rt')as f:
 				data = csv.reader(f)
 				for row in data:
 					r = int(row[0][questTypes.index(type1)])
@@ -85,21 +85,21 @@ def generateBatchHeatmaps(filename):
 			ax.set_title(f"Correlation between {type1} and {type2} quests")
 			fig.tight_layout()
 			#plt.show()
-			plt.savefig(f"graphs/gatherbot/heatmaps/{type1}{type2}.png")
+			plt.savefig(f"graphs/{aidir}/gatherbot/heatmaps/{type1}{type2}.png")
 			plt.close()
 
 
 #calculate the variety of the quests
-def generateVarietyGraph(filename):
+def generateVarietyGraph(aidir, filename):
 	variety = [0, 0, 0, 0, 0] #0 is considered to be a variety of 1
-	with open(f'output/{filename}','rt')as f:
+	with open(f'output/{aidir}/{filename}','rt')as f:
 		data = csv.reader(f)
 		for row in data:
 			v = 0
 			for char in row[0]:
 				if char != "0":
 					v += 1
-			variety[v-1] += 1
+			variety[v-1] += int(row[1])
 
 	labels = ["1", "2", "3", "4", "5"]
 
@@ -109,10 +109,12 @@ def generateVarietyGraph(filename):
 	plt.ylabel('Frequency', fontsize=10)
 	plt.xticks(index, labels, fontsize=10)
 	plt.title('Number of Quest Proposals with Variety of X')
-	plt.savefig(f'graphs/gatherbot/variety_{filename[:-4]}.png')
+	plt.savefig(f'graphs/{aidir}/gatherbot/variety_{filename[:-4]}.png')
 	plt.close()
 
-def generateStateSpaceMap(filename):
+
+#TODO: turn the state space map in to a heatmap
+def generateStateSpaceMap(aidir, filename):
 	from matplotlib.pyplot import figure
 	#figure(num=None, figsize=(40, 8), dpi=80, facecolor='w', edgecolor='k')
 
@@ -130,7 +132,7 @@ def generateStateSpaceMap(filename):
 
 	xdata = []
 	ydata = []
-	with open(f'output/{filename}','rt')as f:
+	with open(f'output/{aidir}/{filename}','rt')as f:
 		data = csv.reader(f)
 		for row in data:
 			generate = ""
@@ -151,11 +153,11 @@ def generateStateSpaceMap(filename):
 	plt.yticks(index, yaxis, fontsize=8)
 	plt.ylabel("Occurance of craft, refine, attack")
 	plt.title("Range of Quest Proposals Generated")
-	plt.savefig(f'graphs/gatherbot/range_{filename[:-4]}.png')
+	plt.savefig(f'graphs/{aidir}/gatherbot/range_{filename[:-4]}.png')
 	plt.close()
 
 
-generateStateSpaceMap('gatherBot10000_h.csv')
-#generateAcceptedGraph('gatherBot10000_a.csv')
-#generateVarietyGraph('gatherBot10000_h.csv')
-#generateBatchHeatmaps('gatherBot10000_h.csv')
+generateStateSpaceMap('mc2', 'gatherBot10000_h.csv')
+generateAcceptedGraph('mc2', 'gatherBot10000_a.csv')
+generateVarietyGraph('mc2', 'gatherBot10000_h.csv')
+generateBatchHeatmaps('mc2', 'gatherBot10000_h.csv')

@@ -6,11 +6,15 @@
 
 #IncludeRegexTransform: 
 
+../Enums/Actions.h
+
 ../Enums/Consumables.h
 
 ../Enums/Creatures.h
 
 ../Enums/GatheredResources.h
+
+../Enums/QuestCategory.h
 
 ../Structs/BlueprintStruct.h
 string
@@ -58,11 +62,41 @@ D:/UofA/Research/AI_Director_Prototype/Automatic Testing/JobBoard.h
 bots/Bot.h
 D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.h
 
+D:/UofA/Research/AI_Director_Prototype/Automatic Testing/JobBoard.cpp
+cstdlib
+-
+ctime
+-
+iostream
+-
+fstream
+-
+sstream
+-
+JobBoard.h
 D:/UofA/Research/AI_Director_Prototype/Automatic Testing/JobBoard.h
+Enums/QuestCategory.h
+D:/UofA/Research/AI_Director_Prototype/Automatic Testing/Enums/QuestCategory.h
+chrono
+-
+random
+-
+
+D:/UofA/Research/AI_Director_Prototype/Automatic Testing/JobBoard.h
+unordered_map
+-
+vector
+-
+random
+-
+bots/Bot.h
+D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.h
 
 D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.h
 Enums/QuestCategory.h
 D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Enums/QuestCategory.h
+Enums/Actions.h
+D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Enums/Actions.h
 
 D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/GatherBot.h
 Bot.h

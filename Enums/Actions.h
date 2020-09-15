@@ -18,5 +18,6 @@ enum actions{
     Equip_Item,
     Buy,
     Sell,
+    Harvest,
 };
 #endif //AI_DIRECTOR_PROTOTYPE_ACTIONS_H

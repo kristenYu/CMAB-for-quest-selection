@@ -30,22 +30,27 @@ AutomaticTest::AutomaticTest() {
 
 }
 
-void AutomaticTest::runTest(int num, std::string filename, Bot& bot, std::string type) {
+void AutomaticTest::runTest(int num, std::string filename, Bot& bot, std::string type, bool newMarkov) {
+    unsigned seed1 = std::chrono::system_clock::now().time_since_epoch().count();
+    std::mt19937 g1 (seed1);  // mt19937 is a standard mersenne_twister_engine
     //No wiggling of choices for now
     bot.epsilon = 0;
+    //UNCOMMENT THIS TO GENERATE A NEW SET OF 100 ACTIONS
+    if(newMarkov == true)
+    {
+        bot.generatePreviousActions(100, g1);
+    }
     std::cout<<bot.getFileName()<<std::endl;
     JobBoard jobBoard(bot);
     int *array;
     int arraySize = 5;
     totalAcceptedQuests = 0;
 
-    unsigned seed1 = std::chrono::system_clock::now().time_since_epoch().count();
-    std::mt19937 g1 (seed1);  // mt19937 is a standard mersenne_twister_engine
+
 
     for(int i = 0; i < num; i++)
     {
-        //UNCOMMENT THIS TO GENERATE A NEW SET OF 100 ACTIONS
-        //bot.generatePreviousActions(100);
+
         array = jobBoard.generateJobs(arraySize, type, g1);
         ResetQuestMakeup();
         bool choice;

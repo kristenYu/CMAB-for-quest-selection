@@ -24,9 +24,11 @@ bool Bot::makeChoice(questCategory category, std::mt19937& generator) {
 
 void Bot::generatePreviousActions(int num, std::mt19937& generator) {
     std::ofstream fStream;
-    std::uniform_int_distribution<int> uni(0,QUESTCATEGORYNUM);
+    std::uniform_int_distribution<int> uni(0,ACTIONNUM);
     //HARDCODED FOR THE DIRECTORY ON MY COMPUTER
+    std::cout<<"attempting to open bot file"<<std::endl;
     fStream.open (fileName);
+    std::cout<<"write bot file"<<std::endl;
     for (int i = 0; i < num; i++)
     {
         r = uni(generator);

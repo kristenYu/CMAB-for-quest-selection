@@ -32,6 +32,7 @@ JobBoard::JobBoard(Bot & bot) {
 
     //uses the naive MC generation
     std::ifstream myFile(this->bot.getFileName());
+
     if(!myFile.is_open()) throw std::runtime_error("Could not open file");
     if(myFile.good())
     {
@@ -62,16 +63,6 @@ JobBoard::JobBoard(Bot & bot) {
              */
         }
     }
-    /*
-    for(int i = 0; i < QUESTCATEGORYNUM; i++)
-    {
-        for(int j = 0; j < QUESTCATEGORYNUM; j++)
-        {
-            std::cout<<transitionCountsMC2[i][j]<<" ";
-        }
-        std::cout<<std::endl;
-    }
-     */
 }
 
 int * JobBoard::generateJobs(int num, std::string type, std::mt19937& generator) {
@@ -93,7 +84,7 @@ int * JobBoard::generateRandomJob(int num, std::mt19937& generator) {
     for(int i = 0; i < num; i++)
     {
         //randomly populate with categories
-        std::uniform_int_distribution<int> uni(0,QUESTCATEGORYNUM);
+        std::uniform_int_distribution<int> uni(0,QUESTCATEGORYNUM-1);
         int r = uni(generator);
         jobs[i] += r;
     }

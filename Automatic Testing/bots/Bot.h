@@ -15,10 +15,10 @@ public:
     virtual void generatePreviousActions(int num, std::mt19937& generator);
     virtual std::string getFileName();
     int r;
-    static const int ACTIONNUM = 12;
-    static const int QUESTCATEGORYNUM = 6;
+    static const int ACTIONNUM = 11;
+    static const int QUESTCATEGORYNUM = 5;
     float epsilon;
-    std::string fileName = "D:\\UofA\\Research\\AI_Director_Prototype\\output\\markov_chains\\bot.csv";
+    std::string fileName = "D:\\UofA\\Research\\AI_Director_Prototype\\output\\markov_chains\\randomBot.csv";
     Bot();
 };
 

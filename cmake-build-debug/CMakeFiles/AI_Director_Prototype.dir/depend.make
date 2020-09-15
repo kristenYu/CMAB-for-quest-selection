@@ -179,6 +179,7 @@ CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Structs/SelfGoalStruct.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../AIDirector.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Automatic\ Testing/AutomaticTest.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Automatic\ Testing/JobBoard.h
+CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Automatic\ Testing/bots/AttackBot.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Automatic\ Testing/bots/Bot.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Automatic\ Testing/bots/GatherBot.h
 CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj: ../Enums/AIDirectorBehavior.h

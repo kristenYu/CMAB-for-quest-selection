@@ -12,6 +12,7 @@
 #include "Automatic Testing/AutomaticTest.h"
 #include "Automatic Testing/bots/Bot.h"
 #include "Automatic Testing/bots/GatherBot.h"
+#include "Automatic Testing/bots/AttackBot.h"
 
 int main() {
     ActionUtils actionUtils;
@@ -29,7 +30,9 @@ int main() {
     {
         AutomaticTest automaticTest;
         GatherBot gatherBot;
-        automaticTest.runTest(10000, "gatherBot", gatherBot, "random");
+        Bot bot;
+        AttackBot attackBot;
+        automaticTest.runTest(10000, "attackBot", attackBot, "random", false);
     } else{
         bool keepPlaying = true;
         bool checkAction = true;

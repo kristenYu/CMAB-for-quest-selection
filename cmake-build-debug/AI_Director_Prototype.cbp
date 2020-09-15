@@ -109,6 +109,12 @@
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Automatic Testing/JobBoard.h">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/AttackBot.cpp">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
+		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/AttackBot.h">
+			<Option target="AI_Director_Prototype"/>
+		</Unit>
 		<Unit filename="D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.cpp">
 			<Option target="AI_Director_Prototype"/>
 		</Unit>

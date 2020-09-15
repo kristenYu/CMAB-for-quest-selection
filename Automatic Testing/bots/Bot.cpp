@@ -12,9 +12,9 @@ Bot::Bot() {
     epsilon = 0.1;
 }
 
-bool Bot::makeChoice(questCategory category) {
-    std::srand(time(NULL) + rand() %100);
-    r = rand() % 2;
+bool Bot::makeChoice(questCategory category, std::mt19937& generator) {
+    std::bernoulli_distribution dist(0.5);
+    r = dist(generator);
     if (r == 0)
     {
         return true;
@@ -22,14 +22,14 @@ bool Bot::makeChoice(questCategory category) {
     return false;
 }
 
-void Bot::generatePreviousActions(int num) {
-    std::srand(time(NULL));
+void Bot::generatePreviousActions(int num, std::mt19937& generator) {
     std::ofstream fStream;
+    std::uniform_int_distribution<int> uni(0,QUESTCATEGORYNUM);
     //HARDCODED FOR THE DIRECTORY ON MY COMPUTER
     fStream.open (fileName);
     for (int i = 0; i < num; i++)
     {
-        r = rand() % ACTIONNUM;
+        r = uni(generator);
         fStream<<r<<",";
     }
    fStream.close();

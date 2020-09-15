@@ -12,7 +12,7 @@
 
 class JobBoard {
 public:
-    int * generateJobs(int num, std::string type);
+    int * generateJobs(int num, std::string type, std::mt19937& generator);
     static const int QUESTCATEGORYNUM = 6;
     JobBoard(Bot &bot);
     Bot bot;
@@ -54,10 +54,10 @@ public:
     std::discrete_distribution<> initialDistribution;
 
 private:
-    int * generateRandomJob(int num);
+    int * generateRandomJob(int num, std::mt19937& generator);
     //naive Markov Chain implementation
-    int * generateMC1Job(int num);
-    int * generateMC2Job(int num);
+    int * generateMC1Job(int num, std::mt19937& generator);
+    int * generateMC2Job(int num, std::mt19937& generator);
 };
 
 

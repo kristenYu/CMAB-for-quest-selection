@@ -230,6 +230,33 @@ Automatic_Testing/JobBoard.cpp.s:
 	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.s
 .PHONY : Automatic_Testing/JobBoard.cpp.s
 
+Automatic_Testing/bots/AttackBot.obj: Automatic_Testing/bots/AttackBot.cpp.obj
+
+.PHONY : Automatic_Testing/bots/AttackBot.obj
+
+# target to build an object file
+Automatic_Testing/bots/AttackBot.cpp.obj:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/AttackBot.cpp.obj
+.PHONY : Automatic_Testing/bots/AttackBot.cpp.obj
+
+Automatic_Testing/bots/AttackBot.i: Automatic_Testing/bots/AttackBot.cpp.i
+
+.PHONY : Automatic_Testing/bots/AttackBot.i
+
+# target to preprocess a source file
+Automatic_Testing/bots/AttackBot.cpp.i:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/AttackBot.cpp.i
+.PHONY : Automatic_Testing/bots/AttackBot.cpp.i
+
+Automatic_Testing/bots/AttackBot.s: Automatic_Testing/bots/AttackBot.cpp.s
+
+.PHONY : Automatic_Testing/bots/AttackBot.s
+
+# target to generate assembly for a file
+Automatic_Testing/bots/AttackBot.cpp.s:
+	$(MAKE) -f CMakeFiles\AI_Director_Prototype.dir\build.make CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/AttackBot.cpp.s
+.PHONY : Automatic_Testing/bots/AttackBot.cpp.s
+
 Automatic_Testing/bots/Bot.obj: Automatic_Testing/bots/Bot.cpp.obj
 
 .PHONY : Automatic_Testing/bots/Bot.obj
@@ -629,6 +656,9 @@ help:
 	@echo ... Automatic_Testing/JobBoard.obj
 	@echo ... Automatic_Testing/JobBoard.i
 	@echo ... Automatic_Testing/JobBoard.s
+	@echo ... Automatic_Testing/bots/AttackBot.obj
+	@echo ... Automatic_Testing/bots/AttackBot.i
+	@echo ... Automatic_Testing/bots/AttackBot.s
 	@echo ... Automatic_Testing/bots/Bot.obj
 	@echo ... Automatic_Testing/bots/Bot.i
 	@echo ... Automatic_Testing/bots/Bot.s

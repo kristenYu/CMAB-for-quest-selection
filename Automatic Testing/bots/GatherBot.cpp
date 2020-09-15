@@ -12,46 +12,43 @@ GatherBot::GatherBot() {
 }
 
 
-bool GatherBot::makeChoice(questCategory category) {
-    std::srand(time(NULL));
+bool GatherBot::makeChoice(questCategory category, std::mt19937& generator) {
+    std::uniform_real_distribution<> dist(0, 1);
     if(category == questCategory::GatherCategory)
     {
         return true;
     } else{
-        return false;
         //random chance of accepting a random quest
-        f = rand();
+        f = dist(generator);
         if(f < epsilon)
         {
-            std::cout<<"epsilon acceptance"<<std::endl;
             return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
 }
 
-void GatherBot::generatePreviousActions(int num) {
+void GatherBot::generatePreviousActions(int num, std::mt19937& generator) {
     std::ofstream fStream;
     //HARDCODED FOR THE DIRECTORY ON MY COMPUTER
     fStream.open (fileName);
+    std::uniform_real_distribution<> dist(0, 1);
+    std::uniform_int_distribution<> totalActions(0, TOTALACTIONS);
+    std::uniform_int_distribution<> actionNum(0, ACTIONNUM);
     for (int i = 0; i < num; i++)
     {
-        struct timespec ts;
-        clock_gettime(CLOCK_MONOTONIC, &ts);
-        std::srand((time_t)ts.tv_nsec);
-
-        float temp = rand() / double(RAND_MAX);
+        float temp = dist(generator);
         if (temp < actionNoise)
         {
             //generate a random action
-            r = rand() % 12;
-            if (r < 3)
-            {
-                r += 3;
-            }
+            r = totalActions(generator);
             fStream<<r<<",";
         } else{
-            r = rand() % ACTIONNUM;
+            r = actionNum(generator);
             fStream<<possibleActions[r]<<",";
         }
     }

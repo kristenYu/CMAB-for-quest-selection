@@ -42,6 +42,12 @@ CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj
  D:/UofA/Research/AI_Director_Prototype/Automatic Testing/JobBoard.cpp
  D:/UofA/Research/AI_Director_Prototype/Automatic Testing/JobBoard.h
  D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.h
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/AttackBot.cpp.obj
+ ../Enums/Actions.h
+ ../Enums/QuestCategory.h
+ D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/AttackBot.cpp
+ D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/AttackBot.h
+ D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.h
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj
  ../Enums/Actions.h
  ../Enums/QuestCategory.h

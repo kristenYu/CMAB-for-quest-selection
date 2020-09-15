@@ -42,6 +42,12 @@ CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj: ../Auto
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj: ../Automatic\ Testing/JobBoard.h
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj: ../Automatic\ Testing/bots/Bot.h
 
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/AttackBot.cpp.obj: ../Enums/Actions.h
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/AttackBot.cpp.obj: ../Enums/QuestCategory.h
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/AttackBot.cpp.obj: ../Automatic\ Testing/bots/AttackBot.cpp
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/AttackBot.cpp.obj: ../Automatic\ Testing/bots/AttackBot.h
+CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/AttackBot.cpp.obj: ../Automatic\ Testing/bots/Bot.h
+
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj: ../Enums/Actions.h
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj: ../Enums/QuestCategory.h
 CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj: ../Automatic\ Testing/bots/Bot.cpp

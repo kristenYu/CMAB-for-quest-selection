@@ -8,6 +8,7 @@
 #include "JobBoard.h"
 #include "bots/GatherBot.h"
 #include <fstream>
+#include <chrono>
 
 AutomaticTest::AutomaticTest() {
     questCategoryMap[questCategory::GatherCategory] = "GatherCategory";
@@ -38,17 +39,20 @@ void AutomaticTest::runTest(int num, std::string filename, Bot& bot, std::string
     int arraySize = 5;
     totalAcceptedQuests = 0;
 
+    unsigned seed1 = std::chrono::system_clock::now().time_since_epoch().count();
+    std::mt19937 g1 (seed1);  // mt19937 is a standard mersenne_twister_engine
+
     for(int i = 0; i < num; i++)
     {
         //UNCOMMENT THIS TO GENERATE A NEW SET OF 100 ACTIONS
         //bot.generatePreviousActions(100);
-        array = jobBoard.generateJobs(arraySize, type);
+        array = jobBoard.generateJobs(arraySize, type, g1);
         ResetQuestMakeup();
         bool choice;
         int numAccepted = 0;
         for(int j = 0; j < arraySize; j++)
         {
-            choice = bot.makeChoice( static_cast<questCategory>(array[j]));
+            choice = bot.makeChoice( static_cast<questCategory>(array[j]), g1);
             if(choice == true)
             {
                 numAccepted ++;
@@ -63,8 +67,8 @@ void AutomaticTest::runTest(int num, std::string filename, Bot& bot, std::string
         } else {
             frequency[questMakeup] += 1;
         }
-
         statsMap[numAccepted] += 1;
+        delete(array);
     }
     std::ofstream fstreamAccepted;
     std::ofstream fstreamHeatMap;

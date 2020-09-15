@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/AI_Director_Prototype.dir/Actions.cpp.obj"
   "CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj"
   "CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj"
+  "CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/AttackBot.cpp.obj"
   "CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj"
   "CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.obj"
   "CMakeFiles/AI_Director_Prototype.dir/Game.cpp.obj"

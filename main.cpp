@@ -32,7 +32,7 @@ int main() {
         GatherBot gatherBot;
         Bot bot;
         AttackBot attackBot;
-        automaticTest.runTest(1, "attackBot", attackBot, "cba", false);
+        automaticTest.runTest(5, "attackBot", attackBot, "cba", false);
         return 0;
     } else{
         bool keepPlaying = true;

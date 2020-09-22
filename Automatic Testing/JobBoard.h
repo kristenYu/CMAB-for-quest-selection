@@ -19,8 +19,14 @@ public:
     std::string fileString;
     std::vector<actions> a;
 
+    std::vector<std::string> allKeys;
     std::vector<std::string> generatedJobs;
-    std::unordered_map<std::string, int> banditMap;
+    std::vector<std::string> validKeys;
+    void rewardBandit(int *reward);
+    void rewardSimpleKey(std::string key, int r);
+    int time;
+    std::unordered_map<std::string, int> banditRewardMap;
+    std::unordered_map<std::string, int> banditCountMap;
     std::string jobKey;
 
     std::unordered_map<actions, questCategory> actionCategoryMap;
@@ -57,7 +63,10 @@ private:
     void generate4VarietyJob(int num, questCategory category);
     void generate5VarietyJob(int num, questCategory category);
 
+    void generateVarietyJobs(int num, questCategory category);
+
     int * changeKeyToJob(int num, std::string key);
+
 };
 
 

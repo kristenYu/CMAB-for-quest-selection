@@ -44,6 +44,7 @@ void AutomaticTest::runTest(int num, std::string filename, Bot& bot, std::string
     JobBoard jobBoard(bot);
     int *array;
     int arraySize = 5;
+    int rewardArray[] = {0, 0, 0, 0, 0, 0};
     totalAcceptedQuests = 0;
 
 
@@ -51,22 +52,24 @@ void AutomaticTest::runTest(int num, std::string filename, Bot& bot, std::string
     for(int i = 0; i < num; i++)
     {
         std::cout<<"generate job board"<<std::endl;
+        jobBoard.time++;
         array = jobBoard.generateJobs(arraySize, type, g1);
         ResetQuestMakeup();
         bool choice;
         int numAccepted = 0;
         for(int j = 0; j < arraySize; j++)
         {
-            std::cout<<array[j]<<" "<<questCategoryMap[static_cast<questCategory>(array[j])]<<std::endl;
+            //std::cout<<array[j]<<" "<<questCategoryMap[static_cast<questCategory>(array[j])]<<std::endl;
             choice = bot.makeChoice( static_cast<questCategory>(array[j]), g1);
             if(choice == true)
             {
                 numAccepted ++;
                 totalAcceptedQuests++;
+                rewardArray[array[j]] += 1;
             }
             questMakeup[array[j]] += 1;
-
         }
+        jobBoard.rewardBandit(rewardArray);
 
         if (frequency.find(questMakeup) == frequency.end() ) {
             frequency[questMakeup] = 1;

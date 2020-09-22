@@ -19,22 +19,11 @@ public:
     std::string fileString;
     std::vector<actions> a;
 
+    std::vector<std::string> generatedJobs;
+    std::unordered_map<std::string, int> banditMap;
+    std::string jobKey;
+
     std::unordered_map<actions, questCategory> actionCategoryMap;
-    /*
-    float transitions[QUESTCATEGORYNUM][QUESTCATEGORYNUM] = {{0,0,0,0,0,0},
-                                                             {0,0,0,0,0,0},
-                                                             {0,0,0,0,0,0},
-                                                             {0,0,0,0,0,0},
-                                                             {0,0,0,0,0,0},
-                                                             {0,0,0,0,0,0}};
-    int transitionTotals[QUESTCATEGORYNUM] = {0,0,0,0,0,0};
-    int count[QUESTCATEGORYNUM][QUESTCATEGORYNUM] = {{0,0,0,0,0,0},
-                                                     {0,0,0,0,0,0},
-                                                     {0,0,0,0,0,0},
-                                                     {0,0,0,0,0,0},
-                                                     {0,0,0,0,0,0},
-                                                     {0,0,0,0,0,0}};
-     */
     std::array<std::array<double, QUESTCATEGORYNUM>, QUESTCATEGORYNUM > transitionCountsMC1 = {{{0, 0, 0, 0, 0, 0},
                                                                                             {0,0,0,0,0,0},
                                                                                             {0,0,0,0,0,0},
@@ -51,13 +40,24 @@ public:
 
     std::array<double, QUESTCATEGORYNUM> initialStateCount =  {0, 0, 0, 0, 0, 0};
 
-    std::discrete_distribution<> initialDistribution;
+
 
 private:
     int * generateRandomJob(int num, std::mt19937& generator);
     //naive Markov Chain implementation
     int * generateMC1Job(int num, std::mt19937& generator);
     int * generateMC2Job(int num, std::mt19937& generator);
+    //Combinatorial Bandit Algorithm
+    int * generateCBAJob(int num, std::mt19937& generator);
+
+    //These assume that 5 quests will be input - the CBA will break if the num is not 5
+    void generate1VarietyJob(int num, questCategory category);
+    void generate2VarietyJob(int num, questCategory category);
+    void generate3VarietyJob(int num, questCategory category);
+    void generate4VarietyJob(int num, questCategory category);
+    void generate5VarietyJob(int num, questCategory category);
+
+    int * changeKeyToJob(int num, std::string key);
 };
 
 

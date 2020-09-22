@@ -20,6 +20,8 @@ public:
     float epsilon;
     std::string fileName = "D:\\UofA\\Research\\AI_Director_Prototype\\output\\markov_chains\\randomBot.csv";
     Bot();
+
+    //TODO: create an anybehavior bot -> or maybe call mixed behavior bot?
 };
 
 

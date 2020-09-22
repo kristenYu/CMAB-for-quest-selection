@@ -28,11 +28,13 @@ JobBoard::JobBoard(Bot & bot) {
     actionCategoryMap[actions::Sell] = questCategory::NullCategory;
     actionCategoryMap[actions::Harvest] = questCategory::HarvestCategory;
 
+    generatedJobs.push_back("first");
+
+
     this->bot.fileName = bot.getFileName();
 
     //uses the naive MC generation
     std::ifstream myFile(this->bot.getFileName());
-
     if(!myFile.is_open()) throw std::runtime_error("Could not open file");
     if(myFile.good())
     {
@@ -63,6 +65,7 @@ JobBoard::JobBoard(Bot & bot) {
              */
         }
     }
+
 }
 
 int * JobBoard::generateJobs(int num, std::string type, std::mt19937& generator) {
@@ -72,6 +75,9 @@ int * JobBoard::generateJobs(int num, std::string type, std::mt19937& generator)
         return generateMC1Job(num, generator);
     } else if (type == "mc2"){
         return generateMC2Job(num, generator);
+    }else if (type == "cba"){
+        std::cout<<"cba job"<<std::endl;
+        return generateCBAJob(num, generator);
     }
 }
 
@@ -139,10 +145,6 @@ int * JobBoard::generateMC2Job(int num, std::mt19937& generator) {
     std::discrete_distribution<> refineDist(transitionCountsMC2[4].begin(), transitionCountsMC2[4].end());
     std::discrete_distribution<> attackDist(transitionCountsMC2[5].begin(), transitionCountsMC2[5].end());
 
-
-    //for (double x:gatherDist.probabilities()) std::cout << x << " ";
-    //std::cout << std::endl;
-
     jobs[0] = initialDist(generator);
     for(int i = 0; i < num-1; i++)
     {
@@ -168,4 +170,122 @@ int * JobBoard::generateMC2Job(int num, std::mt19937& generator) {
         }
     }
     return jobs;
+}
+
+int * JobBoard::changeKeyToJob(int num, std::string key) {
+    int * job = new int[num];
+    int index = 0;
+    for(int i = 0; i < QUESTCATEGORYNUM; i++){//ASCII CONVERSION - 0 is 48
+        for(int j = 0; j < (int) (key[i])-48; j++ )
+        {
+            job[index] = i;
+            index++;
+        }
+    }
+    return job;
+}
+
+int * JobBoard::generateCBAJob(int num, std::mt19937 &generator) {
+    std::cout<<"generate 5 variety job"<<std::endl;
+    generate4VarietyJob(5, questCategory::GatherCategory);
+    std::cout<<generatedJobs.front()<<std::endl;
+    return changeKeyToJob(num, generatedJobs.front());
+}
+
+void JobBoard::generate1VarietyJob(int num, questCategory category) {
+    if(!generatedJobs.empty())
+    {
+        generatedJobs.clear();
+    }
+    jobKey = "";
+    for(int i = 0; i < QUESTCATEGORYNUM; i++)
+    {
+        if(i == category)
+        {
+            jobKey.append(std::to_string(num));
+        } else{
+            jobKey.append("0");
+        }
+    }
+    generatedJobs.push_back(jobKey);
+}
+
+void JobBoard::generate2VarietyJob(int num, questCategory category) {
+    if(!generatedJobs.empty())
+    {
+        generatedJobs.clear();
+    }
+    int loc = 0;
+    for(int i = 0; i < QUESTCATEGORYNUM; i++)
+    {
+        jobKey = "";
+        for(int j = 0; j < QUESTCATEGORYNUM; j++)
+        {
+            if(category == loc)
+            {
+                continue;
+            }
+            if(j == category){
+                jobKey.append(std::to_string(num));
+            } else if(j == loc){
+                jobKey.append(std::to_string(QUESTCATEGORYNUM-1-num));
+            } else{
+                jobKey.append("0");
+            }
+        }
+        loc++;
+        if(jobKey.empty())
+        {
+            continue;
+        }
+        generatedJobs.push_back(jobKey);
+    }
+}
+
+void JobBoard::generate4VarietyJob(int num, questCategory category) {
+    //generate 5 quests where 2 of them will be the given cateogry
+    generate5VarietyJob(num, category);
+    //choose one that is not the given category and remove it, and add it to the given category
+    std::string curr;
+    for(int i = 0; i < generatedJobs.size(); i++)
+    {
+        curr = generatedJobs.front();
+        generatedJobs.front() = std::move(generatedJobs.back());
+        generatedJobs.pop_back();
+        
+        int loc = 0;
+        for()
+    }
+
+}
+
+void JobBoard::generate5VarietyJob(int num, questCategory category) {
+    //Generate 5 quests where 1 of the quests is guaranteed to be that category
+    if(!generatedJobs.empty())
+    {
+        generatedJobs.clear();
+    }
+    int loc = 0;
+    for(int i = 0; i < QUESTCATEGORYNUM; i++)
+    {
+        jobKey = "";
+        for(int j = 0; j < QUESTCATEGORYNUM; j++)
+        {
+            if(category == loc)
+            {
+                continue;
+            }
+           if(j == loc){
+                jobKey.append("0");
+            } else{
+                jobKey.append("1");
+            }
+        }
+        loc++;
+        if(jobKey.empty())
+        {
+            continue;
+        }
+        generatedJobs.push_back(jobKey);
+    }
 }

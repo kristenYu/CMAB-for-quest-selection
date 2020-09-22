@@ -14,27 +14,16 @@
     <list default="true" id="6575b13b-b741-42bb-853b-af43f0fa8dd7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Automatic Testing/AutomaticTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Automatic Testing/AutomaticTest.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Automatic Testing/AutomaticTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/Automatic Testing/AutomaticTest.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Automatic Testing/JobBoard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Automatic Testing/JobBoard.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Automatic Testing/bots/AttackBot.h" beforeDir="false" afterPath="$PROJECT_DIR$/Automatic Testing/bots/AttackBot.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Automatic Testing/bots/Bot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Automatic Testing/bots/Bot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automatic Testing/JobBoard.h" beforeDir="false" afterPath="$PROJECT_DIR$/Automatic Testing/JobBoard.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Automatic Testing/bots/Bot.h" beforeDir="false" afterPath="$PROJECT_DIR$/Automatic Testing/bots/Bot.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Automatic Testing/bots/GatherBot.h" beforeDir="false" afterPath="$PROJECT_DIR$/Automatic Testing/bots/GatherBot.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/AI_Director_Prototype.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AI_Director_Prototype.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/AttackBot.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/AttackBot.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/Bot.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/bots/GatherBot.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/example.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/example.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualize.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +110,11 @@
       <workItem from="1599751506552" duration="4432000" />
       <workItem from="1600095053347" duration="9760000" />
       <workItem from="1600181766906" duration="8489000" />
-      <workItem from="1600202191513" duration="5204000" />
+      <workItem from="1600202191513" duration="5804000" />
+      <workItem from="1600279864166" duration="715000" />
+      <workItem from="1600441820803" duration="1968000" />
+      <workItem from="1600700905037" duration="3529000" />
+      <workItem from="1600724610564" duration="5496000" />
     </task>
     <servers />
   </component>
@@ -141,22 +134,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599259218016" />
-    <state width="1493" height="171" key="GridCell.Tab.0.bottom" timestamp="1600208050895">
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom" timestamp="1600737306340">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600208050895" />
-    <state width="1493" height="171" key="GridCell.Tab.0.center" timestamp="1600208050895">
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600737306340" />
+    <state width="1493" height="171" key="GridCell.Tab.0.center" timestamp="1600737306340">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600208050895" />
-    <state width="1493" height="171" key="GridCell.Tab.0.left" timestamp="1600208050895">
+    <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600737306340" />
+    <state width="1493" height="171" key="GridCell.Tab.0.left" timestamp="1600737306339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600208050895" />
-    <state width="1493" height="171" key="GridCell.Tab.0.right" timestamp="1600208050895">
+    <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600737306339" />
+    <state width="1493" height="171" key="GridCell.Tab.0.right" timestamp="1600737306340">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600208050895" />
+    <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600737306340" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1599579900244">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -169,10 +162,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="611" y="198" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1594337844944" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1594658115012">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1600710523029">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1594658115012" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1600710523029" />
     <state x="112" y="101" width="672" height="676" key="search.everywhere.popup" timestamp="1600105721473">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

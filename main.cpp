@@ -32,7 +32,8 @@ int main() {
         GatherBot gatherBot;
         Bot bot;
         AttackBot attackBot;
-        automaticTest.runTest(10000, "attackBot", attackBot, "random", false);
+        automaticTest.runTest(1, "attackBot", attackBot, "cba", false);
+        return 0;
     } else{
         bool keepPlaying = true;
         bool checkAction = true;

@@ -50,13 +50,14 @@ void AutomaticTest::runTest(int num, std::string filename, Bot& bot, std::string
 
     for(int i = 0; i < num; i++)
     {
-
+        std::cout<<"generate job board"<<std::endl;
         array = jobBoard.generateJobs(arraySize, type, g1);
         ResetQuestMakeup();
         bool choice;
         int numAccepted = 0;
         for(int j = 0; j < arraySize; j++)
         {
+            std::cout<<array[j]<<" "<<questCategoryMap[static_cast<questCategory>(array[j])]<<std::endl;
             choice = bot.makeChoice( static_cast<questCategory>(array[j]), g1);
             if(choice == true)
             {

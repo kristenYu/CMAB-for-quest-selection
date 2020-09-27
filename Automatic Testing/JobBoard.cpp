@@ -93,7 +93,6 @@ JobBoard::JobBoard(Bot & bot) {
         while(!generatedJobs.empty())
         {
             curr = generatedJobs.back();
-            allKeys.push_back(generatedJobs.back());
             generatedJobs.pop_back();
             banditCountMap[curr] = 0;
             banditRewardMap[curr] = 0;
@@ -102,7 +101,6 @@ JobBoard::JobBoard(Bot & bot) {
         while(!generatedJobs.empty())
         {
             curr = generatedJobs.back();
-            allKeys.push_back(generatedJobs.back());
             generatedJobs.pop_back();
             banditCountMap[curr] = 0;
             banditRewardMap[curr] = 0;
@@ -111,7 +109,6 @@ JobBoard::JobBoard(Bot & bot) {
         while(!generatedJobs.empty())
         {
             curr = generatedJobs.back();
-            allKeys.push_back(generatedJobs.back());
             generatedJobs.pop_back();
             banditCountMap[curr] = 0;
             banditRewardMap[curr] = 0;
@@ -120,7 +117,6 @@ JobBoard::JobBoard(Bot & bot) {
         while(!generatedJobs.empty())
         {
             curr = generatedJobs.back();
-            allKeys.push_back(generatedJobs.back());
             generatedJobs.pop_back();
             banditCountMap[curr] = 0;
             banditRewardMap[curr] = 0;
@@ -129,45 +125,77 @@ JobBoard::JobBoard(Bot & bot) {
         while(!generatedJobs.empty())
         {
             curr = generatedJobs.back();
-            allKeys.push_back(generatedJobs.back());
             generatedJobs.pop_back();
             banditCountMap[curr] = 0;
             banditRewardMap[curr] = 0;
         }
-
+        //These are generating illigal jobs
         generate3VarietyJob(1, cat);
         while(!generatedJobs.empty())
         {
             curr = generatedJobs.back();
-            allKeys.push_back(generatedJobs.back());
             generatedJobs.pop_back();
-            banditCountMap[curr] = 0;
-            banditRewardMap[curr] = 0;
+            int total = 0;
+
+            for(int j = 0; j < QUESTCATEGORYNUM; j++){//ASCII CONVERSION - 0 is 48
+                total += (int) curr[j] - 48;
+            }
+            if(total == 5)
+            {
+                banditCountMap[curr] = 0;
+                banditRewardMap[curr] = 0;
+            }
+
         }
-        generate3VarietyJob(2, cat);
+         generate3VarietyJob(2, cat);
         while(!generatedJobs.empty())
         {
             curr = generatedJobs.back();
-            allKeys.push_back(generatedJobs.back());
             generatedJobs.pop_back();
-            banditCountMap[curr] = 0;
-            banditRewardMap[curr] = 0;
+            int total = 0;
+            for(int j = 0; j < QUESTCATEGORYNUM; j++){//ASCII CONVERSION - 0 is 48
+                total += (int) curr[j] - 48;
+            }
+            if(total == 5)
+            {
+                banditCountMap[curr] = 0;
+                banditRewardMap[curr] = 0;
+            }
         }
+
+
         generate3VarietyJob(3, cat);
         while(!generatedJobs.empty())
         {
             curr = generatedJobs.back();
-            allKeys.push_back(generatedJobs.back());
             generatedJobs.pop_back();
             banditCountMap[curr] = 0;
             banditRewardMap[curr] = 0;
         }
+
     }
+
+     /*
+    for(int i = 0; i < QUESTCATEGORYNUM; i++) {
+        questCategory cat = static_cast<questCategory>(i);
+        for(int j = 1; j < QUESTCATEGORYNUM; j++)
+        {
+            generateVarietyJobs(j,cat);
+        }
+    }
+    while(validKeys.empty())
+    {
+        curr = validKeys.back();
+        std::cout<<curr<<std::endl;
+        banditCountMap[curr] = 0;
+        banditRewardMap[curr] = 0;
+        validKeys.pop_back();
+    }
+    */
     std::cout<<banditCountMap.size()<<std::endl;
     std::cout<<banditRewardMap.size()<<std::endl;
-    std::cout<<allKeys.size()<<std::endl;
 
-    time = 0;
+    time = 1;
 }
 
 int * JobBoard::generateJobs(int num, std::string type, std::mt19937& generator) {
@@ -178,7 +206,6 @@ int * JobBoard::generateJobs(int num, std::string type, std::mt19937& generator)
     } else if (type == "mc2"){
         return generateMC2Job(num, generator);
     }else if (type == "cba"){
-        std::cout<<"cba job"<<std::endl;
         return generateCBAJob(num, generator);
     }
 }
@@ -298,23 +325,31 @@ int * JobBoard::generateCBAJob(int num, std::mt19937 &generator) {
         {
             value = 0;
         } else{
-            average = banditRewardMap[it.first]/banditCountMap[it.first];
-            value = average + sqrt(3 * log(time)/2*banditCountMap[it.first]);
+            qValueMap[it.first] = qValueMap[it.first] + 1/banditCountMap[it.first]*(banditRewardMap[it.first] - qValueMap[it.first]);
+            //average = banditRewardMap[it.first]*banditCountMap[it.first]/time;
+            value = qValueMap[it.first] + sqrt(3 * log(time)/2*banditCountMap[it.first]);
         }
         if(value > max)
         {
             max = value;
             possibleKeys.clear();
+            possibleKeys.push_back(it.first);
         }
         else if(value == max)
         {
             possibleKeys.push_back(it.first);
         }
     }
+    if(possibleKeys.empty())
+    {
+        std::cout<<"Keys are empty"<<std::endl;
+    }
     std::uniform_int_distribution<int> uni(0,possibleKeys.size()-1);
     int randomNum = uni(generator);
     action = possibleKeys[randomNum];
-    std::cout<<action<<" "<<max<<std::endl;
+    chosenKeys.push_back(action);
+    maxReward.push_back(max);
+    time++;
     return changeKeyToJob(num, action);
 }
 
@@ -325,19 +360,29 @@ void JobBoard::rewardBandit(int * reward) {
     //TODO: Speed up this part of the algorithm;
     int r;
     int c;
+    /*
+    std::cout<<"reward: ";
+    for(int i =0; i < QUESTCATEGORYNUM; i++)
+    {
+        std::cout<<reward[i];
+    }
+    std::cout<<std::endl;
+     */
     for (auto& it: banditRewardMap) {
         r = 0;
         for(int i = 0; i < QUESTCATEGORYNUM; i++)
         {
             c = it.first[i]-48;
-            if(reward[i] == c)
+            if(reward[i] != 0 && reward[i] <= c)
             {
+                //std::cout<<"adding reward "<<reward[i]<<" at "<<i<<" under "<<c<<std::endl;
                 r += reward[i];
             }
         }
-        banditRewardMap[it.first] += r;
+        banditRewardMap[it.first] = r;
         if(r != 0)
         {
+            //std::cout<<it.first<<": "<<r<<std::endl;
             banditCountMap[it.first] += 1;
         }
         //std::cout<<it.first<<" "<<banditRewardMap[it.first]<<" "<<banditCountMap[it.first]<<std::endl;

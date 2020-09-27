@@ -44,14 +44,13 @@ void AutomaticTest::runTest(int num, std::string filename, Bot& bot, std::string
     JobBoard jobBoard(bot);
     int *array;
     int arraySize = 5;
-    int rewardArray[] = {0, 0, 0, 0, 0, 0};
     totalAcceptedQuests = 0;
-
 
 
     for(int i = 0; i < num; i++)
     {
-        std::cout<<"generate job board"<<std::endl;
+        int rewardArray[] = {0, 0, 0, 0, 0, 0};
+        //std::cout<<"generate job board"<<std::endl;
         jobBoard.time++;
         array = jobBoard.generateJobs(arraySize, type, g1);
         ResetQuestMakeup();
@@ -81,9 +80,11 @@ void AutomaticTest::runTest(int num, std::string filename, Bot& bot, std::string
     }
     std::ofstream fstreamAccepted;
     std::ofstream fstreamHeatMap;
+    std::ofstream fstreamReward;
     //HARDCODED FOR THE DIRECTORY ON MY COMPUTER
     fstreamAccepted.open ("D:\\UofA\\Research\\AI_Director_Prototype\\output\\" + type + "/" + filename + std::to_string(num) + "_a.csv");
     fstreamHeatMap.open("D:\\UofA\\Research\\AI_Director_Prototype\\output\\" + type + "/" + filename + std::to_string(num) + "_h.csv");
+    fstreamReward.open("D:\\UofA\\Research\\AI_Director_Prototype\\output\\" + type + "/" + filename + std::to_string(num) + "_r.csv");
 
     std::cout<<totalAcceptedQuests<<" have been accepted"<<std::endl;
     fstreamAccepted<<"total accepted,"<<totalAcceptedQuests<<","<<num*5<<std::endl;
@@ -102,8 +103,14 @@ void AutomaticTest::runTest(int num, std::string filename, Bot& bot, std::string
         std::cout<<": "<<it->second<<std::endl;
         fstreamHeatMap << "," << it->second << std::endl;
     }
+
+   for(int i = 0; i < jobBoard.maxReward.size(); i++)
+   {
+       fstreamReward<<jobBoard.chosenKeys[i]<<","<<jobBoard.maxReward[i]<<std::endl;
+   }
     fstreamAccepted.close();
     fstreamHeatMap.close();
+    fstreamReward.close();
 }
 
 void AutomaticTest::ResetQuestMakeup() {

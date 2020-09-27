@@ -159,7 +159,7 @@ def generateStateSpaceMap(aidir, filename, botName):
 directors = ['random', 'mc1', 'mc2']
 bots = ['randomBot', 'gatherBot', 'attackBot']
 
-d = 'random'
+d = 'cba'
 for b in bots:
 	generateStateSpaceMap(d, f'{b}10000_h.csv', b)
 	generateAcceptedGraph(d, f'{b}10000_a.csv', b)

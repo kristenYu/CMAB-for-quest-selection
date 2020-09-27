@@ -30,9 +30,9 @@ int main() {
     {
         AutomaticTest automaticTest;
         GatherBot gatherBot;
-        Bot bot;
+        Bot randomBot;
         AttackBot attackBot;
-        automaticTest.runTest(5, "attackBot", attackBot, "cba", false);
+        automaticTest.runTest(10000, "gatherBot", gatherBot, "cba", false);
         return 0;
     } else{
         bool keepPlaying = true;

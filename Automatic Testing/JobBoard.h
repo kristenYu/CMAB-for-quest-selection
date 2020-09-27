@@ -22,12 +22,15 @@ public:
     std::vector<std::string> allKeys;
     std::vector<std::string> generatedJobs;
     std::vector<std::string> validKeys;
+    std::vector<std::string> chosenKeys;
     void rewardBandit(int *reward);
     void rewardSimpleKey(std::string key, int r);
     int time;
     std::unordered_map<std::string, int> banditRewardMap;
     std::unordered_map<std::string, int> banditCountMap;
+    std::unordered_map<std::string, double> qValueMap;
     std::string jobKey;
+    std::vector<double> maxReward;
 
     std::unordered_map<actions, questCategory> actionCategoryMap;
     std::array<std::array<double, QUESTCATEGORYNUM>, QUESTCATEGORYNUM > transitionCountsMC1 = {{{0, 0, 0, 0, 0, 0},

@@ -156,10 +156,14 @@ def generateStateSpaceMap(aidir, filename, botName):
 	plt.savefig(f'graphs/{aidir}/{botName}/range_{filename[:-4]}.png')
 	plt.close()
 
+
+
+
 directors = ['random', 'mc1', 'mc2']
 bots = ['randomBot', 'gatherBot', 'attackBot']
 
-d = 'cba'
+#d = 'cba'
+d = 'random'
 for b in bots:
 	generateStateSpaceMap(d, f'{b}10000_h.csv', b)
 	generateAcceptedGraph(d, f'{b}10000_a.csv', b)

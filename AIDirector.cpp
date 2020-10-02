@@ -272,6 +272,21 @@ objective AIDirector::getQuest(PlayerModel &playerModel, Player &player, behavio
     return newObjective;
 }
 
+objective AIDirector::getObjectiveWithCategory(questCategory category, std::mt19937& generator) {
+    objective newObjective;
+    std::vector<objective> validList;
+    for(int i =0; i < objectivesGenerator.list.size(); i++)
+    {
+        if(objectivesGenerator.list[i].category == category)
+        {
+            validList.push_back(objectivesGenerator.list[i]);
+        }
+    }
+    std::uniform_int_distribution<> dist(0, validList.size()-1);
+    newObjective = validList[dist(generator)];
+    return newObjective;
+}
+
 void AIDirector::getAllObjectivesInLocation(std::vector<objective> in, int location, std::vector<objective> &out) {
     out.clear();
     for(int i = 0; i < in.size(); i++)

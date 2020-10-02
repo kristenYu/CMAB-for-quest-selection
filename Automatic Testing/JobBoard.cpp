@@ -229,7 +229,6 @@ int * JobBoard::generateRandomJob(int num, std::mt19937& generator) {
 int * JobBoard::generateMC1Job(int num, std::mt19937& generator) {
     int* jobs = new int[num];
     std::discrete_distribution<> initialDist(initialStateCount.begin(), initialStateCount.end()); // Create the distribution
-
     std::discrete_distribution<> gatherDist(transitionCountsMC1[0].begin(), transitionCountsMC1[0].end());
     std::discrete_distribution<> harvestDist(transitionCountsMC1[1].begin(), transitionCountsMC1[1].end());
     std::discrete_distribution<> buildDist(transitionCountsMC1[2].begin(), transitionCountsMC1[2].end());
@@ -314,20 +313,52 @@ int * JobBoard::changeKeyToJob(int num, std::string key) {
     return job;
 }
 
+std::string JobBoard::changeArrayToKey(int *array) {
+    int * count = new int[QUESTCATEGORYNUM];
+    for(int i = 0; i < QUESTCATEGORYNUM; i++)
+    {
+        count[i] = 0;
+    }
+    for(int i = 0; i < 5; i++)
+    {
+        count[array[i]] ++;
+    }
+    std::string key;
+    for(int i = 0; i < QUESTCATEGORYNUM; i++){
+        key.append(std::to_string(count[i]));
+    }
+    return key;
+}
+
 int * JobBoard::generateCBAJob(int num, std::mt19937 &generator) {
     std::vector<std::string> possibleKeys;
     double max = 0;
     double value;
     std::string action;
     double average;
+    double adjustedReward;
     for (auto& it: banditRewardMap) {
         if(banditCountMap[it.first] == 0)
         {
             value = 0;
         } else{
-            qValueMap[it.first] = qValueMap[it.first] + 1/banditCountMap[it.first]*(banditRewardMap[it.first] - qValueMap[it.first]);
+            adjustedReward = banditRewardMap[it.first] - qValueMap[it.first];
+            if(it.first == checkKey)
+            {
+                std::cout<<adjustedReward<<std::endl;
+            }
+            qValueMap[it.first] = qValueMap[it.first] + 1.0/banditCountMap[it.first]*adjustedReward;
+            if(it.first == checkKey)
+            {
+                std::cout<<banditCountMap[it.first]<<std::endl;
+            }
+
             //average = banditRewardMap[it.first]*banditCountMap[it.first]/time;
-            value = qValueMap[it.first] + sqrt(3 * log(time)/2*banditCountMap[it.first]);
+            value = qValueMap[it.first] + sqrt(log(time)/(2.0*banditCountMap[it.first]));
+            if(it.first == checkKey)
+            {
+                std::cout<<time<<" "<<sqrt(log(time)/(2.0*banditCountMap[it.first]))<<std::endl;
+            }
         }
         if(value > max)
         {
@@ -344,6 +375,12 @@ int * JobBoard::generateCBAJob(int num, std::mt19937 &generator) {
     {
         std::cout<<"Keys are empty"<<std::endl;
     }
+    for(auto& it: possibleKeys)
+    {
+        std::cout<<"valid key "<<it<<" with adjusted value "<<max<<" and q value ";
+        std::cout<<qValueMap[it]<<" and previous reward "<<banditRewardMap[it]<<" and count "<<banditCountMap[it]<<std::endl;
+    }
+
     std::uniform_int_distribution<int> uni(0,possibleKeys.size()-1);
     int randomNum = uni(generator);
     action = possibleKeys[randomNum];
@@ -356,7 +393,7 @@ int * JobBoard::generateCBAJob(int num, std::mt19937 &generator) {
 void JobBoard::rewardSimpleKey(std::string key, int r) {
     banditRewardMap[key] += r;
 }
-void JobBoard::rewardBandit(int * reward) {
+void JobBoard::rewardBandit(int * reward, std::string key) {
     //TODO: Speed up this part of the algorithm;
     int r;
     int c;
@@ -374,17 +411,24 @@ void JobBoard::rewardBandit(int * reward) {
         {
             c = it.first[i]-48;
             if(reward[i] != 0 && reward[i] <= c)
-            {
-                //std::cout<<"adding reward "<<reward[i]<<" at "<<i<<" under "<<c<<std::endl;
+                {
+
                 r += reward[i];
             }
         }
-        banditRewardMap[it.first] = r;
         if(r != 0)
         {
+            std::cout<<"reward "<<it.first<<" of "<<r<<std::endl;
+            banditRewardMap[it.first] = r;
             //std::cout<<it.first<<": "<<r<<std::endl;
             banditCountMap[it.first] += 1;
+        } else{
+            if (it.first == key)
+            {
+                banditCountMap[it.first] += 1;
+            }
         }
+
         //std::cout<<it.first<<" "<<banditRewardMap[it.first]<<" "<<banditCountMap[it.first]<<std::endl;
     }
 

@@ -45,6 +45,7 @@ void AutomaticTest::runTest(int num, std::string filename, Bot& bot, std::string
     int *array;
     int arraySize = 5;
     totalAcceptedQuests = 0;
+    std::string key;
 
 
     for(int i = 0; i < num; i++)
@@ -68,7 +69,8 @@ void AutomaticTest::runTest(int num, std::string filename, Bot& bot, std::string
             }
             questMakeup[array[j]] += 1;
         }
-        jobBoard.rewardBandit(rewardArray);
+        key = jobBoard.changeArrayToKey(array);
+        jobBoard.rewardBandit(rewardArray, key);
 
         if (frequency.find(questMakeup) == frequency.end() ) {
             frequency[questMakeup] = 1;

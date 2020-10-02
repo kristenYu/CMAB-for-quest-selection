@@ -4,6 +4,8 @@
 
 #ifndef AI_DIRECTOR_PROTOTYPE_AIDIRECTOR_H
 #define AI_DIRECTOR_PROTOTYPE_AIDIRECTOR_H
+
+#include <random>
 #include "PlayerModel.h"
 #include "Enums/QuestCategory.h"
 #include "Objects/SelfGoalsList.h"
@@ -65,6 +67,8 @@ public:
     void updateRewardVector(int reward);
     int numberOfActions[3] = {0};
     void updateNumberOfActions();
+
+    objective getObjectiveWithCategory(questCategory category, std::mt19937& generator);
 
     int rewardVector[3] = {0};
     //set for optimistic initial behaviors

@@ -13,15 +13,19 @@
   <component name="ChangeListManager">
     <list default="true" id="6575b13b-b741-42bb-853b-af43f0fa8dd7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDirector.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/AIDirector.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDirector.h" beforeDir="false" afterPath="$PROJECT_DIR$/AIDirector.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Automatic Testing/AutomaticTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Automatic Testing/AutomaticTest.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Automatic Testing/JobBoard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Automatic Testing/JobBoard.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Automatic Testing/JobBoard.h" beforeDir="false" afterPath="$PROJECT_DIR$/Automatic Testing/JobBoard.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/AI_Director_Prototype.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AI_Director_Prototype.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/AIDirector.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/AutomaticTest.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/learnedData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/learnedData.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visualize.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualize.py" afterDir="false" />
     </list>
@@ -117,7 +121,11 @@
       <workItem from="1600724610564" duration="5496000" />
       <workItem from="1600785279923" duration="16123000" />
       <workItem from="1600967840770" duration="855000" />
-      <workItem from="1601159630306" duration="6373000" />
+      <workItem from="1601159630306" duration="7219000" />
+      <workItem from="1601305423525" duration="2521000" />
+      <workItem from="1601410980155" duration="602000" />
+      <workItem from="1601479672639" duration="2922000" />
+      <workItem from="1601656144124" duration="6365000" />
     </task>
     <servers />
   </component>
@@ -137,22 +145,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599259218016" />
-    <state width="1493" height="218" key="GridCell.Tab.0.bottom" timestamp="1601166486543">
+    <state width="1493" height="198" key="GridCell.Tab.0.bottom" timestamp="1601662316055">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="218" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601166486543" />
-    <state width="1493" height="218" key="GridCell.Tab.0.center" timestamp="1601166486543">
+    <state width="1493" height="198" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601662316055" />
+    <state width="1493" height="198" key="GridCell.Tab.0.center" timestamp="1601662316055">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="218" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601166486543" />
-    <state width="1493" height="218" key="GridCell.Tab.0.left" timestamp="1601166486543">
+    <state width="1493" height="198" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601662316055" />
+    <state width="1493" height="198" key="GridCell.Tab.0.left" timestamp="1601662316055">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="218" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601166486543" />
-    <state width="1493" height="218" key="GridCell.Tab.0.right" timestamp="1601166486543">
+    <state width="1493" height="198" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601662316055" />
+    <state width="1493" height="198" key="GridCell.Tab.0.right" timestamp="1601662316055">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="218" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601166486543" />
+    <state width="1493" height="198" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601662316055" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1599579900244">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

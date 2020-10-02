@@ -18,12 +18,16 @@ public:
     Bot bot;
     std::string fileString;
     std::vector<actions> a;
+    //FOR DEBUG PURPOSES
+    std::string checkKey;
+
 
     std::vector<std::string> allKeys;
     std::vector<std::string> generatedJobs;
     std::vector<std::string> validKeys;
     std::vector<std::string> chosenKeys;
-    void rewardBandit(int *reward);
+    void rewardBandit(int *reward, std::string key);
+    std::string changeArrayToKey(int* array);
     void rewardSimpleKey(std::string key, int r);
     int time;
     std::unordered_map<std::string, int> banditRewardMap;

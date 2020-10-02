@@ -1,5 +1,6 @@
 #include <iostream>
 #include <unordered_map>
+#include <chrono>
 #include "PlayerModel.h"
 #include "Enums/Actions.h"
 #include "PlayerModel.h"
@@ -24,15 +25,24 @@ int main() {
     objective quest;
     EquippableItemsList equippableItemsList;
     int numberOfActions = 0;
+    Bot bot;
+    JobBoard jobBoard(bot);
+    int * questCategoryArray;
+    objective questArray[5];
+    int rewardArray[6];
 
-    int runAutomation = 0;
+    unsigned seed1 = std::chrono::system_clock::now().time_since_epoch().count();
+    std::mt19937 g1 (seed1);
+
+
+    int runAutomation = 1;
     if(runAutomation == 0)
     {
         AutomaticTest automaticTest;
         GatherBot gatherBot;
         Bot randomBot;
         AttackBot attackBot;
-        automaticTest.runTest(10000, "gatherBot", gatherBot, "cba", false);
+        automaticTest.runTest(10000, "attackBot", attackBot, "random", false);
         return 0;
     } else{
         bool keepPlaying = true;
@@ -60,9 +70,9 @@ int main() {
         }
         else if (aiBehavior == behavior::learned)
         {
+            //Do nothing - activates the job board
             aiDirector.setBehavior(behavior::learned);
-            aiDirector.loadLearnedBehavior();
-            aiDirector.printQValue();
+            std::cout<<"Starting q-learning cmab"<<std::endl;
         }
 
 
@@ -219,15 +229,64 @@ int main() {
             }
             else if(actionInput == 12)
             {
-                playerModel.printPlayerStyle();
-                playerModel.printPlayerActions();
+                //playerModel.printPlayerStyle();
+                //playerModel.printPlayerActions();
                 if(aiDirector.b == behavior::learned)
                 {
-                    quest = aiDirector.getLearnedQuest(playerModel, player);
+                    questCategoryArray = jobBoard.generateJobs(5, "cba", g1);
+                    //clear reward array
+                    for(int i = 0; i < 6; i++)
+                    {
+                        rewardArray[i] = 0;
+                    }
+                    for(int i = 0; i < 5; i++)
+                    {
+                        quest = aiDirector.getObjectiveWithCategory(static_cast<questCategory>(questCategoryArray[i]), g1);
+                        std::cout<<"["<<i<<"]"<<quest.task<<", ";
+                        questArray[i] = quest;
+                    }
+
+                    std::cout<<"[5] None"<<std::endl;
+                    bool allAccepted = true;
+                    while(allAccepted)
+                    {
+                        std::cout<<"Please enter the number of a quest you would like to accept (only one)"<<std::endl;
+                        int accept;
+                        std::cin>>accept;
+                        if(accept > 5)
+                        {
+                            std::cout<<"invalid action"<<std::endl;
+                            allAccepted = false;
+                        }else if(accept == 5){
+                            std::cout<<"accepted no quests"<<std::endl;
+                            allAccepted = false;
+                        }else{
+                            rewardArray[questArray[accept].category] ++;
+                            player.currentQuests.push_back(questArray[accept]);
+                        }
+                        std::cout<<"would you like to accept another quest? [0] No [1] yes"<<std::endl;
+                        int cont;
+                        std::cin>>cont;
+                        if(cont > 2)
+                        {
+                            std::cout<<"invalid action"<<std::endl;
+                            allAccepted = false;
+                        } else{
+                            if(cont == 0)
+                            {
+                                allAccepted = false;
+                            }
+                        }
+                    }
+                    std::string key = jobBoard.changeArrayToKey(questCategoryArray);
+                    jobBoard.checkKey = key;
+                    jobBoard.rewardBandit(rewardArray, key);
+
+                    //quest = aiDirector.getLearnedQuest(playerModel, player);
                 } else{
                     quest = aiDirector.getQuest(playerModel, player, aiDirector.b);
                 }
-
+                /*
                 //game.printPlayerActionStack(player);
                 std::cout<<quest.task<<std::endl;
                 std::cout<<"Would you like to accept this quest?"<<std::endl;
@@ -247,6 +306,7 @@ int main() {
                     aiDirector.updateNumberOfActions();
                     aiDirector.printNumberOfActions();
                 }
+                 */
             }
             else{
                 playerModel.printPlayerStyle();

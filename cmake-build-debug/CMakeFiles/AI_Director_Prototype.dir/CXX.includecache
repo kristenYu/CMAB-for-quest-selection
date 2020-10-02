@@ -6,57 +6,31 @@
 
 #IncludeRegexTransform: 
 
-../Enums/Consumables.h
+../Enums/Actions.h
 
-../Enums/Creatures.h
+../Enums/QuestCategory.h
 
-../Enums/GatheredResources.h
-
-../Structs/BlueprintStruct.h
-string
+D:/UofA/Research/AI_Director_Prototype/Automatic Testing/JobBoard.cpp
+cstdlib
 -
-vector
+ctime
 -
-
-../Structs/BuildingStruct.h
-BlueprintStruct.h
-../Structs/BlueprintStruct.h
-
-../Structs/SelfGoalStruct.h
-string
+iostream
 -
-Enums/QuestCategory.h
-../Structs/Enums/QuestCategory.h
-Enums/Locations.h
-../Structs/Enums/Locations.h
-
-D:/UofA/Research/AI_Director_Prototype/AIDirector.h
-PlayerModel.h
-D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
-Enums/QuestCategory.h
-D:/UofA/Research/AI_Director_Prototype/Enums/QuestCategory.h
-Objects/SelfGoalsList.h
-D:/UofA/Research/AI_Director_Prototype/Objects/SelfGoalsList.h
-Structs/ObjectiveStruct.h
-D:/UofA/Research/AI_Director_Prototype/Structs/ObjectiveStruct.h
-Objects/ObjectivesGenerator.h
-D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.h
-Enums/Locations.h
-D:/UofA/Research/AI_Director_Prototype/Enums/Locations.h
-Enums/AIDirectorBehavior.h
-D:/UofA/Research/AI_Director_Prototype/Enums/AIDirectorBehavior.h
-Enums/Actions.h
-D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
-
-D:/UofA/Research/AI_Director_Prototype/Automatic Testing/AutomaticTest.h
-unordered_map
+fstream
 -
-map
+sstream
 -
 JobBoard.h
 D:/UofA/Research/AI_Director_Prototype/Automatic Testing/JobBoard.h
-bots/Bot.h
-D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.h
+Enums/QuestCategory.h
+D:/UofA/Research/AI_Director_Prototype/Automatic Testing/Enums/QuestCategory.h
+chrono
+-
+random
+-
+math.h
+-
 
 D:/UofA/Research/AI_Director_Prototype/Automatic Testing/JobBoard.h
 unordered_map
@@ -66,12 +40,6 @@ vector
 random
 -
 bots/Bot.h
-D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.h
-
-D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/AttackBot.h
-string
--
-Bot.h
 D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.h
 
 D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.h
@@ -81,182 +49,4 @@ Enums/QuestCategory.h
 D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Enums/QuestCategory.h
 Enums/Actions.h
 D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Enums/Actions.h
-
-D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/GatherBot.h
-Bot.h
-D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.h
-
-D:/UofA/Research/AI_Director_Prototype/Enums/AIDirectorBehavior.h
-
-D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
-
-D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
-
-D:/UofA/Research/AI_Director_Prototype/Enums/Locations.h
-
-D:/UofA/Research/AI_Director_Prototype/Enums/QuestCategory.h
-
-D:/UofA/Research/AI_Director_Prototype/Game.h
-string
--
-unordered_map
--
-Player.h
-D:/UofA/Research/AI_Director_Prototype/Player.h
-Structs/ActionStruct.h
-D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
-Enums/GatheredResources.h
-D:/UofA/Research/AI_Director_Prototype/Enums/GatheredResources.h
-Objects/BlueprintsList.h
-D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.h
-Objects/BuildingsList.h
-D:/UofA/Research/AI_Director_Prototype/Objects/BuildingsList.h
-Objects/ObjectivesGenerator.h
-D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.h
-Objects/Merchant.h
-D:/UofA/Research/AI_Director_Prototype/Objects/Merchant.h
-
-D:/UofA/Research/AI_Director_Prototype/Objects/ActionUtils.h
-unordered_map
--
-
-D:/UofA/Research/AI_Director_Prototype/Objects/BlueprintsList.h
-Structs/BlueprintStruct.h
-D:/UofA/Research/AI_Director_Prototype/Objects/Structs/BlueprintStruct.h
-Enums/GatheredResources.h
-D:/UofA/Research/AI_Director_Prototype/Objects/Enums/GatheredResources.h
-
-D:/UofA/Research/AI_Director_Prototype/Objects/BuildingsList.h
-BuildingStruct.h
-D:/UofA/Research/AI_Director_Prototype/Objects/BuildingStruct.h
-
-D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h
-SchematicList.h
-D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h
-Structs/EquippableItemStruct.h
-D:/UofA/Research/AI_Director_Prototype/Objects/Structs/EquippableItemStruct.h
-
-D:/UofA/Research/AI_Director_Prototype/Objects/Merchant.h
-vector
--
-unordered_map
--
-Consumables.h
-D:/UofA/Research/AI_Director_Prototype/Objects/Consumables.h
-GatheredResources.h
-D:/UofA/Research/AI_Director_Prototype/Objects/GatheredResources.h
-
-D:/UofA/Research/AI_Director_Prototype/Objects/ObjectivesGenerator.h
-Structs/ObjectiveStruct.h
-D:/UofA/Research/AI_Director_Prototype/Objects/Structs/ObjectiveStruct.h
-Enums/Locations.h
-D:/UofA/Research/AI_Director_Prototype/Objects/Enums/Locations.h
-Enums/QuestCategory.h
-D:/UofA/Research/AI_Director_Prototype/Objects/Enums/QuestCategory.h
-Enums/Creatures.h
-D:/UofA/Research/AI_Director_Prototype/Objects/Enums/Creatures.h
-Player.h
-D:/UofA/Research/AI_Director_Prototype/Objects/Player.h
-BuildingsList.h
-D:/UofA/Research/AI_Director_Prototype/Objects/BuildingsList.h
-EquippableItemsList.h
-D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h
-
-D:/UofA/Research/AI_Director_Prototype/Objects/SchematicList.h
-vector
--
-Structs/SchematicStruct.h
-D:/UofA/Research/AI_Director_Prototype/Objects/Structs/SchematicStruct.h
-
-D:/UofA/Research/AI_Director_Prototype/Objects/SelfGoalsList.h
-vector
--
-Structs/SelfGoalStruct.h
-D:/UofA/Research/AI_Director_Prototype/Objects/Structs/SelfGoalStruct.h
-
-D:/UofA/Research/AI_Director_Prototype/Player.h
-unordered_map
--
-vector
--
-Structs/ActionStruct.h
-D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
-Structs/SchematicStruct.h
-D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
-Objects/EquippableItemsList.h
-D:/UofA/Research/AI_Director_Prototype/Objects/EquippableItemsList.h
-Structs/EquippableItemStruct.h
-D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h
-Structs/BlueprintStruct.h
-D:/UofA/Research/AI_Director_Prototype/Structs/BlueprintStruct.h
-Structs/ObjectiveStruct.h
-D:/UofA/Research/AI_Director_Prototype/Structs/ObjectiveStruct.h
-
-D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
-Player.h
-D:/UofA/Research/AI_Director_Prototype/Player.h
-
-D:/UofA/Research/AI_Director_Prototype/Structs/ActionStruct.h
-Enums/Actions.h
-D:/UofA/Research/AI_Director_Prototype/Structs/Enums/Actions.h
-
-D:/UofA/Research/AI_Director_Prototype/Structs/BlueprintStruct.h
-string
--
-vector
--
-
-D:/UofA/Research/AI_Director_Prototype/Structs/EquippableItemStruct.h
-SchematicStruct.h
-D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
-
-D:/UofA/Research/AI_Director_Prototype/Structs/ObjectiveStruct.h
-string
--
-vector
--
-Enums/QuestCategory.h
-D:/UofA/Research/AI_Director_Prototype/Structs/Enums/QuestCategory.h
-Enums/Locations.h
-D:/UofA/Research/AI_Director_Prototype/Structs/Enums/Locations.h
-Enums/GatheredResources.h
-D:/UofA/Research/AI_Director_Prototype/Structs/Enums/GatheredResources.h
-
-D:/UofA/Research/AI_Director_Prototype/Structs/SchematicStruct.h
-string
--
-vector
--
-
-D:/UofA/Research/AI_Director_Prototype/main.cpp
-iostream
--
-unordered_map
--
-PlayerModel.h
-D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
-Enums/Actions.h
-D:/UofA/Research/AI_Director_Prototype/Enums/Actions.h
-PlayerModel.h
-D:/UofA/Research/AI_Director_Prototype/PlayerModel.h
-Objects/ActionUtils.h
-D:/UofA/Research/AI_Director_Prototype/Objects/ActionUtils.h
-Player.h
-D:/UofA/Research/AI_Director_Prototype/Player.h
-Game.h
-D:/UofA/Research/AI_Director_Prototype/Game.h
-AIDirector.h
-D:/UofA/Research/AI_Director_Prototype/AIDirector.h
-Structs/ObjectiveStruct.h
-D:/UofA/Research/AI_Director_Prototype/Structs/ObjectiveStruct.h
-Enums/AIDirectorBehavior.h
-D:/UofA/Research/AI_Director_Prototype/Enums/AIDirectorBehavior.h
-Automatic Testing/AutomaticTest.h
-D:/UofA/Research/AI_Director_Prototype/Automatic Testing/AutomaticTest.h
-Automatic Testing/bots/Bot.h
-D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/Bot.h
-Automatic Testing/bots/GatherBot.h
-D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/GatherBot.h
-Automatic Testing/bots/AttackBot.h
-D:/UofA/Research/AI_Director_Prototype/Automatic Testing/bots/AttackBot.h
 

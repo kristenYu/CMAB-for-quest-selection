@@ -345,19 +345,19 @@ int * JobBoard::generateCBAJob(int num, std::mt19937 &generator) {
             adjustedReward = banditRewardMap[it.first] - qValueMap[it.first];
             if(it.first == checkKey)
             {
-                std::cout<<adjustedReward<<std::endl;
+                //std::cout<<adjustedReward<<std::endl;
             }
             qValueMap[it.first] = qValueMap[it.first] + 1.0/banditCountMap[it.first]*adjustedReward;
             if(it.first == checkKey)
             {
-                std::cout<<banditCountMap[it.first]<<std::endl;
+               // std::cout<<banditCountMap[it.first]<<std::endl;
             }
 
             //average = banditRewardMap[it.first]*banditCountMap[it.first]/time;
             value = qValueMap[it.first] + sqrt(log(time)/(2.0*banditCountMap[it.first]));
             if(it.first == checkKey)
             {
-                std::cout<<time<<" "<<sqrt(log(time)/(2.0*banditCountMap[it.first]))<<std::endl;
+                //std::cout<<time<<" "<<sqrt(log(time)/(2.0*banditCountMap[it.first]))<<std::endl;
             }
         }
         if(value > max)
@@ -377,8 +377,8 @@ int * JobBoard::generateCBAJob(int num, std::mt19937 &generator) {
     }
     for(auto& it: possibleKeys)
     {
-        std::cout<<"valid key "<<it<<" with adjusted value "<<max<<" and q value ";
-        std::cout<<qValueMap[it]<<" and previous reward "<<banditRewardMap[it]<<" and count "<<banditCountMap[it]<<std::endl;
+       // std::cout<<"valid key "<<it<<" with adjusted value "<<max<<" and q value ";
+        //std::cout<<qValueMap[it]<<" and previous reward "<<banditRewardMap[it]<<" and count "<<banditCountMap[it]<<std::endl;
     }
 
     std::uniform_int_distribution<int> uni(0,possibleKeys.size()-1);
@@ -418,7 +418,7 @@ void JobBoard::rewardBandit(int * reward, std::string key) {
         }
         if(r != 0)
         {
-            std::cout<<"reward "<<it.first<<" of "<<r<<std::endl;
+           // std::cout<<"reward "<<it.first<<" of "<<r<<std::endl;
             banditRewardMap[it.first] = r;
             //std::cout<<it.first<<": "<<r<<std::endl;
             banditCountMap[it.first] += 1;

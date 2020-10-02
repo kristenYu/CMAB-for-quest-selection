@@ -162,13 +162,13 @@ def generateStateSpaceMap(aidir, filename, botName):
 directors = ['random', 'mc1', 'mc2']
 bots = ['randomBot', 'gatherBot', 'attackBot']
 
-#d = 'cba'
-d = 'random'
+d = 'cba'
+#d = 'random'
 for b in bots:
 	generateStateSpaceMap(d, f'{b}10000_h.csv', b)
 	generateAcceptedGraph(d, f'{b}10000_a.csv', b)
 	generateVarietyGraph(d, f'{b}10000_h.csv', b)
-	generateBatchHeatmaps(d, f'{b}10000_h.csv', b)
+	#generateBatchHeatmaps(d, f'{b}10000_h.csv', b)
 '''
 
 for d in directors:

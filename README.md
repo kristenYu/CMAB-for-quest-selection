@@ -8,6 +8,7 @@ In the release section of this github, click the link for the latest version. Th
 
 ## Known Issues
 1. If you try to build before you blueprint something, you will end up in an infinite loop
+1. You can accept the same quest multiple times
 
 ## AI Director Settings
 When you first run the game, it will ask you to pick one of these 4 settings. You will stay on that setting throughout the entirety of your playthrough. 
@@ -18,7 +19,7 @@ When you first run the game, it will ask you to pick one of these 4 settings. Yo
 1. Prediction:
   This is the prediction model as proposed in the AI Director Quest Category Document. When more than one objective meets both the location and category requirements, the objective is chosen at random.
 1. Learned:
-  This is the nonstationary UCBI learning model which weights the other behaviors according to player preference.
+  This is the new combinatorial multi-armed bandit algorithm (cba) which will do reinforcement learning on the problem. 
  
 ## Playing the Game
 To play the game, please enter the number of the action you want to take. This is supposed to mirror what happens in nightingale. In general, the main loops are gather->blueprint->build and gather->refine->craft.

@@ -11,17 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6575b13b-b741-42bb-853b-af43f0fa8dd7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Automatic Testing/JobBoard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Automatic Testing/JobBoard.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/AI_Director_Prototype.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/AI_Director_Prototype.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/Automatic_Testing/JobBoard.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/AI_Director_Prototype.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualize.py" afterDir="false" />
-    </list>
+    <list default="true" id="6575b13b-b741-42bb-853b-af43f0fa8dd7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,7 +108,7 @@
       <workItem from="1601305423525" duration="2521000" />
       <workItem from="1601410980155" duration="602000" />
       <workItem from="1601479672639" duration="2922000" />
-      <workItem from="1601656144124" duration="8292000" />
+      <workItem from="1601656144124" duration="8895000" />
     </task>
     <servers />
   </component>
@@ -138,22 +128,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599259218016" />
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1601663187720">
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1601777962106">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601663187720" />
-    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1601663187720">
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601777962106" />
+    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1601777962105">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601663187720" />
-    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1601663187720">
+    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601777962105" />
+    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1601777962105">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601663187720" />
-    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1601663187720">
+    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601777962105" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1601777962105">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601663187720" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601777962105" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1599579900244">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

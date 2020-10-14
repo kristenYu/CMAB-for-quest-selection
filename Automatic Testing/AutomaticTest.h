@@ -10,6 +10,7 @@
 #include "JobBoard.h"
 #include "bots/Bot.h"
 
+
 class AutomaticTest {
 public:
     void runTest(int num, std::string filename, Bot& bot, std::string type, bool newMarkov);

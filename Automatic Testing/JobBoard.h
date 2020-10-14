@@ -5,10 +5,11 @@
 #ifndef AI_DIRECTOR_PROTOTYPE_JOBBOARD_H
 #define AI_DIRECTOR_PROTOTYPE_JOBBOARD_H
 
+#include "bots/Bot.h"
 #include <unordered_map>
 #include <vector>
 #include <random>
-#include "bots/Bot.h"
+#include <array>
 
 class JobBoard {
 public:
@@ -37,12 +38,12 @@ public:
     std::vector<double> maxReward;
 
     std::unordered_map<actions, questCategory> actionCategoryMap;
-    std::array<std::array<double, QUESTCATEGORYNUM>, QUESTCATEGORYNUM > transitionCountsMC1 = {{{0, 0, 0, 0, 0, 0},
-                                                                                            {0,0,0,0,0,0},
-                                                                                            {0,0,0,0,0,0},
-                                                                                            {0,0,0,0,0,0},
-                                                                                            {0,0,0,0,0,0},
-                                                                                            {0,0,0,0,0,0}}};
+    std::array<std::array<double, QUESTCATEGORYNUM>, QUESTCATEGORYNUM > transitionCountsMC1 = {{{0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
+                                                                                            {0.0,0.0,0.0,0.0,0.0,0.0},
+                                                                                            {0.0,0.0,0.0,0.0,0.0,0.0},
+                                                                                            {0.0,0.0,0.0,0.0,0.0,0.0},
+                                                                                            {0.0,0.0,0.0,0.0,0.0,0.0},
+                                                                                            {0.0,0.0,0.0,0.0,0.0,0.0}}};
 
     std::array<std::array<double, QUESTCATEGORYNUM>, QUESTCATEGORYNUM > transitionCountsMC2 = {{{0, 0, 0, 0, 0, 0},
                                                                                                        {0,0,0,0,0,0},

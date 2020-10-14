@@ -33,7 +33,7 @@ JobBoard::JobBoard(Bot & bot) {
 
 
     this->bot.fileName = bot.getFileName();
-
+    /*
     //uses the naive MC generation
     std::ifstream myFile(this->bot.getFileName());
     if(!myFile.is_open()) throw std::runtime_error("Could not open file");
@@ -63,9 +63,10 @@ JobBoard::JobBoard(Bot & bot) {
             /*
             std::cout<<"location "<<actionCategoryMap[a[i]]<<" "<<actionCategoryMap[a[i + 1]]<<": ";
             std::cout<<transitionCountsMC2[actionCategoryMap[a[i]]][actionCategoryMap[a[i + 1]]]<<std::endl;
-             */
+             
         }
     }
+    */
     std::string curr;
     for(int i = 0; i < QUESTCATEGORYNUM; i++)
     {
@@ -208,6 +209,7 @@ int * JobBoard::generateJobs(int num, std::string type, std::mt19937& generator)
     }else if (type == "cba"){
         return generateCBAJob(num, generator);
     }
+    return NULL;
 }
 
 int * JobBoard::generateRandomJob(int num, std::mt19937& generator) {

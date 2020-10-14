@@ -99,5 +99,5 @@ void Player::unlockBlueprint(blueprint bp) {
 }
 
 bool Player::TrackQuest() {
-
+    return false;
 }

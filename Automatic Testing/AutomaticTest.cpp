@@ -2,13 +2,15 @@
 // Created by Sticky on 9/4/2020.
 //
 
-#include <iostream>
+
 #include "AutomaticTest.h"
 #include "bots/Bot.h"
 #include "JobBoard.h"
 #include "bots/GatherBot.h"
 #include <fstream>
 #include <chrono>
+#include <iostream>
+#include <string>
 
 AutomaticTest::AutomaticTest() {
     questCategoryMap[questCategory::GatherCategory] = "GatherCategory";

@@ -1,2 +1,4 @@
 output/
 graphs/
+.vs/
+build/
